@@ -1,0 +1,31 @@
+---
+title: "图片变体"
+description: "图片变体接口。"
+api: "POST /v1/images/variations"
+---
+
+## 用途
+
+用于基于已有图片生成多个相似变体。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="gpt-image-1" required>
+  图片变体模型名称。
+</ParamField>
+
+<ParamField body="image" type="file" required>
+  原始图片文件。该接口通常以 `multipart/form-data` 上传。
+</ParamField>
+
+## 响应
+
+<ResponseField name="data" type="object[]">
+  变体图片列表。
+</ResponseField>

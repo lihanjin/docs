@@ -1,0 +1,31 @@
+---
+title: "音频翻译"
+description: "音频翻译接口。"
+api: "POST /v1/audio/translations"
+---
+
+## 用途
+
+用于把音频内容识别后翻译为目标语言文本，常见为翻译成英文。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="whisper-1" required>
+  音频翻译模型名称。
+</ParamField>
+
+<ParamField body="file" type="file" required>
+  待翻译音频文件。该接口通常以 `multipart/form-data` 上传。
+</ParamField>
+
+## 响应
+
+<ResponseField name="text" type="string">
+  翻译后的文本内容。
+</ResponseField>

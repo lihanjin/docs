@@ -1,0 +1,40 @@
+---
+title: "POST /v1/embeddings"
+description: "文本向量生成接口。"
+---
+
+## 用途
+
+用于把文本转换为向量，适合检索、召回和语义相似度场景。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/embeddings`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+- Content-Type: `application/json`
+
+## 最小请求体
+
+```json
+{
+  "model": "text-embedding-3-small",
+  "input": "AllTokens 是统一的大模型接口网关。"
+}
+```
+
+## 请求示例
+
+```bash
+curl https://alltoken.aatest.online/v1/embeddings \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "text-embedding-3-small",
+    "input": "AllTokens 是统一的大模型接口网关。"
+  }'
+```
+
+## 返回
+
+成功时返回向量数组，通常位于 `data[0].embedding`。

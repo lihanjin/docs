@@ -1,0 +1,40 @@
+---
+title: "图片生成"
+description: "图片生成接口。"
+api: "POST /v1/images/generations"
+---
+
+## 用途
+
+用于根据文本提示词生成图片。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="gpt-image-1" required>
+  图片模型名称。
+</ParamField>
+
+<ParamField body="prompt" type="string" default="一张未来感的 AI 控制台界面" required>
+  图片生成提示词。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "gpt-image-1",
+  "prompt": "一张未来感的 AI 控制台界面"
+}
+```
+
+## 响应
+
+<ResponseField name="data" type="object[]">
+  图片结果，通常包含 URL 或 base64 数据。
+</ResponseField>

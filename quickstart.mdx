@@ -1,80 +1,160 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "快速上手"
+description: "通过控制台创建 API Key，并用第一条请求接入 AllTokens。"
 ---
 
-## Get started in three steps
+## 开始前准备
 
-Get your documentation site running locally and make your first customization.
+在开始之前，请先确认你已经具备以下条件：
 
-### Step 1: Set up your local environment
-
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 2: Deploy your changes
-
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
-
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
-
-### Step 3: Go live
-
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
-
-## Next steps
-
-Now that you have your docs running, explore these key features:
-
-<CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/en/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/en/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/en/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/en/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
-</CardGroup>
+- 可以访问 [AllTokens 控制台](https://alltoken.aatest.online/)
+- 已完成登录或注册
+- 已获得可用额度，或已开通可调用的令牌
 
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  如果你计划自托管部署，而不是直接使用线上站点，可以跳到本文最后的“自托管部署”部分。
 </Note>
+
+## 在线接入
+
+### 第一步：登录控制台
+
+访问 [https://alltoken.aatest.online/](https://alltoken.aatest.online/) 并登录。
+
+平台支持多种登录方式。实际可见选项以当前站点页面展示为准。
+
+### 第二步：创建 API Key
+
+登录后进入控制台的 **令牌管理**。
+
+你可以在这里创建一个新的 API 令牌，并为它设置：
+
+- 令牌名称
+- 令牌分组
+- 可用额度
+- 允许访问的模型
+- 访问限制与状态
+
+创建完成后，复制真实令牌值并妥善保存。后续请求会用它作为 `Authorization: Bearer <YOUR_API_KEY>`。
+
+### 第三步：确认接口地址
+
+如果你使用线上站点，推荐把以下地址作为基础地址：
+
+```bash
+https://alltoken.aatest.online/v1
+```
+
+如果你需要 Gemini 兼容路径，可直接使用：
+
+```bash
+https://alltoken.aatest.online/v1beta/models
+```
+
+常见接口包括：
+
+- 模型列表：`GET /v1/models`
+- 聊天补全：`POST /v1/chat/completions`
+- 文本向量：`POST /v1/embeddings`
+- 音频能力：`POST /v1/audio/transcriptions`
+- Responses：`POST /v1/responses`
+
+### 第四步：发送第一条请求
+
+下面的示例使用 OpenAI 兼容方式发起聊天请求：
+
+```bash
+curl https://alltoken.aatest.online/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请介绍一下你自己。"
+      }
+    ]
+  }'
+```
+
+如果你想先验证令牌是否可用，可以先请求模型列表：
+
+```bash
+curl https://alltoken.aatest.online/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+### 第五步：在控制台调试
+
+如果你不想一开始就写代码，可以先在控制台的 **Playground** 里调试请求。
+
+这适合用来完成三件事：
+
+- 确认当前令牌是否可用
+- 查看某个模型是否已开放
+- 验证请求体格式与返回内容
+
+## 常见接入方式
+
+### 兼容 OpenAI SDK
+
+如果你的应用本身支持自定义 `base_url` 或 `baseURL`，通常只需要把基础地址改为：
+
+```txt
+https://alltoken.aatest.online/v1
+```
+
+然后把 API Key 改成你在 AllTokens 控制台中生成的令牌即可。
+
+### 切换不同模型
+
+AllTokens 的优势之一是把模型切换收敛到统一入口。多数情况下，你只需要修改请求里的 `model` 字段，而不需要改动整套接入逻辑。
+
+### 使用其他接口格式
+
+如果你的业务使用 Claude Messages、Gemini 或 OpenAI Responses，AllTokens 也提供了对应路径。你可以继续沿用已有请求结构，再将地址切到 AllTokens。
+
+完整接口清单和示例见 [API reference](/api-reference/introduction)。
+
+## 自托管部署
+
+如果你希望自行部署一套 AllTokens，可以直接参考 `new-api` 项目中的 Docker Compose 配置。
+
+### 使用 Docker Compose
+
+```bash
+git clone https://github.com/QuantumNous/new-api.git
+cd new-api
+docker-compose up -d
+```
+
+默认配置会启动这些服务：
+
+- `new-api`
+- `redis`
+- `postgres`
+
+启动后，可在本地访问：
+
+```txt
+http://localhost:3000
+```
+
+在生产环境中，至少需要修改默认数据库密码、会话密钥和其他敏感配置。
+
+### 使用自托管地址发起请求
+
+部署完成后，把上面的线上地址替换为你自己的域名即可。例如：
+
+```txt
+https://your-domain.example.com/v1
+```
+
+## 下一步
+
+完成第一条请求后，建议继续完善以下内容：
+
+1. 创建不同用途的令牌，并按模型或环境隔离权限。
+2. 配置渠道与分组，优化上游路由和重试策略。
+3. 使用 Playground 和日志能力验证真实调用链路。

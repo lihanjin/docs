@@ -1,0 +1,48 @@
+---
+title: "重排"
+description: "Rerank 文本重排接口。"
+api: "POST /v1/rerank"
+---
+
+## 用途
+
+用于对候选文本结果做相关性重排。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="rerank-v1" required>
+  Rerank 模型名称。
+</ParamField>
+
+<ParamField body="query" type="string" default="统一大模型网关" required>
+  查询文本。
+</ParamField>
+
+<ParamField body="documents" type="string[]" required>
+  候选文本数组。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "rerank-v1",
+  "query": "统一大模型网关",
+  "documents": [
+    "AllTokens 提供统一 API 入口。",
+    "今天上海天气晴。"
+  ]
+}
+```
+
+## 响应
+
+<ResponseField name="results" type="object[]">
+  带相关性分数的重排结果。
+</ResponseField>

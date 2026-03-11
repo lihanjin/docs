@@ -1,0 +1,62 @@
+---
+title: "对话补全"
+description: "OpenAI 兼容聊天补全接口。"
+api: "POST /v1/chat/completions"
+---
+
+## 用途
+
+用于发送多轮对话请求，生成文本回复。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头，格式为 `Bearer YOUR_API_KEY`。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="glm-4" required>
+  模型名称，例如 `gpt-4o-mini`。
+</ParamField>
+
+<ParamField body="messages" type="object[]" required>
+  对话消息数组，至少包含一条用户消息。
+</ParamField>
+
+<ParamField body="temperature" type="number" default="0.7">
+  可选，控制生成随机性。
+</ParamField>
+
+<ParamField body="stream" type="boolean" default="false">
+  可选，是否启用流式返回。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "glm-4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你好，请介绍一下 AllTokens。"
+    }
+  ],
+  "temperature": 0.7
+}
+```
+
+## 响应
+
+<ResponseField name="id" type="string">
+  请求 ID。
+</ResponseField>
+
+<ResponseField name="choices" type="object[]">
+  生成结果数组，内容通常位于 `choices[0].message.content`。
+</ResponseField>
+
+<ResponseField name="usage" type="object">
+  Token 使用统计。
+</ResponseField>

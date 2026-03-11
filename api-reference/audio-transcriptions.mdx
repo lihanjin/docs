@@ -1,0 +1,28 @@
+---
+title: "POST /v1/audio/transcriptions"
+description: "音频转文本接口。"
+---
+
+## 用途
+
+用于把语音内容转写为文本。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/audio/transcriptions`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+
+## 说明
+
+该接口通常使用 `multipart/form-data` 上传音频文件。
+
+## 常见字段
+
+- `model`: 语音识别模型
+- `file`: 音频文件
+- `language`: 可选，音频语言
+
+## 返回
+
+成功时返回转写文本。

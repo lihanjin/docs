@@ -1,0 +1,48 @@
+---
+title: "POST /v1/rerank"
+description: "Rerank 文本重排接口。"
+---
+
+## 用途
+
+用于对候选文本结果做相关性重排。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/rerank`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+- Content-Type: `application/json`
+
+## 最小请求体
+
+```json
+{
+  "model": "rerank-v1",
+  "query": "统一大模型网关",
+  "documents": [
+    "AllTokens 提供统一 API 入口。",
+    "今天上海天气晴。"
+  ]
+}
+```
+
+## 请求示例
+
+```bash
+curl https://alltoken.aatest.online/v1/rerank \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "rerank-v1",
+    "query": "统一大模型网关",
+    "documents": [
+      "AllTokens 提供统一 API 入口。",
+      "今天上海天气晴。"
+    ]
+  }'
+```
+
+## 返回
+
+成功时返回带分数的重排结果列表。

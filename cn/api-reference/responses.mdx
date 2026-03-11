@@ -1,0 +1,48 @@
+---
+title: "响应生成"
+description: "OpenAI Responses 接口。"
+api: "POST /v1/responses"
+---
+
+## 用途
+
+用于以 Responses 风格发起生成请求，适合已经采用新接口结构的客户端。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头，格式为 `Bearer YOUR_API_KEY`。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="glm-4" required>
+  模型名称。
+</ParamField>
+
+<ParamField body="input" type="string" default="请概括 AllTokens 的核心价值。" required>
+  输入内容。
+</ParamField>
+
+<ParamField body="stream" type="boolean" default="false">
+  可选，是否流式返回。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "glm-4",
+  "input": "请概括 AllTokens 的核心价值。"
+}
+```
+
+## 响应
+
+<ResponseField name="id" type="string">
+  请求 ID。
+</ResponseField>
+
+<ResponseField name="output" type="object[]">
+  模型输出内容。
+</ResponseField>

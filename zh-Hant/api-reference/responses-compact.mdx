@@ -1,0 +1,31 @@
+---
+title: "POST /v1/responses/compact"
+description: "紧凑模式 Responses 接口。"
+---
+
+## 用途
+
+用于发送更紧凑的 Responses 请求与响应结构，适合希望减少冗余字段的场景。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/responses/compact`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+- Content-Type: `application/json`
+
+## 示例
+
+```bash
+curl https://alltoken.aatest.online/v1/responses/compact \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4.1-mini",
+    "input": "写一个产品标语。"
+  }'
+```
+
+## 说明
+
+请求字段与 `/v1/responses` 基本一致，但返回内容更适合轻量消费端使用。

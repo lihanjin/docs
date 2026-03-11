@@ -1,0 +1,22 @@
+---
+title: "POST /v1/audio/translations"
+description: "音频翻译接口。"
+---
+
+## 用途
+
+用于把音频内容识别后翻译为目标语言文本，常见为翻译成英文。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/audio/translations`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+
+## 说明
+
+该接口通常使用 `multipart/form-data` 上传音频文件。字段结构与音频转写接口类似。
+
+## 返回
+
+成功时返回翻译后的文本内容。

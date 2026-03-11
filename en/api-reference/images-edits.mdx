@@ -1,0 +1,29 @@
+---
+title: "POST /v1/images/edits"
+description: "图片编辑接口。"
+---
+
+## 用途
+
+用于基于已有图片执行编辑或重绘。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/images/edits`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+
+## 说明
+
+该接口通常需要通过 `multipart/form-data` 传入原图、可选遮罩图和编辑提示词。具体字段取决于你使用的上游模型能力。
+
+## 常见字段
+
+- `model`: 图片模型
+- `image`: 原始图片文件
+- `mask`: 可选，遮罩文件
+- `prompt`: 编辑说明
+
+## 返回
+
+成功时返回编辑后的图片结果。

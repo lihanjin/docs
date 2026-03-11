@@ -1,33 +1,92 @@
 ---
-title: '简介'
-description: '用于展示 API 端点的示例章节'
+title: "接口参考"
+description: "面向调用方的 AllTokens API 请求文档。"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## 基础说明
 
-## 欢迎
+AllTokens 面向调用方提供统一的大模型接口网关。
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+如果你已经有 OpenAI、Claude 或 Gemini 兼容请求代码，通常只需要替换基础地址和 API Key，即可迁移到 AllTokens。
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+## 基础地址
 
-## Authentication
+线上站点推荐使用以下地址：
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+```txt
+https://alltoken.aatest.online
 ```
+
+所有接口都需要通过请求头传递令牌：
+
+```http
+Authorization: Bearer YOUR_API_KEY
+```
+
+除个别音频或图片上传接口外，默认请求体使用 `application/json`。
+
+## 接口列表
+
+<CardGroup cols={2}>
+  <Card title="/v1/chat/completions" href="/cn/api-reference/chat-completions" icon="messages">
+    OpenAI 兼容聊天补全接口。
+  </Card>
+  <Card title="/v1/responses" href="/cn/api-reference/responses" icon="sparkles">
+    OpenAI Responses 接口。
+  </Card>
+  <Card title="/v1/responses/compact" href="/cn/api-reference/responses-compact" icon="compress">
+    紧凑模式 Responses 接口。
+  </Card>
+  <Card title="/v1/messages" href="/cn/api-reference/messages" icon="comment-dots">
+    Claude Messages 兼容接口。
+  </Card>
+  <Card title="/v1beta/models" href="/cn/api-reference/models" icon="list">
+    Gemini 模型查询接口。
+  </Card>
+  <Card title="/v1/embeddings" href="/cn/api-reference/embeddings" icon="waveform-lines">
+    向量生成接口。
+  </Card>
+  <Card title="/v1/rerank" href="/cn/api-reference/rerank" icon="arrow-down-wide-short">
+    Rerank 重排接口。
+  </Card>
+  <Card title="/v1/images/generations" href="/cn/api-reference/images-generations" icon="image">
+    图片生成接口。
+  </Card>
+  <Card title="/v1/images/edits" href="/cn/api-reference/images-edits" icon="pen-ruler">
+    图片编辑接口。
+  </Card>
+  <Card title="/v1/images/variations" href="/cn/api-reference/images-variations" icon="wand-magic-sparkles">
+    图片变体接口。
+  </Card>
+  <Card title="/v1/audio/speech" href="/cn/api-reference/audio-speech" icon="volume">
+    文本转语音接口。
+  </Card>
+  <Card title="/v1/audio/transcriptions" href="/cn/api-reference/audio-transcriptions" icon="microphone-lines">
+    音频转文本接口。
+  </Card>
+  <Card title="/v1/audio/translations" href="/cn/api-reference/audio-translations" icon="language">
+    音频翻译接口。
+  </Card>
+</CardGroup>
+
+## 快速示例
+
+```bash
+curl https://alltoken.aatest.online/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      {"role": "user", "content": "你好"}
+    ]
+  }'
+```
+
+## 兼容性说明
+
+- OpenAI 兼容调用：优先使用 `/v1/chat/completions`、`/v1/responses`、`/v1/embeddings`
+- Claude 兼容调用：使用 `/v1/messages`
+- Gemini 兼容调用：使用 `/v1beta/models`
+
+如果你需要先完成第一条请求，建议先从 [快速上手](/cn/quickstart) 开始。

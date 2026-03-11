@@ -1,0 +1,25 @@
+---
+title: "GET /v1beta/models"
+description: "Gemini 模型查询接口。"
+---
+
+## 用途
+
+用于获取当前可见的 Gemini 模型列表。
+
+## 请求
+
+- Method: `GET`
+- URL: `https://alltoken.aatest.online/v1beta/models`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+
+## 请求示例
+
+```bash
+curl https://alltoken.aatest.online/v1beta/models \
+  -H "Authorization: Bearer YOUR_API_KEY"
+```
+
+## 返回
+
+成功时返回模型列表。你可以用它确认账号当前可访问的 Gemini 相关模型。

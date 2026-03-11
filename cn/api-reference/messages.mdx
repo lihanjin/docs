@@ -1,0 +1,50 @@
+---
+title: "Claude 消息"
+description: "Claude Messages 兼容接口。"
+api: "POST /v1/messages"
+---
+
+## 用途
+
+用于兼容 Claude Messages 请求格式。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="claude-3-5-sonnet" required>
+  Claude 模型名称。
+</ParamField>
+
+<ParamField body="max_tokens" type="integer" default="512" required>
+  最大输出 token 数。
+</ParamField>
+
+<ParamField body="messages" type="object[]" required>
+  Claude Messages 消息数组。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "claude-3-5-sonnet",
+  "max_tokens": 512,
+  "messages": [
+    {
+      "role": "user",
+      "content": "请介绍一下 AllTokens。"
+    }
+  ]
+}
+```
+
+## 响应
+
+<ResponseField name="content" type="object[]">
+  Claude 返回内容数组。
+</ResponseField>

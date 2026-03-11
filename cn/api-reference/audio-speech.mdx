@@ -1,0 +1,45 @@
+---
+title: "文本转语音"
+description: "文本转语音接口。"
+api: "POST /v1/audio/speech"
+---
+
+## 用途
+
+用于把输入文本合成为语音。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="gpt-4o-mini-tts" required>
+  语音模型名称。
+</ParamField>
+
+<ParamField body="voice" type="string" default="alloy" required>
+  音色名称。
+</ParamField>
+
+<ParamField body="input" type="string" default="欢迎使用 AllTokens。" required>
+  待合成文本。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "alloy",
+  "input": "欢迎使用 AllTokens。"
+}
+```
+
+## 响应
+
+<ResponseField name="audio" type="binary">
+  合成后的音频内容。
+</ResponseField>

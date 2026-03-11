@@ -1,0 +1,40 @@
+---
+title: "紧凑响应"
+description: "紧凑模式 Responses 接口。"
+api: "POST /v1/responses/compact"
+---
+
+## 用途
+
+用于发送更紧凑的 Responses 请求与响应结构，适合希望减少冗余字段的场景。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="glm-4" required>
+  模型名称。
+</ParamField>
+
+<ParamField body="input" type="string" default="写一个产品标语。" required>
+  输入内容。
+</ParamField>
+
+## 示例请求体
+
+```json
+{
+  "model": "glm-4",
+  "input": "写一个产品标语。"
+}
+```
+
+## 响应
+
+<ResponseField name="output_text" type="string">
+  紧凑模式下的聚合文本输出。
+</ResponseField>

@@ -1,18 +1,82 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AllTokens 文档",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#7C3AED",
+    "light": "#A78BFA",
+    "dark": "#5B21B6"
   },
   "favicon": "/favicon.svg",
+  "api": {
+    "mdx": {
+      "server": "https://alltoken.aatest.online",
+      "auth": {
+        "method": "bearer"
+      }
+    },
+    "playground": {
+      "display": "interactive"
+    },
+    "examples": {
+      "languages": [
+        "curl",
+        "python",
+        "javascript"
+      ],
+      "defaults": "required"
+    }
+  },
   "navigation": {
     "languages": [
       {
+        "language": "cn",
+        "tabs": [
+          {
+            "tab": "开始使用",
+            "groups": [
+              {
+                "group": "开始使用",
+                "pages": [
+                  "cn/index",
+                  "cn/quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "接口参考",
+            "groups": [
+              {
+                "group": "接口文档",
+                "pages": [
+                  "cn/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "接口示例",
+                "pages": [
+                  "cn/api-reference/chat-completions",
+                  "cn/api-reference/responses",
+                  "cn/api-reference/responses-compact",
+                  "cn/api-reference/messages",
+                  "cn/api-reference/models",
+                  "cn/api-reference/embeddings",
+                  "cn/api-reference/rerank",
+                  "cn/api-reference/images-generations",
+                  "cn/api-reference/images-edits",
+                  "cn/api-reference/images-variations",
+                  "cn/api-reference/audio-speech",
+                  "cn/api-reference/audio-transcriptions",
+                  "cn/api-reference/audio-translations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "language": "en",
-        "default": true,
         "tabs": [
           {
             "tab": "Guides",
@@ -21,32 +85,7 @@
                 "group": "Getting started",
                 "pages": [
                   "en/index",
-                  "en/quickstart",
-                  "en/development"
-                ]
-              },
-              {
-                "group": "Customization",
-                "pages": [
-                  "en/essentials/settings",
-                  "en/essentials/navigation"
-                ]
-              },
-              {
-                "group": "Writing content",
-                "pages": [
-                  "en/essentials/markdown",
-                  "en/essentials/code",
-                  "en/essentials/images",
-                  "en/essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "AI tools",
-                "pages": [
-                  "en/ai-tools/cursor",
-                  "en/ai-tools/claude-code",
-                  "en/ai-tools/windsurf"
+                  "en/quickstart"
                 ]
               }
             ]
@@ -63,72 +102,19 @@
               {
                 "group": "Endpoint examples",
                 "pages": [
-                  "en/api-reference/endpoint/get",
-                  "en/api-reference/endpoint/create",
-                  "en/api-reference/endpoint/delete",
-                  "en/api-reference/endpoint/webhook"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "language": "cn",
-        "tabs": [
-          {
-            "tab": "指南",
-            "groups": [
-              {
-                "group": "快速开始",
-                "pages": [
-                  "cn/index",
-                  "cn/quickstart",
-                  "cn/development"
-                ]
-              },
-              {
-                "group": "站点定制",
-                "pages": [
-                  "cn/essentials/settings",
-                  "cn/essentials/navigation"
-                ]
-              },
-              {
-                "group": "内容编写",
-                "pages": [
-                  "cn/essentials/markdown",
-                  "cn/essentials/code",
-                  "cn/essentials/images",
-                  "cn/essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "AI 工具",
-                "pages": [
-                  "cn/ai-tools/cursor",
-                  "cn/ai-tools/claude-code",
-                  "cn/ai-tools/windsurf"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "API 参考",
-            "groups": [
-              {
-                "group": "API 文档",
-                "pages": [
-                  "cn/api-reference/introduction"
-                ]
-              },
-              {
-                "group": "接口示例",
-                "pages": [
-                  "cn/api-reference/endpoint/get",
-                  "cn/api-reference/endpoint/create",
-                  "cn/api-reference/endpoint/delete",
-                  "cn/api-reference/endpoint/webhook"
+                  "en/api-reference/chat-completions",
+                  "en/api-reference/responses",
+                  "en/api-reference/responses-compact",
+                  "en/api-reference/messages",
+                  "en/api-reference/models",
+                  "en/api-reference/embeddings",
+                  "en/api-reference/rerank",
+                  "en/api-reference/images-generations",
+                  "en/api-reference/images-edits",
+                  "en/api-reference/images-variations",
+                  "en/api-reference/audio-speech",
+                  "en/api-reference/audio-transcriptions",
+                  "en/api-reference/audio-translations"
                 ]
               }
             ]
@@ -139,38 +125,13 @@
         "language": "zh-Hant",
         "tabs": [
           {
-            "tab": "指南",
+            "tab": "開始使用",
             "groups": [
               {
-                "group": "快速開始",
+                "group": "開始使用",
                 "pages": [
                   "zh-Hant/index",
-                  "zh-Hant/quickstart",
-                  "zh-Hant/development"
-                ]
-              },
-              {
-                "group": "網站設定",
-                "pages": [
-                  "zh-Hant/essentials/settings",
-                  "zh-Hant/essentials/navigation"
-                ]
-              },
-              {
-                "group": "內容撰寫",
-                "pages": [
-                  "zh-Hant/essentials/markdown",
-                  "zh-Hant/essentials/code",
-                  "zh-Hant/essentials/images",
-                  "zh-Hant/essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "AI 工具",
-                "pages": [
-                  "zh-Hant/ai-tools/cursor",
-                  "zh-Hant/ai-tools/claude-code",
-                  "zh-Hant/ai-tools/windsurf"
+                  "zh-Hant/quickstart"
                 ]
               }
             ]
@@ -187,10 +148,19 @@
               {
                 "group": "端點範例",
                 "pages": [
-                  "zh-Hant/api-reference/endpoint/get",
-                  "zh-Hant/api-reference/endpoint/create",
-                  "zh-Hant/api-reference/endpoint/delete",
-                  "zh-Hant/api-reference/endpoint/webhook"
+                  "zh-Hant/api-reference/chat-completions",
+                  "zh-Hant/api-reference/responses",
+                  "zh-Hant/api-reference/responses-compact",
+                  "zh-Hant/api-reference/messages",
+                  "zh-Hant/api-reference/models",
+                  "zh-Hant/api-reference/embeddings",
+                  "zh-Hant/api-reference/rerank",
+                  "zh-Hant/api-reference/images-generations",
+                  "zh-Hant/api-reference/images-edits",
+                  "zh-Hant/api-reference/images-variations",
+                  "zh-Hant/api-reference/audio-speech",
+                  "zh-Hant/api-reference/audio-transcriptions",
+                  "zh-Hant/api-reference/audio-translations"
                 ]
               }
             ]
@@ -201,52 +171,40 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "官网",
+          "href": "https://alltoken.aatest.online/",
+          "icon": "globe"
         }
       ]
     }
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "/cn"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "产品站点",
+        "href": "https://alltoken.aatest.online/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "立即体验",
+      "href": "https://alltoken.aatest.online/"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/QuantumNous/new-api"
     }
   }
 }

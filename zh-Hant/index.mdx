@@ -1,97 +1,93 @@
 ---
-title: "簡介"
-description: "歡迎使用你的全新文件站點"
+title: "產品簡介"
+description: "了解 AllTokens 是什麼、解決什麼問題，以及適合哪些場景。"
 ---
 
-## 開始使用
+## 產品介紹
 
-只要幾分鐘，就能讓你的文件站點跑起來。
+AllTokens 是一個面向團隊與開發者的 AI 網關與 AI 資產管理平台。
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/zh-Hant/quickstart"
-  horizontal
->
-  依照三步快速開始指南完成初始化。
-</Card>
+你可以把它理解为一层统一的模型访问入口。它把多家模型供应商、不同的接口格式、不同的计费策略和不同的访问权限收敛到同一套控制台和同一组 API 中。
 
-## 依需求自訂
+对于开发者，AllTokens 让你用更稳定的方式接入模型。
 
-打造兼具美觀與易用性的文件站點。
+对于团队管理者，AllTokens 让你统一管理渠道、令牌、额度、模型权限和调用统计。
 
-<Columns cols={2}>
-  <Card
-    title="本機編輯"
-    icon="pen-to-square"
-    href="/zh-Hant/development"
-  >
-    在本機修改文件，並即時預覽效果。
+<CardGroup cols={2}>
+  <Card title="统一接入入口" icon="plug">
+    提供标准化接口访问地址，减少多供应商适配成本。
   </Card>
-  <Card
-    title="自訂站點"
-    icon="palette"
-    href="/zh-Hant/essentials/settings"
-  >
-    調整站點設計與色彩，讓它符合你的品牌。
+  <Card title="控制台管理" icon="grid-2">
+    在同一个后台管理令牌、渠道、模型、用户和额度。
   </Card>
-    <Card
-    title="設定導覽"
-    icon="map"
-    href="/zh-Hant/essentials/navigation"
-  >
-    安排文件結構，幫助使用者更快找到需要的內容。
+  <Card title="调用与计费可见" icon="chart-line">
+    提供统计、日志、额度和计费相关能力，方便运营和排查。
   </Card>
-  <Card
-    title="API 文件"
-    icon="terminal"
-    href="/zh-Hant/api-reference/introduction"
-  >
-    依據 OpenAPI 規格自動產生 API 文件。
+  <Card title="支持自托管" icon="server">
+    除在线使用外，也支持使用 Docker Compose 快速部署。
   </Card>
-</Columns>
+</CardGroup>
 
-## 建立高品質頁面
+## 产品功能
 
-這裡提供打造優秀文件站點所需的核心能力。
+### 统一模型网关
 
-<Columns cols={2}>
-  <Card
-    title="使用 MDX 撰寫"
-    icon="pen-fancy"
-    href="/zh-Hant/essentials/markdown"
-  >
-    使用 MDX 撰寫並排版文件頁面。
-  </Card>
-  <Card
-    title="程式碼範例"
-    icon="code"
-    href="/zh-Hant/essentials/code"
-  >
-    透過範例程式碼展示產品的使用方式。
-  </Card>
-  <Card
-    title="圖片"
-    icon="image"
-    href="/zh-Hant/essentials/images"
-  >
-    顯示圖片與其他媒體資源。
-  </Card>
-  <Card
-    title="可重用片段"
-    icon="recycle"
-    href="/zh-Hant/essentials/reusable-snippets"
-  >
-    一次撰寫，在整個文件站點重複使用。
-  </Card>
-</Columns>
+AllTokens 提供統一的 `/v1` 入口，並支援多類常見模型介面：
 
-## 需要靈感？
+- OpenAI 兼容接口，如 `/v1/chat/completions`、`/v1/models`、`/v1/embeddings`
+- OpenAI Responses 接口，如 `/v1/responses`
+- Claude Messages 接口，如 `/v1/messages`
+- Gemini 相关接口，如 `/v1beta/models/*`
+- 音频、图片、Rerank、Realtime 等扩展能力
 
-<Card
-  title="查看完整範例"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  瀏覽更多優秀文件站點案例。
-</Card>
+这意味着你可以在尽量少改客户端代码的前提下，切换模型和供应商。
+
+### 控制台与资产管理
+
+AllTokens 控制台覆蓋了這些核心能力：
+
+- 令牌管理：创建、复制、删除和限制 API 令牌
+- 渠道管理：配置上游 API 渠道、权重、分组和路由策略
+- 模型管理：管理模型展示、模型部署和模型可见性
+- 额度与充值：支持余额、充值、兑换码和多支付方式
+- 用户与权限：支持用户管理、分组、模型限制和访问控制
+- Playground：在控制台内直接调试请求
+
+### 安全与登录
+
+AllTokens 支持多种认证与登录方式，包括：
+
+- 用户名或邮箱登录
+- GitHub、Discord、Linux DO、Telegram、OIDC 等第三方登录
+- Passkey 与 2FA 等增强认证方式
+
+如果你需要面向团队或对外提供服务，这些能力可以减少自行搭建账号体系的成本。
+
+## 产品特性
+
+### 为什么使用 AllTokens
+
+<AccordionGroup>
+  <Accordion title="降低多模型接入复杂度" icon="shuffle">
+    当你同时使用 OpenAI、Claude、Gemini 或其他上游时，接口格式、鉴权方式和可用模型往往并不一致。AllTokens 将这些差异收敛到统一入口，减少多套 SDK 与多套配置带来的维护成本。
+  </Accordion>
+  <Accordion title="把调用、额度和权限放到同一处管理" icon="shield-keyhole">
+    平台把令牌、渠道、模型、充值、调用日志和权限控制放在同一个控制台里。你不需要在多个后台之间来回切换。
+  </Accordion>
+  <Accordion title="兼顾在线使用与自托管部署" icon="boxes-stacked">
+    如果你只想尽快开始调用，可以直接使用线上站点。如果你需要更强的环境控制，也可以参考源码使用 Docker Compose 自托管部署。
+  </Accordion>
+</AccordionGroup>
+
+## 适用场景
+
+- 为内部工具、AI 应用或代理服务提供统一模型出口
+- 为团队成员分发独立令牌，并限制可用模型与额度
+- 对不同上游做灰度、重试、分组和路由配置
+- 搭建一个可直接运营的 AI API 平台
+
+## 下一步
+
+如果你已經準備開始接入，請繼續閱讀 [快速上手](/zh-Hant/quickstart)。
+
+如果你想直接查看請求格式、鑑權方式與範例，請前往 [API reference](/zh-Hant/api-reference/introduction)。

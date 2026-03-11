@@ -1,0 +1,57 @@
+---
+title: "POST /v1/chat/completions"
+description: "OpenAI 兼容聊天补全接口。"
+---
+
+## 用途
+
+用于发送多轮对话请求，生成文本回复。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/chat/completions`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+- Content-Type: `application/json`
+
+## 最小请求体
+
+```json
+{
+  "model": "gpt-4o-mini",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你好，请用一句话介绍 AllTokens。"
+    }
+  ]
+}
+```
+
+## 请求示例
+
+```bash
+curl https://alltoken.aatest.online/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "你好，请用一句话介绍 AllTokens。"
+      }
+    ]
+  }'
+```
+
+## 常用字段
+
+- `model`: 目标模型名称
+- `messages`: 对话消息数组
+- `temperature`: 可选，控制随机性
+- `stream`: 可选，是否开启流式返回
+
+## 返回
+
+成功时返回 OpenAI 兼容响应，结果通常位于 `choices[0].message.content`。

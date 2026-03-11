@@ -1,97 +1,93 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "产品简介"
+description: "了解 AllTokens 是什么、解决什么问题，以及适合哪些场景。"
 ---
 
-## Setting up
+## 产品介绍
 
-Get your documentation site up and running in minutes.
+AllTokens 是一个面向团队和开发者的 AI 网关与 AI 资产管理平台。
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/en/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+你可以把它理解为一层统一的模型访问入口。它把多家模型供应商、不同的接口格式、不同的计费策略和不同的访问权限收敛到同一套控制台和同一组 API 中。
 
-## Make it yours
+对于开发者，AllTokens 让你用更稳定的方式接入模型。
 
-Design a docs site that looks great and empowers your users.
+对于团队管理者，AllTokens 让你统一管理渠道、令牌、额度、模型权限和调用统计。
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/en/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="统一接入入口" icon="plug">
+    提供标准化接口访问地址，减少多供应商适配成本。
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/en/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="控制台管理" icon="grid-2">
+    在同一个后台管理令牌、渠道、模型、用户和额度。
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/en/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="调用与计费可见" icon="chart-line">
+    提供统计、日志、额度和计费相关能力，方便运营和排查。
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/en/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="支持自托管" icon="server">
+    除在线使用外，也支持使用 Docker Compose 快速部署。
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## 产品功能
 
-Everything you need to create world-class documentation.
+### 统一模型网关
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/en/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/en/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/en/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/en/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+AllTokens 提供统一的 `/v1` 入口，并支持多类常见模型接口：
 
-## Need inspiration?
+- OpenAI 兼容接口，如 `/v1/chat/completions`、`/v1/models`、`/v1/embeddings`
+- OpenAI Responses 接口，如 `/v1/responses`
+- Claude Messages 接口，如 `/v1/messages`
+- Gemini 相关接口，如 `/v1beta/models/*`
+- 音频、图片、Rerank、Realtime 等扩展能力
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+这意味着你可以在尽量少改客户端代码的前提下，切换模型和供应商。
+
+### 控制台与资产管理
+
+AllTokens 控制台覆盖了这些核心管理能力：
+
+- 令牌管理：创建、复制、删除和限制 API 令牌
+- 渠道管理：配置上游 API 渠道、权重、分组和路由策略
+- 模型管理：管理模型展示、模型部署和模型可见性
+- 额度与充值：支持余额、充值、兑换码和多支付方式
+- 用户与权限：支持用户管理、分组、模型限制和访问控制
+- Playground：在控制台内直接调试请求
+
+### 安全与登录
+
+AllTokens 支持多种认证与登录方式，包括：
+
+- 用户名或邮箱登录
+- GitHub、Discord、Linux DO、Telegram、OIDC 等第三方登录
+- Passkey 与 2FA 等增强认证方式
+
+如果你需要面向团队或对外提供服务，这些能力可以减少自行搭建账号体系的成本。
+
+## 产品特性
+
+### 为什么使用 AllTokens
+
+<AccordionGroup>
+  <Accordion title="降低多模型接入复杂度" icon="shuffle">
+    当你同时使用 OpenAI、Claude、Gemini 或其他上游时，接口格式、鉴权方式和可用模型往往并不一致。AllTokens 将这些差异收敛到统一入口，减少多套 SDK 与多套配置带来的维护成本。
+  </Accordion>
+  <Accordion title="把调用、额度和权限放到同一处管理" icon="shield-keyhole">
+    平台把令牌、渠道、模型、充值、调用日志和权限控制放在同一个控制台里。你不需要在多个后台之间来回切换。
+  </Accordion>
+  <Accordion title="兼顾在线使用与自托管部署" icon="boxes-stacked">
+    如果你只想尽快开始调用，可以直接使用线上站点。如果你需要更强的环境控制，也可以参考源码使用 Docker Compose 自托管部署。
+  </Accordion>
+</AccordionGroup>
+
+## 适用场景
+
+- 为内部工具、AI 应用或代理服务提供统一模型出口
+- 为团队成员分发独立令牌，并限制可用模型与额度
+- 对不同上游做灰度、重试、分组和路由配置
+- 搭建一个可直接运营的 AI API 平台
+
+## 下一步
+
+如果你已经准备开始接入，请继续阅读 [快速上手](/quickstart)。
+
+如果你想直接查看请求格式、鉴权方式和示例，请前往 [API reference](/api-reference/introduction)。

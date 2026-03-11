@@ -1,0 +1,42 @@
+---
+title: "POST /v1/audio/speech"
+description: "文本转语音接口。"
+---
+
+## 用途
+
+用于把输入文本合成为语音。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/audio/speech`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+- Content-Type: `application/json`
+
+## 最小请求体
+
+```json
+{
+  "model": "gpt-4o-mini-tts",
+  "voice": "alloy",
+  "input": "欢迎使用 AllTokens。"
+}
+```
+
+## 请求示例
+
+```bash
+curl https://alltoken.aatest.online/v1/audio/speech \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4o-mini-tts",
+    "voice": "alloy",
+    "input": "欢迎使用 AllTokens。"
+  }'
+```
+
+## 返回
+
+成功时返回音频流或音频文件内容。

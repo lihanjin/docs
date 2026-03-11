@@ -1,0 +1,39 @@
+---
+title: "图片编辑"
+description: "图片编辑接口。"
+api: "POST /v1/images/edits"
+---
+
+## 用途
+
+用于基于已有图片执行编辑或重绘。
+
+## 请求头
+
+<ParamField header="Authorization" type="string" default="Bearer YOUR_API_KEY" required>
+  Bearer 鉴权请求头。
+</ParamField>
+
+## 请求体
+
+<ParamField body="model" type="string" default="gpt-image-1" required>
+  图片编辑模型名称。
+</ParamField>
+
+<ParamField body="prompt" type="string" default="保留主体，增强画面细节与光影" required>
+  编辑指令。
+</ParamField>
+
+<ParamField body="image" type="file" required>
+  原始图片文件。该接口通常以 `multipart/form-data` 上传。
+</ParamField>
+
+<ParamField body="mask" type="file">
+  可选，遮罩图片。
+</ParamField>
+
+## 响应
+
+<ResponseField name="data" type="object[]">
+  编辑后的图片结果。
+</ResponseField>

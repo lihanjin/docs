@@ -1,0 +1,22 @@
+---
+title: "POST /v1/images/variations"
+description: "图片变体接口。"
+---
+
+## 用途
+
+用于基于已有图片生成多个相似变体。
+
+## 请求
+
+- Method: `POST`
+- URL: `https://alltoken.aatest.online/v1/images/variations`
+- Auth: `Authorization: Bearer YOUR_API_KEY`
+
+## 说明
+
+该接口一般使用 `multipart/form-data` 上传原图，并指定输出数量、尺寸或风格参数。
+
+## 返回
+
+成功时返回变体图片列表。
