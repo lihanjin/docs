@@ -1,0 +1,80 @@
+---
+title: "快速開始"
+description: "幾分鐘內開始建立你的文件站點"
+---
+
+## 透過三步開始使用
+
+先在本機跑起文件站點，再完成第一次自訂。
+
+### 第一步：準備本機環境
+
+<AccordionGroup>
+  <Accordion icon="copy" title="把文件倉庫複製到本機">
+    在接入流程中，如果你還沒有倉庫，系統會為你的文件內容建立一個 GitHub 倉庫。你可以在 [dashboard](https://dashboard.mintlify.com) 找到它的連結。
+    
+    依照 GitHub 文件中的 [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 指引，把倉庫複製到本機後即可開始修改與預覽。
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="啟動預覽服務">
+    1. 安裝 Mintlify CLI：`npm i -g mint`
+    2. 進入文件目錄並執行：`mint dev`
+    3. 開啟 `http://localhost:3000` 查看即時文件預覽。
+    
+    <Tip>你編輯檔案後，預覽會自動更新。</Tip>
+  </Accordion>
+</AccordionGroup>
+
+### 第二步：發布你的變更
+
+<AccordionGroup>
+  <Accordion icon="github" title="安裝 GitHub App">
+    在 [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) 安裝 Mintlify GitHub App。
+    
+    安裝後，文件變更會自動部署到你的站點，不需要手動管理發布流程。
+</Accordion>
+<Accordion icon="palette" title="更新站點名稱與色彩">
+    作為第一次修改，你可以先調整站點名稱與品牌色。
+
+    1. 在編輯器中開啟 `docs.json`。
+    2. 把 `"name"` 欄位改成你的專案名稱。
+    3. 更新 `"colors"` 以符合你的品牌。
+    4. 儲存後，前往 `http://localhost:3000` 立即查看效果。
+
+    <Tip>可以先試著修改主色，效果會最明顯。</Tip>
+  </Accordion>
+</AccordionGroup>
+
+### 第三步：正式上線
+
+<Accordion icon="rocket" title="發布文件">
+  1. 提交並推送你的變更。
+  2. 稍等片刻，文件站點就會更新上線。
+</Accordion>
+
+## 下一步
+
+文件站點已經跑起來了，接下來可以繼續了解這些核心能力：
+
+<CardGroup cols={2}>
+
+<Card title="撰寫內容" icon="pen-to-square" href="/zh-Hant/essentials/markdown">
+  學習 MDX 語法，開始撰寫你的文件。
+</Card>
+
+<Card title="自訂樣式" icon="palette" href="/zh-Hant/essentials/settings">
+  讓你的文件站點更符合品牌風格。
+</Card>
+
+<Card title="加入程式碼範例" icon="square-code" href="/zh-Hant/essentials/code">
+  插入帶有語法高亮的程式碼區塊。
+</Card>
+
+<Card title="API 文件" icon="code" href="/zh-Hant/api-reference/introduction">
+  從 OpenAPI 規格自動產生 API 文件。
+</Card>
+
+</CardGroup>
+
+<Note>
+  **需要幫助？** 查看 [完整文件](https://mintlify.com/docs) 或加入 [社群](https://mintlify.com/community)。
+</Note>
