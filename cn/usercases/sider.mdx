@@ -1,0 +1,41 @@
+---
+title: "在 Sider 中使用"
+description: "将 Passto AllTokens 接入 Sider，通过兼容接口使用统一模型网关。"
+---
+
+## 概述
+
+Sider 支持接入外部模型服务。
+
+配置 Passto AllTokens 后，你可以在 Sider 中通过统一网关访问已开通的模型。
+
+## 配置步骤
+
+### 步骤 1：打开设置
+
+进入 Sider 的模型或 API 设置页面。
+
+### 步骤 2：选择自定义兼容接口
+
+优先选择 OpenAI 兼容、自定义模型服务或类似入口。
+
+### 步骤 3：填写参数
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：例如 `glm-4`
+
+### 步骤 4：验证连接
+
+保存后发起一次测试提问，确认能够正常得到回复。
+
+## 常见问题
+
+### 配置保存后无法请求
+
+请确认网络可访问 Passto AllTokens 域名，并检查 Base URL 末尾是否为 `/v1`。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

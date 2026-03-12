@@ -1,0 +1,61 @@
+---
+title: "在 Dify 中使用"
+description: "将 Passto AllTokens 接入 Dify，作为模型供应方统一管理模型调用。"
+---
+
+## 概述
+
+Dify 支持通过兼容接口接入外部模型供应方。
+
+使用 Passto AllTokens 作为统一网关后，你可以在 Dify 中集中管理模型访问、额度和路由策略。
+
+## 前置条件
+
+- 已部署或可访问 Dify
+- 已拥有 Passto AllTokens API Key
+- 已确认需要接入的模型名称
+
+## 配置步骤
+
+### 步骤 1：进入模型供应方配置
+
+在 Dify 后台进入模型供应方或模型配置页面。
+
+### 步骤 2：选择兼容接入方式
+
+选择 OpenAI 兼容或自定义兼容接口方式接入。
+
+### 步骤 3：填写连接信息
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：例如 `glm-4`
+
+### 步骤 4：验证模型
+
+完成配置后，在 Dify 中新建一个简单应用或测试会话，确认模型能够正常返回结果。
+
+## 使用建议
+
+- 建议先在 Passto AllTokens 中为 Dify 创建独立令牌
+- 如需不同应用使用不同模型，可分别配置多个模型项
+- 如果需要稳定切换上游，可在 Passto AllTokens 中完成路由层配置
+
+## 常见问题
+
+### 模型测试失败
+
+请先确认 Base URL 使用的是：
+
+```txt
+https://alltoken.aatest.online/v1
+```
+
+### 返回模型不存在
+
+请检查模型名称与令牌权限是否匹配。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

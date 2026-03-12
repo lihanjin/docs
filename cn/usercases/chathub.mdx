@@ -1,0 +1,57 @@
+---
+title: "在 ChatHub 中使用"
+description: "将 Passto AllTokens 接入 ChatHub，通过 OpenAI 兼容方式调用模型。"
+---
+
+## 概述
+
+ChatHub 是一个聚合多模型的聊天工具。
+
+接入 Passto AllTokens 后，你可以在 ChatHub 中统一使用 Passto AllTokens 提供的模型与网关能力。
+
+## 前置条件
+
+- 已安装 ChatHub
+- 已准备好 Passto AllTokens API Key
+- 可以访问 `https://alltoken.aatest.online`
+
+## 配置步骤
+
+### 步骤 1：打开模型提供方配置
+
+在 ChatHub 中进入模型或提供方设置页面，选择支持自定义接口的提供方。
+
+如果你看到 `OpenAI Compatible`、`OpenAI API` 或 `自定义 OpenAI` 一类选项，优先选择它。
+
+### 步骤 2：填写连接信息
+
+填写以下信息：
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：例如 `glm-4`、`claude-3-5-sonnet` 或其他你已开通的模型
+
+### 步骤 3：保存并测试
+
+保存配置后，新建一段对话并发送一条简单消息，确认可以正常返回内容。
+
+## 使用建议
+
+- 优先选择 OpenAI 兼容方式接入
+- 先用一个基础模型验证链路，再切换到目标模型
+- 如需多人共用，建议为 ChatHub 单独创建一个 API Key
+
+## 常见问题
+
+### 提示认证失败
+
+请确认 API Key 使用的是 Passto AllTokens 控制台中生成的有效令牌。
+
+### 提示模型不存在
+
+请检查模型名称是否填写正确，并确认当前令牌具备该模型访问权限。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

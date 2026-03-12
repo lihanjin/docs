@@ -1,0 +1,51 @@
+---
+title: "在 Chatbox 中使用"
+description: "将 Passto AllTokens 接入 Chatbox，通过统一网关调用模型。"
+---
+
+## 概述
+
+Chatbox 支持配置自定义模型提供方。
+
+通过接入 Passto AllTokens，你可以在 Chatbox 中使用统一的 API Key、模型访问权限和网关地址。
+
+## 前置条件
+
+- 已安装 Chatbox
+- 已拥有 Passto AllTokens API Key
+- 已知需要使用的模型名称
+
+## 配置步骤
+
+### 步骤 1：进入模型设置
+
+打开 Chatbox 设置页，进入模型提供方或 API 配置区域。
+
+### 步骤 2：选择兼容类型
+
+优先选择支持 OpenAI 兼容协议的接入方式。
+
+### 步骤 3：填写配置信息
+
+- API Key：`YOUR_API_KEY`
+- API Host / Base URL：`https://alltoken.aatest.online/v1`
+- Model：例如 `glm-4`
+
+### 步骤 4：开始使用
+
+保存后返回对话页，发送一条测试消息验证配置是否生效。
+
+## 常见问题
+
+### 返回 401 或鉴权错误
+
+请确认 API Key 是否填写正确，以及前后是否包含多余空格。
+
+### 无法列出模型
+
+部分客户端不会自动拉取模型列表，这时可以直接手动填写模型名称。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

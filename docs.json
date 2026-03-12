@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AllTokens 文档",
+  "name": "Passto AllTokens",
   "colors": {
     "primary": "#7C3AED",
     "light": "#A78BFA",
@@ -40,6 +40,24 @@
                 "pages": [
                   "cn/index",
                   "cn/quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "场景示例",
+            "groups": [
+              {
+                "group": "场景示例",
+                "pages": [
+                  "cn/usercases/claude-code",
+                  "cn/usercases/chathub",
+                  "cn/usercases/chatbox",
+                  "cn/usercases/dify",
+                  "cn/usercases/sider",
+                  "cn/usercases/mindsearch",
+                  "cn/usercases/db-gpt",
+                  "cn/usercases/deep-research-web-ui"
                 ]
               }
             ]
@@ -91,6 +109,24 @@
             ]
           },
           {
+            "tab": "Use cases",
+            "groups": [
+              {
+                "group": "Use cases",
+                "pages": [
+                  "en/usercases/claude-code",
+                  "en/usercases/chathub",
+                  "en/usercases/chatbox",
+                  "en/usercases/dify",
+                  "en/usercases/sider",
+                  "en/usercases/mindsearch",
+                  "en/usercases/db-gpt",
+                  "en/usercases/deep-research-web-ui"
+                ]
+              }
+            ]
+          },
+          {
             "tab": "API reference",
             "groups": [
               {
@@ -132,6 +168,24 @@
                 "pages": [
                   "zh-Hant/index",
                   "zh-Hant/quickstart"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "場景示例",
+            "groups": [
+              {
+                "group": "場景示例",
+                "pages": [
+                  "zh-Hant/usercases/claude-code",
+                  "zh-Hant/usercases/chathub",
+                  "zh-Hant/usercases/chatbox",
+                  "zh-Hant/usercases/dify",
+                  "zh-Hant/usercases/sider",
+                  "zh-Hant/usercases/mindsearch",
+                  "zh-Hant/usercases/db-gpt",
+                  "zh-Hant/usercases/deep-research-web-ui"
                 ]
               }
             ]
@@ -179,8 +233,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "",
+    "dark": "",
     "href": "/cn"
   },
   "navbar": {
