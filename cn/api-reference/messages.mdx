@@ -24,8 +24,12 @@ api: "POST /v1/messages"
   最大输出 token 数。
 </ParamField>
 
-<ParamField body="messages" type="object[]" required>
+<ParamField body="messages" type="object[]" default='[{"role":"user","content":"请介绍一下 AllTokens。"}]' required>
   Claude Messages 消息数组。
+</ParamField>
+
+<ParamField body="temperature" type="number" default="0.7">
+  可选，控制生成随机性。
 </ParamField>
 
 ## 示例请求体

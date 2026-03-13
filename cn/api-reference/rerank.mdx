@@ -24,8 +24,12 @@ api: "POST /v1/rerank"
   查询文本。
 </ParamField>
 
-<ParamField body="documents" type="string[]" required>
+<ParamField body="documents" type="string[]" default='["AllTokens 提供统一 API 入口。","今天上海天气晴。"]' required>
   候选文本数组。
+</ParamField>
+
+<ParamField body="top_n" type="integer" default="3">
+  可选，返回前 N 条重排结果。
 </ParamField>
 
 ## 示例请求体

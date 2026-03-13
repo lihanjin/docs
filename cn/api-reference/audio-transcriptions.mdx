@@ -28,6 +28,10 @@ api: "POST /v1/audio/transcriptions"
   可选，音频语言代码。
 </ParamField>
 
+<ParamField body="response_format" type="string" default="json">
+  可选，返回结果格式。
+</ParamField>
+
 ## 响应
 
 <ResponseField name="text" type="string">

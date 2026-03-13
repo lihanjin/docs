@@ -32,6 +32,14 @@ api: "POST /v1/images/edits"
   可选，遮罩图片。
 </ParamField>
 
+<ParamField body="size" type="string" default="1024x1024">
+  可选，输出图片尺寸。
+</ParamField>
+
+<ParamField body="n" type="integer" default="1">
+  可选，生成图片张数。
+</ParamField>
+
 ## 响应
 
 <ResponseField name="data" type="object[]">

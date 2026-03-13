@@ -28,6 +28,10 @@ api: "POST /v1/responses"
   可选，是否流式返回。
 </ParamField>
 
+<ParamField body="max_output_tokens" type="integer" default="512">
+  可选，限制本次生成的最大输出 token 数。
+</ParamField>
+
 ## 示例请求体
 
 ```json

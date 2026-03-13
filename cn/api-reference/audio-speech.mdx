@@ -28,6 +28,14 @@ api: "POST /v1/audio/speech"
   待合成文本。
 </ParamField>
 
+<ParamField body="response_format" type="string" default="mp3">
+  可选，输出音频格式。
+</ParamField>
+
+<ParamField body="speed" type="number" default="1.0">
+  可选，语速倍率。
+</ParamField>
+
 ## 示例请求体
 
 ```json

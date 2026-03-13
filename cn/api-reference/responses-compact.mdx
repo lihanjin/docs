@@ -24,6 +24,10 @@ api: "POST /v1/responses/compact"
   输入内容。
 </ParamField>
 
+<ParamField body="max_output_tokens" type="integer" default="256">
+  可选，限制紧凑响应的输出长度。
+</ParamField>
+
 ## 示例请求体
 
 ```json
