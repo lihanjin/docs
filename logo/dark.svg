@@ -1,35 +1,39 @@
-<svg width="280" height="56" viewBox="0 0 280 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="dark-bg" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg-dark" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
       <stop stop-color="#060C1A"/>
       <stop offset="1" stop-color="#0B1A2E"/>
     </linearGradient>
-    <linearGradient id="dark-stroke" x1="22" y1="8" x2="22" y2="33" gradientUnits="userSpaceOnUse">
+    <linearGradient id="stroke-dark" x1="128" y1="70" x2="128" y2="192" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFFFF" stop-opacity="0.96"/>
       <stop offset="1" stop-color="#5EF0C6"/>
     </linearGradient>
-    <radialGradient id="dark-apexGlow" cx="22" cy="10" r="18" gradientUnits="userSpaceOnUse">
+    <radialGradient id="apexGlow-dark" cx="128" cy="80" r="96" gradientUnits="userSpaceOnUse">
       <stop stop-color="#5EF0C6" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#5EF0C6" stop-opacity="0"/>
     </radialGradient>
+    <filter id="dotGlow-dark" x="-120%" y="-120%" width="340%" height="340%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strokeGlow-dark" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <g transform="translate(4 6)">
-    <rect width="44" height="44" rx="10" fill="url(#dark-bg)"/>
-    <rect width="44" height="44" rx="10" fill="url(#dark-apexGlow)"/>
-    <path d="M13 33L22 8" stroke="url(#dark-stroke)" stroke-width="3.6" stroke-linecap="round"/>
-    <path d="M22 8L31 33" stroke="url(#dark-stroke)" stroke-width="3.6" stroke-linecap="round"/>
-    <path d="M16.5 24.5H27.5" stroke="url(#dark-stroke)" stroke-width="2.8" stroke-linecap="round"/>
-    <circle cx="22" cy="8" r="2.6" fill="#5EF0C6"/>
-    <circle cx="13" cy="33" r="1.6" fill="#5EF0C6" fill-opacity="0.58"/>
-    <circle cx="31" cy="33" r="1.6" fill="#5EF0C6" fill-opacity="0.58"/>
-  </g>
-  <text
-    x="60"
-    y="36"
-    fill="#FFFFFF"
-    font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-size="29"
-    font-weight="700"
-    letter-spacing="-0.6"
-  >AllToken</text>
+  <rect width="256" height="256" rx="52" fill="url(#bg-dark)"/>
+  <rect x="0.5" y="0.5" width="255" height="255" rx="51.5" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
+  <rect width="256" height="256" rx="52" fill="url(#apexGlow-dark)"/>
+  <path d="M76 192L128 70" stroke="url(#stroke-dark)" stroke-width="17" stroke-linecap="round" filter="url(#strokeGlow-dark)"/>
+  <path d="M128 70L180 192" stroke="url(#stroke-dark)" stroke-width="17" stroke-linecap="round" filter="url(#strokeGlow-dark)"/>
+  <path d="M95 148H161" stroke="url(#stroke-dark)" stroke-width="13" stroke-linecap="round" filter="url(#strokeGlow-dark)"/>
+  <circle cx="128" cy="70" r="10" fill="#5EF0C6" filter="url(#dotGlow-dark)"/>
+  <circle cx="76" cy="192" r="6.5" fill="#5EF0C6" fill-opacity="0.58"/>
+  <circle cx="180" cy="192" r="6.5" fill="#5EF0C6" fill-opacity="0.58"/>
 </svg>

@@ -9,6 +9,18 @@ DB-GPT 支持配置外部模型服务。
 
 通过 AllTokens 作为统一网关，你可以在 DB-GPT 中集中控制模型访问、额度和路由。
 
+## 适用场景
+
+- 你在 DB-GPT 中接入统一的大模型网关
+- 你希望数据库分析、问答和知识检索使用同一套模型入口
+- 你希望按环境或业务拆分 API Key
+
+## 前置条件
+
+- 已部署或可访问 DB-GPT
+- 已拥有 AllTokens API Key
+- 已确定要接入的模型名称
+
 ## 配置步骤
 
 ### 步骤 1：进入模型配置页
@@ -23,7 +35,7 @@ DB-GPT 支持配置外部模型服务。
 
 - API Key：`YOUR_API_KEY`
 - Base URL：`https://alltoken.aatest.online/v1`
-- Model：例如 `glm-4`
+- Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet`
 
 ### 步骤 4：执行测试
 
@@ -33,6 +45,17 @@ DB-GPT 支持配置外部模型服务。
 
 - 建议为 DB-GPT 使用独立 API Key
 - 如需绑定特定模型能力，可在 AllTokens 侧限制模型范围
+- 如果 DB-GPT 中同时使用聊天和 Embedding 能力，建议分别配置对应模型
+
+## 常见问题
+
+### 配置项保存后测试失败
+
+请先确认 Base URL 是否填写为 `https://alltoken.aatest.online/v1`，并检查模型名称是否与当前令牌权限匹配。
+
+### 任务启动后中途失败
+
+这通常与模型能力不匹配、额度不足或上下文过长有关。建议先用基础问题验证，再切换到正式任务。
 
 ## 下一步
 

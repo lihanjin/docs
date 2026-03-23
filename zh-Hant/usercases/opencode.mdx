@@ -1,0 +1,54 @@
+---
+title: "在 OpenCode 中使用"
+description: "將 AllTokens 接入 OpenCode，透過自訂 OpenAI 相容提供方使用統一模型網關。"
+---
+
+## 概述
+
+OpenCode 支援透過設定檔接入自訂模型提供方。
+
+接入 AllTokens 後，你可以用統一的 API Key、基礎地址與模型名稱完成編碼問答、重構與命令列協作。
+
+## 快速設定
+
+先設定 API Key：
+
+```bash
+export ALLTOKEN_API_KEY="YOUR_API_KEY"
+```
+
+建立或更新 `~/.config/opencode/opencode.json`：
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "alltoken": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "AllToken",
+      "options": {
+        "baseURL": "https://alltoken.aatest.online/v1",
+        "apiKey": "{env:ALLTOKEN_API_KEY}"
+      },
+      "models": {
+        "glm-4": {
+          "name": "GLM-4"
+        }
+      }
+    }
+  },
+  "model": "alltoken/glm-4"
+}
+```
+
+接著啟動 OpenCode：
+
+```bash
+opencode
+```
+
+## 說明
+
+- 基礎地址請使用 `https://alltoken.aatest.online/v1`
+- 如需切換模型，可把 `model` 改成 `alltoken/deepseek-v3` 等值
+- 如果你想按專案隔離設定，也可以把 `opencode.json` 放在專案根目錄

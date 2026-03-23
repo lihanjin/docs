@@ -1,0 +1,54 @@
+---
+title: "Use in OpenCode"
+description: "Connect AllTokens to OpenCode through a custom OpenAI-compatible provider."
+---
+
+## Overview
+
+OpenCode lets you configure custom model providers through its config file.
+
+With AllTokens, you can route OpenCode requests through a single gateway and manage API keys, models, and quotas in one place.
+
+## Quick setup
+
+Set your API key:
+
+```bash
+export ALLTOKEN_API_KEY="YOUR_API_KEY"
+```
+
+Create or update `~/.config/opencode/opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "alltoken": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "AllToken",
+      "options": {
+        "baseURL": "https://alltoken.aatest.online/v1",
+        "apiKey": "{env:ALLTOKEN_API_KEY}"
+      },
+      "models": {
+        "glm-4": {
+          "name": "GLM-4"
+        }
+      }
+    }
+  },
+  "model": "alltoken/glm-4"
+}
+```
+
+Then start OpenCode:
+
+```bash
+opencode
+```
+
+## Notes
+
+- Use `https://alltoken.aatest.online/v1` as the base URL.
+- You can switch models by updating `model` to values like `alltoken/deepseek-v3`.
+- You can also put `opencode.json` in a project root if you want per-project config.

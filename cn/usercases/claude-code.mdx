@@ -5,9 +5,15 @@ description: "将 AllTokens 接入 Claude Code，直接通过统一网关调用 
 
 ## 概述
 
-Claude Code 是一个面向开发者的命令行 AI 助手。
+Claude Code 是一个面向开发者的命令行 AI 助手，适合代码生成、调试、重构和代码库问答。
 
-通过接入 AllTokens，你可以把 Claude Code 的请求统一走 AllTokens 网关，便于集中管理 API Key、模型访问、额度和路由策略。
+将 Claude Code 接入 AllTokens 后，你可以把请求统一走同一套网关地址，并集中管理 API Key、模型权限、额度和路由策略。
+
+## 适用场景
+
+- 你希望把 Claude Code 的调用统一纳入团队的模型网关
+- 你希望在不改日常使用习惯的情况下切换模型或管理额度
+- 你希望为开发环境单独创建 API Key，便于审计和隔离
 
 ## 前置条件
 
@@ -35,7 +41,7 @@ export ANTHROPIC_BASE_URL="https://alltoken.aatest.online"
 
 ### 步骤 3：选择模型
 
-如果你希望默认使用某个 Claude 模型，可以继续设置：
+如果你希望默认使用某个 Claude 模型，可以继续设置。常见示例：
 
 ```bash
 export ANTHROPIC_MODEL="claude-3-5-sonnet"
@@ -65,17 +71,24 @@ export ANTHROPIC_MODEL="claude-3-5-sonnet"
 source ~/.zshrc
 ```
 
+## 验证配置
+
+完成配置后，可以直接在 Claude Code 中发起一个简单请求，例如让它解释当前目录中的一个文件，确认能够正常返回结果。
+
+如果你切换了模型，也建议先发起一条短请求，确认当前令牌具备目标模型的访问权限。
+
 ## 使用建议
 
-- 先在 AllTokens 控制台中确认你的令牌已启用 Claude 相关模型
-- 如需切换模型，只修改 `ANTHROPIC_MODEL` 即可
+- 先在 AllTokens 控制台中确认令牌已启用 Claude 相关模型
+- 如需切换模型，只需要修改 `ANTHROPIC_MODEL`
 - 如果你同时管理多个环境，建议为 Claude Code 单独创建一个 API Key
+- 如果你和团队共用网关，建议区分开发、测试和生产环境的令牌
 
 ## 常见问题
 
 ### 提示认证失败
 
-请确认 `ANTHROPIC_API_KEY` 使用的是 AllTokens 控制台里生成的有效令牌。
+请确认 `ANTHROPIC_API_KEY` 使用的是 AllTokens 控制台里生成的有效令牌，并且值本身没有多余空格或引号问题。
 
 ### 提示找不到模型
 
@@ -88,6 +101,10 @@ source ~/.zshrc
 ```txt
 https://alltoken.aatest.online
 ```
+
+### 修改配置后没有生效
+
+请确认已经重新加载 shell 配置，或者重新打开了终端会话。
 
 ## 下一步
 

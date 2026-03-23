@@ -7,7 +7,13 @@ description: "将 AllTokens 接入 ChatHub，通过 OpenAI 兼容方式调用模
 
 ChatHub 是一个聚合多模型的聊天工具。
 
-接入 AllTokens 后，你可以在 ChatHub 中统一使用 AllTokens 提供的模型与网关能力。
+接入 AllTokens 后，你可以在 ChatHub 中统一使用 AllTokens 提供的模型与网关能力，并复用同一套 API Key 管理方式。
+
+## 适用场景
+
+- 你希望在一个客户端中集中使用多个模型
+- 你希望把 ChatHub 的模型调用统一收敛到 AllTokens
+- 你希望在不改使用习惯的情况下切换模型或控制额度
 
 ## 前置条件
 
@@ -29,11 +35,15 @@ ChatHub 是一个聚合多模型的聊天工具。
 
 - API Key：`YOUR_API_KEY`
 - Base URL：`https://alltoken.aatest.online/v1`
-- Model：例如 `glm-4`、`claude-3-5-sonnet` 或其他你已开通的模型
+- Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet` 或其他你已开通的模型
 
 ### 步骤 3：保存并测试
 
 保存配置后，新建一段对话并发送一条简单消息，确认可以正常返回内容。
+
+## 推荐验证方式
+
+建议先使用一个短问题进行测试，例如“请用一句话介绍 AllTokens”。如果能够正常返回，再切换到你的目标模型或正式对话。
 
 ## 使用建议
 
@@ -50,6 +60,10 @@ ChatHub 是一个聚合多模型的聊天工具。
 ### 提示模型不存在
 
 请检查模型名称是否填写正确，并确认当前令牌具备该模型访问权限。
+
+### 保存后仍然调用旧配置
+
+部分版本的 ChatHub 会缓存提供方配置。修改后如果没有生效，建议重新打开会话，或者重启 ChatHub 后再试一次。
 
 ## 下一步
 

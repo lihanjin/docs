@@ -1,0 +1,109 @@
+---
+title: "在 OpenClaw 中使用"
+description: "将 AllTokens 作为 OpenClaw 的自定义 OpenAI 兼容提供方接入。"
+---
+
+## 概述
+
+OpenClaw 支持通过向导或配置文件接入自定义模型提供方。
+
+将 AllTokens 配置为 OpenClaw 的 OpenAI 兼容提供方后，你可以通过统一网关管理模型访问、API Key 和路由策略。
+
+## 前置条件
+
+- 已安装并可以正常使用 OpenClaw
+- 已拥有可用的 AllTokens API Key
+- 已确认需要使用的模型名称
+
+## 方法一：使用向导配置
+
+OpenClaw 提供了自定义提供方向导，适合第一次接入时使用。
+
+```bash
+openclaw onboard \
+  --auth-choice custom-api-key \
+  --custom-provider-id alltoken \
+  --custom-compatibility openai \
+  --custom-base-url "https://alltoken.aatest.online/v1" \
+  --custom-model-id "glm-4" \
+  --custom-api-key "$ALLTOKEN_API_KEY"
+```
+
+执行前，先设置环境变量：
+
+```bash
+export ALLTOKEN_API_KEY="YOUR_API_KEY"
+```
+
+## 方法二：手动写入配置
+
+如果你希望手动维护 OpenClaw 的模型提供方配置，可以在配置文件中加入自定义 provider。
+
+```json
+{
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "alltoken": {
+        "baseUrl": "https://alltoken.aatest.online/v1",
+        "apiKey": "ALLTOKEN_API_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-4",
+            "name": "GLM-4",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "alltoken/glm-4"
+      }
+    }
+  }
+}
+```
+
+如果你要使用其他模型，把 `glm-4` 替换成当前已开通的模型名即可。
+
+## 推荐验证方式
+
+完成配置后，先发起一个简单任务，确认 OpenClaw 可以正常调用模型并返回结果。
+
+## 使用建议
+
+- 第一次接入优先使用向导，成功后再决定是否改成手动配置
+- 如果你需要不同环境共存，建议为不同环境使用不同的 provider id 或 API Key
+- 如果你更换模型，只需要更新默认模型或 provider 里的模型列表
+
+## 常见问题
+
+### 向导执行后模型不可用
+
+请确认 `--custom-base-url` 使用的是 `https://alltoken.aatest.online/v1`，并确认模型名已在 AllTokens 中开通。
+
+### 返回认证失败
+
+请确认 `ALLTOKEN_API_KEY` 为有效令牌，并且当前终端中已经生效。
+
+### 手动配置后启动报错
+
+请检查配置文件 JSON 语法是否正确，并确认 provider id、模型 id 和默认模型引用一致。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

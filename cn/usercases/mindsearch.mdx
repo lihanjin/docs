@@ -9,21 +9,51 @@ MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接
 
 将 AllTokens 作为统一模型入口后，你可以在 MindSearch 中复用同一套模型与鉴权配置。
 
-## 配置思路
+## 适用场景
 
-如果你的 MindSearch 支持 OpenAI 兼容方式接入，通常只需要配置：
+- 你在自部署 MindSearch，需要替换默认模型服务
+- 你希望统一管理搜索类应用的模型调用
+- 你希望在不同环境里复用同一套接入方式
+
+## 前置条件
+
+- 已部署或可访问 MindSearch
+- 已拥有 AllTokens API Key
+- 已确认你的 MindSearch 版本支持 OpenAI 兼容接入，或支持自定义模型服务
+
+## 推荐配置
+
+如果你的 MindSearch 支持 OpenAI 兼容方式接入，通常只需要以下三项：
 
 - API Key：`YOUR_API_KEY`
 - Base URL：`https://alltoken.aatest.online/v1`
 - Model：例如 `glm-4`
 
-## 推荐步骤
+如果你使用的是自部署版本，常见做法是在配置文件或环境变量中填写这些值。
+
+## 示例环境变量
+
+```bash
+export OPENAI_API_KEY="YOUR_API_KEY"
+export OPENAI_API_BASE="https://alltoken.aatest.online/v1"
+export OPENAI_MODEL="glm-4"
+```
+
+如果你的版本使用的变量名不同，只需要把相同的值填到对应字段即可。
+
+## 配置步骤
 
 1. 打开 MindSearch 的模型配置或环境变量配置位置。
 2. 将基础地址设置为 `https://alltoken.aatest.online/v1`。
 3. 填入 AllTokens API Key。
 4. 指定一个已开通的模型名称。
 5. 执行一次搜索或总结任务验证返回结果。
+
+## 使用建议
+
+- 如果你需要更稳定的长任务执行，先从一个基础模型测试链路
+- 如果应用需要联网搜索能力，请同时确认搜索服务配置已完成
+- 生产环境建议为 MindSearch 单独使用一个 API Key
 
 ## 常见问题
 
@@ -34,6 +64,10 @@ MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接
 ### 返回 404
 
 请检查配置的路径是否是标准 OpenAI 兼容入口，而不是站点首页地址。
+
+### 搜索可以执行，但总结阶段失败
+
+这通常说明搜索服务已正常，但模型服务配置仍有问题。请重新确认 API Key、Base URL 和模型名称。
 
 ## 下一步
 

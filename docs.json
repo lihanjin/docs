@@ -51,6 +51,8 @@
                 "group": "场景示例",
                 "pages": [
                   "cn/usercases/claude-code",
+                  "cn/usercases/opencode",
+                  "cn/usercases/openclaw",
                   "cn/usercases/chathub",
                   "cn/usercases/chatbox",
                   "cn/usercases/dify",
@@ -115,6 +117,8 @@
                 "group": "Use cases",
                 "pages": [
                   "en/usercases/claude-code",
+                  "en/usercases/opencode",
+                  "en/usercases/openclaw",
                   "en/usercases/chathub",
                   "en/usercases/chatbox",
                   "en/usercases/dify",
@@ -179,6 +183,8 @@
                 "group": "場景示例",
                 "pages": [
                   "zh-Hant/usercases/claude-code",
+                  "zh-Hant/usercases/opencode",
+                  "zh-Hant/usercases/openclaw",
                   "zh-Hant/usercases/chathub",
                   "zh-Hant/usercases/chatbox",
                   "zh-Hant/usercases/dify",
