@@ -1,0 +1,85 @@
+---
+title: "在 Bob 翻译中使用"
+description: "将 AllTokens 接入 Bob，通过 OpenAI 兼容服务进行翻译和 OCR。"
+---
+
+## 概述
+
+Bob 是一款 macOS 平台的翻译和 OCR 工具。你可以在任意应用中划词翻译、截图翻译和取词识别。
+
+接入 AllTokens 后，你可以把翻译请求统一走同一套网关，并复用现有的 API Key 管理方式。
+
+## 适用场景
+
+- 你希望在 Mac 上快速翻译选中的文本
+- 你希望把 Bob 的翻译请求统一收敛到 AllTokens
+- 你希望用同一套 API Key 管理多个客户端
+
+## 前置条件
+
+- 已安装 Bob
+- 已准备好 AllTokens API Key
+- 可以访问 `https://alltoken.aatest.online`
+
+## 配置步骤
+
+### 步骤 1：打开服务设置
+
+在 Bob 中打开偏好设置，进入 **翻译** > **服务**。
+
+### 步骤 2：新增 OpenAI 服务
+
+在文本翻译服务列表中点击 `+`，然后选择 **OpenAI**。
+
+### 步骤 3：填写连接信息
+
+填写以下信息：
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：选择你已开通的模型，例如 `glm-4`、`deepseek-v3` 或 `claude-3-5-sonnet`
+
+### 步骤 4：配置自定义 Prompt
+
+如果你使用 Bob 的自定义 Prompt 能力，可以这样写：
+
+- 角色设定：`你是一个翻译器`
+- 用户指令：
+
+```txt
+把下面这段话翻译成 $query.detectToLang：
+$query.text
+```
+
+### 步骤 5：保存并测试
+
+保存配置后，选中一段文本并触发 Bob 翻译，确认可以正常返回结果。
+
+## 推荐验证方式
+
+建议先翻译一小段短文本，例如“请用一句话介绍 AllTokens”。如果返回正常，再切换到你的目标模型或正式内容。
+
+## 使用建议
+
+- 优先选择你已经验证过的基础模型
+- 如果你和团队共用网关，建议为 Bob 单独创建一个 API Key
+- 如果提示找不到模型，请确认当前令牌具备该模型权限
+
+## 常见问题
+
+### 提示认证失败
+
+请确认 API Key 使用的是 AllTokens 控制台中生成的有效令牌。
+
+### 提示模型不存在
+
+请检查模型名称是否填写正确，并确认当前令牌具备该模型访问权限。
+
+### 翻译结果没有变化
+
+请确认 Bob 的服务已切换到你刚刚新增的 OpenAI 配置，并且 Base URL 已指向 `https://alltoken.aatest.online/v1`。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

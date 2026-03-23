@@ -53,6 +53,7 @@
                   "cn/usercases/claude-code",
                   "cn/usercases/opencode",
                   "cn/usercases/openclaw",
+                  "cn/usercases/bob",
                   "cn/usercases/chathub",
                   "cn/usercases/chatbox",
                   "cn/usercases/dify",
