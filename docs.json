@@ -48,7 +48,7 @@
             "tab": "场景示例",
             "groups": [
               {
-                "group": "场景示例",
+                "group": "开发者工具&平台",
                 "pages": [
                   "cn/usercases/claude-code",
                   "cn/usercases/opencode",
@@ -61,6 +61,18 @@
                   "cn/usercases/mindsearch",
                   "cn/usercases/db-gpt",
                   "cn/usercases/deep-research-web-ui"
+                ]
+              },
+              {
+                "group": "翻译工具",
+                "pages": [
+                  "cn/usercases/trancy"
+                ]
+              },
+              {
+                "group": "高效输入与笔记工具",
+                "pages": [
+                  "cn/usercases/nextaidrawio"
                 ]
               }
             ]
@@ -115,7 +127,7 @@
             "tab": "Use cases",
             "groups": [
               {
-                "group": "Use cases",
+                "group": "Developer tools & platforms",
                 "pages": [
                   "en/usercases/claude-code",
                   "en/usercases/opencode",
@@ -127,6 +139,18 @@
                   "en/usercases/mindsearch",
                   "en/usercases/db-gpt",
                   "en/usercases/deep-research-web-ui"
+                ]
+              },
+              {
+                "group": "Translation tools",
+                "pages": [
+                  "en/usercases/trancy"
+                ]
+              },
+              {
+                "group": "Input & note tools",
+                "pages": [
+                  "en/usercases/nextaidrawio"
                 ]
               }
             ]
@@ -181,7 +205,7 @@
             "tab": "場景示例",
             "groups": [
               {
-                "group": "場景示例",
+                "group": "開發者工具與平台",
                 "pages": [
                   "zh-Hant/usercases/claude-code",
                   "zh-Hant/usercases/opencode",
@@ -193,6 +217,18 @@
                   "zh-Hant/usercases/mindsearch",
                   "zh-Hant/usercases/db-gpt",
                   "zh-Hant/usercases/deep-research-web-ui"
+                ]
+              },
+              {
+                "group": "翻譯工具",
+                "pages": [
+                  "zh-Hant/usercases/trancy"
+                ]
+              },
+              {
+                "group": "高效輸入與筆記工具",
+                "pages": [
+                  "zh-Hant/usercases/nextaidrawio"
                 ]
               }
             ]

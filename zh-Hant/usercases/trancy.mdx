@@ -1,0 +1,26 @@
+---
+title: "在 Trancy 中使用"
+description: "將 AllTokens 接入 Trancy，作為翻譯與閱讀場景的模型服務。"
+---
+
+## 概述
+
+Trancy 支援在設定中接入自訂 AI 提供方，用於翻譯與閱讀場景。
+
+接入 AllTokens 後，你可以用統一的 API Key、模型與網關地址完成配置。
+
+## 快速設定
+
+在 Trancy 設定中選擇 OpenAI 相容的自訂提供方，並填入：
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：`glm-4`（或你在 AllTokens 已開通的模型）
+
+儲存後進行一次翻譯測試，確認可正常返回結果。
+
+## 說明
+
+- Base URL 請使用帶 `/v1` 的路徑。
+- 若出現驗證失敗，請檢查 API Key 是否有效且無多餘空白。
+- 若提示模型不存在，請確認模型名稱與權限是否正確。

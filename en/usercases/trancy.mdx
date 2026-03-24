@@ -1,0 +1,26 @@
+---
+title: "Use in Trancy"
+description: "Connect AllTokens to Trancy as the model backend for translation workflows."
+---
+
+## Overview
+
+Trancy supports custom AI provider settings for translation and reading workflows.
+
+With AllTokens, you can use one API key, one base URL, and flexible model routing.
+
+## Quick setup
+
+In Trancy settings, choose an OpenAI-compatible custom provider and fill:
+
+- API Key: `YOUR_API_KEY`
+- Base URL: `https://alltoken.aatest.online/v1`
+- Model: `glm-4` (or any model enabled in your AllTokens account)
+
+Save the config, then run a simple translation test.
+
+## Notes
+
+- Use `/v1` in the base URL.
+- If auth fails, re-check key format and spaces.
+- If a model is not found, confirm the model name and access permission.

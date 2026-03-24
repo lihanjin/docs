@@ -1,0 +1,65 @@
+---
+title: "在 Trancy 中使用"
+description: "将 AllTokens 接入 Trancy，作为翻译和阅读场景的模型服务。"
+---
+
+## 概述
+
+Trancy 是一个面向网页与视频场景的翻译工具，支持在设置中接入自定义模型服务。
+
+接入 AllTokens 后，你可以在 Trancy 中统一使用 API Key、模型和网关地址。
+
+## 前置条件
+
+- 已安装并可以正常使用 Trancy
+- 已拥有可用的 AllTokens API Key
+- 网络可以访问 `https://alltoken.aatest.online`
+
+## 配置步骤
+
+### 步骤 1：打开 Trancy 设置
+
+进入 Trancy 的 `AI` 或 `模型` 相关设置页面。
+
+### 步骤 2：选择自定义兼容提供方
+
+优先选择 `OpenAI Compatible`、`Custom OpenAI` 或类似入口。
+
+### 步骤 3：填写连接信息
+
+- API Key：`YOUR_API_KEY`
+- Base URL：`https://alltoken.aatest.online/v1`
+- Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet`
+
+### 步骤 4：保存并测试
+
+保存后对任意网页段落进行翻译，确认能正常返回结果。
+
+## 使用建议
+
+- 先使用基础模型验证链路，再切换到目标模型
+- 建议为 Trancy 单独创建 API Key，便于统计与隔离
+- 如果有延迟要求，优先选择响应更快的模型
+
+## 常见问题
+
+### 配置后无法请求
+
+请确认 Base URL 使用的是：
+
+```txt
+https://alltoken.aatest.online/v1
+```
+
+### 返回认证失败
+
+请确认 API Key 为 AllTokens 控制台生成的有效令牌，并检查是否包含多余空格。
+
+### 模型不可用
+
+请确认模型名称填写正确，且当前令牌已开通该模型权限。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)
