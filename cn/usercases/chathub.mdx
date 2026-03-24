@@ -1,71 +1,63 @@
 ---
-title: "在 ChatHub 中使用"
-description: "将 AllTokens 接入 ChatHub，通过 OpenAI 兼容方式调用模型。"
+title: "ChatHub"
+description: "在 ChatHub 中接入 AllTokens，完成模型配置与多模型对比。"
 ---
 
-## 概述
+## 关于 ChatHub
 
-ChatHub 是一个聚合多模型的聊天工具。
+更新日期：2025年2月10日
 
-接入 AllTokens 后，你可以在 ChatHub 中统一使用 AllTokens 提供的模型与网关能力，并复用同一套 API Key 管理方式。
+ChatHub 是一款常见的大语言模型聚合插件。
 
-## 适用场景
+接入 AllTokens 后，你可以在 ChatHub 里统一配置模型来源，并继续使用它的多模型聊天能力。
 
-- 你希望在一个客户端中集中使用多个模型
-- 你希望把 ChatHub 的模型调用统一收敛到 AllTokens
-- 你希望在不改使用习惯的情况下切换模型或控制额度
+## 安装 ChatHub
 
-## 前置条件
+先打开 [ChatHub 浏览器扩展文档](https://doc.chathub.gg/overview/chrome-extension)，然后安装浏览器扩展。
 
-- 已安装 ChatHub
-- 已准备好 AllTokens API Key
-- 可以访问 `https://alltoken.aatest.online`
+![ChatHub 安装页](/images/usercases/chathub/step-1-install.jpg)
 
-## 配置步骤
+安装完成后，打开 ChatHub 扩展里的 `Settings` 页面。
 
-### 步骤 1：打开模型提供方配置
+## 自定义设置
 
-在 ChatHub 中进入模型或提供方设置页面，选择支持自定义接口的提供方。
+自定义机器人只在浏览器扩展版本可用。
 
-如果你看到 `OpenAI Compatible`、`OpenAI API` 或 `自定义 OpenAI` 一类选项，优先选择它。
+在 `Settings` 页面里，你可以添加一个支持 OpenAI 兼容 API 的自定义机器人。
 
-### 步骤 2：填写连接信息
+## 在 ChatHub 中使用 AllTokens 模型
 
-填写以下信息：
+1. 在 ChatHub 设置里找到“自定义机器人”，然后点击“添加”。
 
-- API Key：`YOUR_API_KEY`
-- Base URL：`https://alltoken.aatest.online/v1`
-- Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet` 或其他你已开通的模型
+![添加自定义机器人](/images/usercases/chathub/step-2-add-bot.jpg)
 
-### 步骤 3：保存并测试
+2. 在弹窗中依次填写：
 
-保存配置后，新建一段对话并发送一条简单消息，确认可以正常返回内容。
+- 机器人名称
+- 选择 AllTokens 作为提供方
+- 输入你的 AllTokens API Key
+- 填写一个你已经开通的模型名称
 
-## 推荐验证方式
+![配置提供方和模型](/images/usercases/chathub/step-3-config.jpg)
 
-建议先使用一个短问题进行测试，例如“请用一句话介绍 AllTokens”。如果能够正常返回，再切换到你的目标模型或正式对话。
+3. 点击确认后，模型就会保存成功。
+
+![确认配置](/images/usercases/chathub/step-4-confirm.jpg)
+
+4. 保存后直接开始聊天。
+
+![开始聊天](/images/usercases/chathub/step-5-chat.jpg)
+
+## 在 ChatHub 中进行多模型对比
+
+如果你重复添加多个模型，就可以使用 ChatHub 的 All-in-One 功能同时对比多个模型。
+
+![多模型对比](/images/usercases/chathub/step-6-compare.jpg)
+
+除了对比功能，ChatHub 还提供提示词库、代码预览等能力。你可以查看 [ChatHub 官方文档](https://doc.chathub.gg/introduction) 了解更多。
 
 ## 使用建议
 
-- 优先选择 OpenAI 兼容方式接入
-- 先用一个基础模型验证链路，再切换到目标模型
-- 如需多人共用，建议为 ChatHub 单独创建一个 API Key
-
-## 常见问题
-
-### 提示认证失败
-
-请确认 API Key 使用的是 AllTokens 控制台中生成的有效令牌。
-
-### 提示模型不存在
-
-请检查模型名称是否填写正确，并确认当前令牌具备该模型访问权限。
-
-### 保存后仍然调用旧配置
-
-部分版本的 ChatHub 会缓存提供方配置。修改后如果没有生效，建议重新打开会话，或者重启 ChatHub 后再试一次。
-
-## 下一步
-
-- 获取 API Key：参见 [快速上手](/cn/quickstart)
-- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)
+- 先用一个基础模型确认连接可用，再切换到正式模型
+- 如果多人共用，建议单独给 ChatHub 准备一把 API Key
+- 如果你需要切换模型，直接在 ChatHub 里新增或修改机器人配置即可

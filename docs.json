@@ -10,7 +10,7 @@
   "favicon": "/favicon.svg",
   "api": {
     "mdx": {
-      "server": "https://alltoken.aatest.online",
+      "server": "https://alltoken.co",
       "auth": {
         "method": "bearer"
       }
@@ -48,19 +48,17 @@
             "tab": "场景示例",
             "groups": [
               {
-                "group": "开发者工具&平台",
+                "group": "开发工具&平台",
                 "pages": [
                   "cn/usercases/claude-code",
                   "cn/usercases/opencode",
-                  "cn/usercases/openclaw",
-                  "cn/usercases/bob",
-                  "cn/usercases/chathub",
-                  "cn/usercases/chatbox",
-                  "cn/usercases/dify",
-                  "cn/usercases/sider",
-                  "cn/usercases/mindsearch",
-                  "cn/usercases/db-gpt",
-                  "cn/usercases/deep-research-web-ui"
+                  "cn/usercases/openclaw"
+                ]
+              },
+              {
+                "group": "对话助手",
+                "pages": [
+                  "cn/usercases/chathub"
                 ]
               },
               {
@@ -73,6 +71,18 @@
                 "group": "高效输入与笔记工具",
                 "pages": [
                   "cn/usercases/nextaidrawio"
+                ]
+              },
+              {
+                "group": "智能体解决方案",
+                "pages": [
+                  "cn/usercases/openmanus"
+                ]
+              },
+              {
+                "group": "音频内容创作",
+                "pages": [
+                  "cn/usercases/cube-sugar-studio"
                 ]
               }
             ]
@@ -131,14 +141,13 @@
                 "pages": [
                   "en/usercases/claude-code",
                   "en/usercases/opencode",
-                  "en/usercases/openclaw",
-                  "en/usercases/chathub",
-                  "en/usercases/chatbox",
-                  "en/usercases/dify",
-                  "en/usercases/sider",
-                  "en/usercases/mindsearch",
-                  "en/usercases/db-gpt",
-                  "en/usercases/deep-research-web-ui"
+                  "en/usercases/openclaw"
+                ]
+              },
+              {
+                "group": "Chat assistants",
+                "pages": [
+                  "en/usercases/chathub"
                 ]
               },
               {
@@ -209,14 +218,13 @@
                 "pages": [
                   "zh-Hant/usercases/claude-code",
                   "zh-Hant/usercases/opencode",
-                  "zh-Hant/usercases/openclaw",
-                  "zh-Hant/usercases/chathub",
-                  "zh-Hant/usercases/chatbox",
-                  "zh-Hant/usercases/dify",
-                  "zh-Hant/usercases/sider",
-                  "zh-Hant/usercases/mindsearch",
-                  "zh-Hant/usercases/db-gpt",
-                  "zh-Hant/usercases/deep-research-web-ui"
+                  "zh-Hant/usercases/openclaw"
+                ]
+              },
+              {
+                "group": "對話助手",
+                "pages": [
+                  "zh-Hant/usercases/chathub"
                 ]
               },
               {
@@ -269,7 +277,7 @@
       "anchors": [
         {
           "anchor": "官网",
-          "href": "https://alltoken.aatest.online/",
+          "href": "https://alltoken.co/",
           "icon": "globe"
         }
       ]
@@ -284,13 +292,13 @@
     "links": [
       {
         "label": "产品站点",
-        "href": "https://alltoken.aatest.online/"
+        "href": "https://alltoken.co/"
       }
     ],
     "primary": {
       "type": "button",
       "label": "立即体验",
-      "href": "https://alltoken.aatest.online/"
+      "href": "https://alltoken.co/"
     }
   },
   "contextual": {

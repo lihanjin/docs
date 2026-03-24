@@ -1,79 +1,94 @@
 ---
 title: "在 Next AI Draw.io 中使用"
-description: "将 AllTokens 接入 Next AI Draw.io，用自然语言生成和编辑各类图表。"
+description: "将 AllTokens 接入 Next AI Draw.io，用自然语言创建和编辑图表。"
 ---
 
 ## 概述
 
-[Next AI Draw.io](https://github.com/sing1ee/next-ai-drawio) 是一个 AI 图表工具，支持通过文字描述生成和修改 draw.io 图表。
+[Next AI Draw.io](https://github.com/sing1ee/next-ai-drawio) 是一款 AI 图表工具。你可以通过自然语言生成和修改 draw.io 图表。
 
-接入 AllTokens 后，你可以在同一入口下调用已开通模型，完成流程图、架构图、UML 图和思维导图等场景。
+接入 AllTokens 后，你可以在同一个入口下调用已开通模型，完成流程图、架构图、UML 图、思维导图和云架构图等任务。
 
 ## 使用方式
 
 ### 方式一：在线使用（推荐）
 
-直接访问在线版本：
+打开在线版本即可开始使用，无需安装：
 
-```txt
-https://next-ai-drawio.jiang.jp/zh
-```
+- [https://next-ai-drawio.jiang.jp/zh](https://next-ai-drawio.jiang.jp/zh)
 
-无需安装，打开即可使用。
+### 方式二：下载桌面应用
 
-### 方式二：桌面应用
+你也可以安装桌面客户端离线使用。
 
-如果你更偏向本地使用，可以从项目的 Releases 下载客户端并安装：
+1. 打开 [Releases 页面](https://github.com/sing1ee/next-ai-drawio/releases)
+2. 下载对应平台安装包
+3. 完成安装并启动 Next AI Draw.io
 
-- macOS：`.dmg`
-- Windows：`.exe`
-- Linux：`.AppImage` 或 `.deb`
+| 平台 | 安装包 |
+| --- | --- |
+| macOS | `.dmg` |
+| Windows | `.exe` |
+| Linux | `.AppImage` 或 `.deb` |
 
-项目地址：
+## 配置 AI
 
-```txt
-https://github.com/sing1ee/next-ai-drawio
-```
+### 打开应用并进入设置
 
-## 配置 AllTokens
+打开 Next AI Draw.io 后，点击右下角的模型设置入口，进入模型配置页面。
 
-### 步骤 1：打开设置
+![Next AI Draw.io 设置入口](/images/usercases/nextaidrawio/step-1-settings.png)
 
-进入 Next AI Draw.io 的模型设置页，点击添加模型。
+### 选择供应商并填写 API 信息
 
-### 步骤 2：选择 OpenAI 兼容供应商
+在 **AI 模型配置** 中新增一个模型，然后填写以下信息：
 
-如果有兼容选项，优先选择 OpenAI 兼容或自定义兼容入口。
-
-### 步骤 3：填写连接信息
-
+- 供应商：选择 `OpenAI` 或兼容 OpenAI 协议的自定义入口
 - API Key：`YOUR_API_KEY`
-- Base URL：`https://alltoken.aatest.online/v1`
-- Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet`
+- Base URL：`https://alltoken.co/v1`
+- 模型名：填写你已开通的模型，例如 `zai-org/GLM-4.5` 或 `deepseek-ai/DeepSeek-V3`
 
-### 步骤 4：测试可用性
+![选择供应商并填写 API 信息](/images/usercases/nextaidrawio/step-2-model-config.png)
 
-保存后运行一次模型测试，确认模型状态可用，再开始正式生成图表。
+你可以按下面顺序完成配置：
+
+1. 点击添加模型
+2. 选择兼容 OpenAI 的供应商
+3. 输入 API Key
+4. 输入模型名称
+5. 点击保存
+6. 点击测试
+
+当模型前显示可用状态（例如绿色标记）时，表示配置成功。
 
 ## 使用建议
 
-- 图表生成建议优先使用推理与代码能力更强的模型
-- 先用短提示词验证链路，再输入完整图表需求
-- 为图表工具单独创建 API Key，便于后续统计与管理
+- 优先使用推理和代码能力更强的模型提升图表质量
+- 先用简短提示词验证链路，再输入完整图表需求
+- 给图表工具单独创建 API Key，便于统计和权限隔离
 
 ## 常见问题
 
-### 模型测试失败
+### 为什么生成的图表质量一般？
 
-请确认 Base URL 为 `https://alltoken.aatest.online/v1`，并检查 API Key 是否有效。
+图表质量与模型能力和提示词清晰度直接相关。建议优先使用更强模型，并在提示词中写明图表类型、节点关系和层级结构。
 
-### 可以连接但图表质量一般
+### 支持生成哪些图表类型？
 
-请尝试切换到能力更强的模型，或在提示词中明确图表结构、节点关系和输出样式。
+支持 draw.io 支持的主流图表类型，包括流程图、架构图、UML 图、思维导图和云架构图（AWS/GCP/Azure）等。
 
-### 提示模型不存在
+### 测试失败或请求报错怎么办？
 
-请确认模型名称拼写正确，且当前令牌具备对应模型权限。
+请依次检查：
+
+1. Base URL 是否为 `https://alltoken.co/v1`
+2. API Key 是否有效且无多余空格
+3. 模型名是否拼写正确且已开通权限
+
+## 相关链接
+
+- 在线演示：[https://next-ai-drawio.jiang.jp/zh](https://next-ai-drawio.jiang.jp/zh)
+- GitHub 仓库：[https://github.com/sing1ee/next-ai-drawio](https://github.com/sing1ee/next-ai-drawio)
 
 ## 下一步
 

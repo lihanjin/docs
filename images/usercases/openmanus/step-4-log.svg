@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <rect x="85" y="85" width="1030" height="500" rx="30" fill="#ffffff" stroke="#dbe4ff"/>
+  <text x="125" y="170" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Execution log</text>
+  <text x="125" y="225" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">A typical agent run alternates between thinking, searching, and writing.</text>
+  <rect x="125" y="280" width="820" height="220" rx="18" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="155" y="330" font-family="monospace" font-size="22" fill="#374151">step 1  analyze request</text>
+  <text x="155" y="370" font-family="monospace" font-size="22" fill="#374151">step 2  search web sources</text>
+  <text x="155" y="410" font-family="monospace" font-size="22" fill="#374151">step 3  parse web pages</text>
+  <text x="155" y="450" font-family="monospace" font-size="22" fill="#374151">step 4  write report</text>
+  <circle cx="945" cy="285" r="84" fill="#dbeafe"/>
+  <text x="903" y="301" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#2563eb">04</text>
+</svg>

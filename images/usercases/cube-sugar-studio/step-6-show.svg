@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <rect x="85" y="85" width="1030" height="500" rx="30" fill="#ffffff" stroke="#dbe4ff"/>
+  <text x="125" y="170" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Generate the Show</text>
+  <text x="125" y="225" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">Select items, choose the summary style, and play the episode.</text>
+  <rect x="125" y="290" width="320" height="180" rx="22" fill="#eff6ff"/>
+  <text x="160" y="360" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#1d4ed8">Create episode</text>
+  <text x="160" y="405" font-family="Arial, sans-serif" font-size="24" fill="#4b5563">Detailed / summary / skip</text>
+  <circle cx="940" cy="285" r="84" fill="#dbeafe"/>
+  <text x="898" y="301" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#2563eb">06</text>
+</svg>

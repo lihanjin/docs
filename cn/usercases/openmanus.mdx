@@ -1,0 +1,85 @@
+---
+title: "OpenManus"
+description: "将 AllTokens 接入 OpenManus，配置支持 function calling 的模型并运行智能体任务。"
+---
+
+## 安装 OpenManus
+
+先完成 OpenManus 的代码下载和依赖安装。
+
+如果你已经能在本地启动 OpenManus，再继续下一步配置即可。
+
+![安装 OpenManus](/images/usercases/openmanus/step-1-install.svg)
+
+## 配置 OpenManus
+
+在 `config` 目录里找到 `config.toml`，把模型服务改成 AllTokens。
+
+推荐先使用一个支持 function calling 的通用模型，例如 `Qwen/QwQ-32B`，然后按需再切到视觉模型。
+
+```toml
+[llm]
+model = "Qwen/QwQ-32B"
+base_url = "https://alltoken.co/v1"
+api_key = "YOUR_API_KEY"
+max_tokens = 16384
+temperature = 0.6
+
+[llm.vision]
+model = "Qwen/Qwen2-VL-72B-Instruct"
+base_url = "https://alltoken.co/v1"
+api_key = "YOUR_API_KEY"
+```
+
+![配置 OpenManus](/images/usercases/openmanus/step-2-config.svg)
+
+## 运行 OpenManus
+
+配置完成后，直接启动主程序即可。
+
+```bash
+python main.py
+```
+
+启动后，OpenManus 会根据你的提示词自动拆解任务、搜索信息、整理结果，并在需要时调用工具。
+
+![运行 OpenManus](/images/usercases/openmanus/step-3-run.svg)
+
+## 一次典型任务流程
+
+OpenManus 更适合做多步骤任务，比如调研、分析和报告生成。
+
+一个常见流程通常会包含：
+
+1. 明确用户需求
+2. 搜索相关资料
+3. 打开网页或文档提取信息
+4. 用代码整理数据
+5. 生成最终报告
+
+如果你需要联网信息，建议优先选择支持工具调用的模型，并确保网络与搜索工具都正常。
+
+## 执行日志
+
+运行时你通常会看到类似这样的过程：
+
+- 先分析用户目标
+- 再选择合适的搜索关键词
+- 然后打开网页、提取 HTML 或正文
+- 接着用 Python 清洗和整理数据
+- 最后输出结果、报告或文件
+
+![执行日志](/images/usercases/openmanus/step-4-log.svg)
+
+## 使用建议
+
+- 先用简单任务验证链路，再跑复杂报告
+- 如果你同时要用视觉能力，确认视觉模型也已开通
+- 如果任务经常报错，先检查 `base_url`、`api_key` 和模型名
+- 生产环境里建议给 OpenManus 单独准备一把 API Key
+
+## 总结
+
+OpenManus 适合做多步骤、可拆解、需要工具协作的智能体任务。
+
+接入 AllTokens 后，你可以把模型入口统一到一个网关，再按任务选择合适的通用模型或视觉模型。

@@ -1,0 +1,77 @@
+---
+title: "麦悠电台"
+description: "将 AllTokens 接入麦悠电台，创建订阅电台并生成 AI 节目。"
+---
+
+## 获取 API Key
+
+先在 AllTokens 控制台创建一个可用的 API Key，并确保目标模型已经开通。
+
+如果你打算把电台和日常使用分开管理，建议单独为麦悠电台创建一把 Key。
+
+![获取 API Key](/images/usercases/cube-sugar-studio/step-1-api-key.svg)
+
+## 安装麦悠电台
+
+麦悠电台支持 iOS 和 Android。
+
+你可以先安装 App，再进入设置页面完成模型接入。
+
+![安装麦悠电台](/images/usercases/cube-sugar-studio/step-2-install.svg)
+
+## 配置 AllTokens API
+
+打开麦悠电台后，进入左上角的设置。
+
+在 `AI 设置` 或模型设置区域，填入下面信息：
+
+- API Key：你在 AllTokens 创建的密钥
+- Base URL：`https://alltoken.co/v1`
+- 模型：选择你已经开通的模型，例如 `glm-4` 或 `deepseek-v3`
+
+保存后，先跑一次测试，确认模型服务能正常返回内容。
+
+![配置 AllTokens API](/images/usercases/cube-sugar-studio/step-3-config.svg)
+
+## 设置语音
+
+进入顶部的语音设置页后，你可以分别调整主持人和助理的音色。
+
+通常建议先选一个默认音色，再根据内容风格调整语速、音高和音量。
+
+如果你使用云端语音，建议先确认模型服务可用，再切换到更丰富的音色组合。
+
+![设置语音](/images/usercases/cube-sugar-studio/step-4-voice.svg)
+
+## 创建电台
+
+点击右上角的新增按钮，创建一个新的电台。
+
+你可以直接输入 RSS 地址，也可以导入 OPML 文件。
+
+如果你已经接了 RSSHub 或 WeWe RSS，就可以把常看的媒体源和公众号一起订阅进来。
+
+![创建电台](/images/usercases/cube-sugar-studio/step-5-radio.svg)
+
+## 生成节目并收听
+
+打开新闻列表后，选择你想要的内容，然后生成一期节目。
+
+在生成时，你可以决定内容更详细、做摘要，还是直接跳过。
+
+生成完成后，回到电台主页，点击播放就能收听。
+
+![生成节目](/images/usercases/cube-sugar-studio/step-6-show.svg)
+
+## 使用建议
+
+- 先用短内容验证链路，再处理长篇资讯
+- 电台和语音建议分开测试，方便排查问题
+- 如果要稳定使用，建议把这个 App 单独绑定一个 API Key
+- 如果你经常换模型，优先选择上下文更稳的通用模型
+
+## 总结
+
+麦悠电台适合把资讯订阅、AI 生成和语音播报连成一条工作流。
+
+接入 AllTokens 后，你可以用统一的网关管理模型调用，再把精力放在内容生产和播报效果上。

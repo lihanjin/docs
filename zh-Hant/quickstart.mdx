@@ -1,54 +1,29 @@
 ---
 title: "快速上手"
-description: "透過控制台建立 API Key，並用第一條請求接入 AllTokens。"
+description: "通过 API Key 和第一条请求接入 AllTokens 网关。"
 ---
 
 ## 开始前准备
 
 在开始之前，请先确认你已经具备以下条件：
 
-- 可以访问 [AllTokens 控制台](https://alltoken.aatest.online/)
-- 已完成登录或注册
-- 已获得可用额度，或已开通可调用的令牌
-
-<Note>
-  如果你计划自托管部署，而不是直接使用线上站点，可以跳到本文最后的“自托管部署”部分。
-</Note>
+- 已获得可用的 API Key
+- 可以访问 `https://alltoken.co`
 
 ## 在线接入
 
-### 第一步：登录控制台
-
-访问 [https://alltoken.aatest.online/](https://alltoken.aatest.online/) 并登录。
-
-平台支援多種登入方式。實際可見選項以當前站點頁面顯示為準。
-
-### 第二步：创建 API Key
-
-登录后进入控制台的 **令牌管理**。
-
-你可以在这里创建一个新的 API 令牌，并为它设置：
-
-- 令牌名称
-- 令牌分组
-- 可用额度
-- 允许访问的模型
-- 访问限制与状态
-
-创建完成后，复制真实令牌值并妥善保存。后续请求会用它作为 `Authorization: Bearer <YOUR_API_KEY>`。
-
-### 第三步：确认接口地址
+### 第一步：确认接口地址
 
 如果你使用线上站点，推荐把以下地址作为基础地址：
 
 ```bash
-https://alltoken.aatest.online/v1
+https://alltoken.co/v1
 ```
 
 如果你需要 Gemini 兼容路径，可直接使用：
 
 ```bash
-https://alltoken.aatest.online/v1beta/models
+https://alltoken.co/v1beta/models
 ```
 
 常见接口包括：
@@ -59,12 +34,21 @@ https://alltoken.aatest.online/v1beta/models
 - 音频能力：`POST /v1/audio/transcriptions`
 - Responses：`POST /v1/responses`
 
-### 第四步：发送第一条请求
+### 第二步：验证 API Key
+
+先请求模型列表，确认你的 API Key 可用：
+
+```bash
+curl https://alltoken.co/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+```
+
+### 第三步：发送第一条请求
 
 下面的示例使用 OpenAI 兼容方式发起聊天请求：
 
 ```bash
-curl https://alltoken.aatest.online/v1/chat/completions \
+curl https://alltoken.co/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
@@ -78,83 +62,20 @@ curl https://alltoken.aatest.online/v1/chat/completions \
   }'
 ```
 
-如果你想先验证令牌是否可用，可以先请求模型列表：
+### 第四步：切换模型
 
-```bash
-curl https://alltoken.aatest.online/v1/models \
-  -H "Authorization: Bearer YOUR_API_KEY"
-```
-
-### 第五步：在控制台调试
-
-如果你不想一开始就写代码，可以先在控制台的 **Playground** 里调试请求。
-
-这适合用来完成三件事：
-
-- 确认当前令牌是否可用
-- 查看某个模型是否已开放
-- 验证请求体格式与返回内容
-
-## 常见接入方式
-
-### 兼容 OpenAI SDK
-
-如果你的应用本身支持自定义 `base_url` 或 `baseURL`，通常只需要把基础地址改为：
-
-```txt
-https://alltoken.aatest.online/v1
-```
-
-然后把 API Key 改成你在 AllTokens 控制台中生成的令牌即可。
-
-### 切换不同模型
-
-AllTokens 的优势之一是把模型切换收敛到统一入口。多数情况下，你只需要修改请求里的 `model` 字段，而不需要改动整套接入逻辑。
+多数情况下，你只需要修改请求体里的 `model` 字段，而不需要改动整套接入逻辑。
 
 ### 使用其他接口格式
 
 如果你的业务使用 Claude Messages、Gemini 或 OpenAI Responses，AllTokens 也提供了对应路径。你可以继续沿用已有请求结构，再将地址切到 AllTokens。
 
-完整介面清單與範例見 [API reference](/zh-Hant/api-reference/introduction)。
-
-## 自托管部署
-
-如果你希望自行部署一套 AllTokens，可以直接参考 `new-api` 项目中的 Docker Compose 配置。
-
-### 使用 Docker Compose
-
-```bash
-git clone https://github.com/QuantumNous/new-api.git
-cd new-api
-docker-compose up -d
-```
-
-默认配置会启动这些服务：
-
-- `new-api`
-- `redis`
-- `postgres`
-
-启动后，可在本地访问：
-
-```txt
-http://localhost:3000
-```
-
-在生产环境中，至少需要修改默认数据库密码、会话密钥和其他敏感配置。
-
-### 使用自托管地址发起请求
-
-部署完成后，把上面的线上地址替换为你自己的域名即可。例如：
-
-```txt
-https://your-domain.example.com/v1
-```
+完整接口清单和示例见 [API reference](/cn/api-reference/introduction)。
 
 ## 下一步
 
 完成第一条请求后，建议继续完善以下内容：
 
-1. 创建不同用途的令牌，并按模型或环境隔离权限。
-2. 配置渠道与分组，优化上游路由和重试策略。
-3. 使用 Playground 和日志能力验证真实调用链路。
+1. 将 API Key 放到环境变量，避免在代码里明文写入。
+2. 为不同业务选择对应模型，并验证响应质量与耗时。
+3. 根据业务路径继续接入 `/v1/responses`、`/v1/embeddings` 等接口。

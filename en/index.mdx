@@ -1,30 +1,28 @@
 ---
-title: "Introduction"
-description: "Learn what AllTokens is, what problems it solves, and where it fits."
+title: "产品简介"
+description: "了解 AllTokens 是什么、解决什么问题，以及适合哪些场景。"
 ---
 
-## Product overview
+## 产品介绍
 
-AllTokens is an AI gateway and AI asset management platform for teams and developers.
+AllTokens 是一个面向开发者的 API Key 模型网关服务。
 
-你可以把它理解为一层统一的模型访问入口。它把多家模型供应商、不同的接口格式、不同的计费策略和不同的访问权限收敛到同一套控制台和同一组 API 中。
+你可以把它理解为一层统一的模型访问入口。你使用一个基础地址和 API Key，就能通过统一网关访问多种模型接口。
 
-对于开发者，AllTokens 让你用更稳定的方式接入模型。
-
-对于团队管理者，AllTokens 让你统一管理渠道、令牌、额度、模型权限和调用统计。
+对于开发者，AllTokens 的目标很明确：提供稳定、兼容的 API 网关接入。
 
 <CardGroup cols={2}>
   <Card title="统一接入入口" icon="plug">
-    提供标准化接口访问地址，减少多供应商适配成本。
+    提供标准化 API 地址，减少多供应商适配成本。
   </Card>
-  <Card title="控制台管理" icon="grid-2">
-    在同一个后台管理令牌、渠道、模型、用户和额度。
+  <Card title="API Key 鉴权" icon="key-round">
+    通过 `Authorization: Bearer <API_KEY>` 进行网关访问控制。
   </Card>
-  <Card title="调用与计费可见" icon="chart-line">
-    提供统计、日志、额度和计费相关能力，方便运营和排查。
+  <Card title="多接口兼容" icon="shuffle">
+    兼容 OpenAI、Claude、Gemini 等常见请求路径。
   </Card>
-  <Card title="支持自托管" icon="server">
-    除在线使用外，也支持使用 Docker Compose 快速部署。
+  <Card title="低改造接入" icon="sparkles">
+    在尽量少改客户端代码的前提下完成迁移。
   </Card>
 </CardGroup>
 
@@ -32,7 +30,7 @@ AllTokens is an AI gateway and AI asset management platform for teams and develo
 
 ### 统一模型网关
 
-AllTokens provides a unified `/v1` entry point and supports several common model API styles:
+AllTokens 提供统一的 `/v1` 入口，并支持多类常见模型接口：
 
 - OpenAI 兼容接口，如 `/v1/chat/completions`、`/v1/models`、`/v1/embeddings`
 - OpenAI Responses 接口，如 `/v1/responses`
@@ -42,26 +40,13 @@ AllTokens provides a unified `/v1` entry point and supports several common model
 
 这意味着你可以在尽量少改客户端代码的前提下，切换模型和供应商。
 
-### 控制台与资产管理
+### API Key 网关控制
 
-AllTokens console covers these core capabilities:
+AllTokens 提供基于 API Key 的网关访问控制：
 
-- 令牌管理：创建、复制、删除和限制 API 令牌
-- 渠道管理：配置上游 API 渠道、权重、分组和路由策略
-- 模型管理：管理模型展示、模型部署和模型可见性
-- 额度与充值：支持余额、充值、兑换码和多支付方式
-- 用户与权限：支持用户管理、分组、模型限制和访问控制
-- Playground：在控制台内直接调试请求
-
-### 安全与登录
-
-AllTokens 支持多种认证与登录方式，包括：
-
-- 用户名或邮箱登录
-- GitHub、Discord、Linux DO、Telegram、OIDC 等第三方登录
-- Passkey 与 2FA 等增强认证方式
-
-如果你需要面向团队或对外提供服务，这些能力可以减少自行搭建账号体系的成本。
+- 所有请求统一使用 API Key 鉴权
+- 保持常见 SDK 与请求格式的兼容性
+- 以网关方式统一接入不同模型能力
 
 ## 产品特性
 
@@ -71,23 +56,23 @@ AllTokens 支持多种认证与登录方式，包括：
   <Accordion title="降低多模型接入复杂度" icon="shuffle">
     当你同时使用 OpenAI、Claude、Gemini 或其他上游时，接口格式、鉴权方式和可用模型往往并不一致。AllTokens 将这些差异收敛到统一入口，减少多套 SDK 与多套配置带来的维护成本。
   </Accordion>
-  <Accordion title="把调用、额度和权限放到同一处管理" icon="shield-keyhole">
-    平台把令牌、渠道、模型、充值、调用日志和权限控制放在同一个控制台里。你不需要在多个后台之间来回切换。
+  <Accordion title="保持客户端改动最小" icon="wand">
+    在已有请求结构基础上，你通常只需要替换基础地址和 API Key，就可以接入网关。
   </Accordion>
-  <Accordion title="兼顾在线使用与自托管部署" icon="boxes-stacked">
-    如果你只想尽快开始调用，可以直接使用线上站点。如果你需要更强的环境控制，也可以参考源码使用 Docker Compose 自托管部署。
+  <Accordion title="专注 API Key 网关控制" icon="key-round">
+    产品能力聚焦在 API Key 网关层，不引入额外的平台管理能力，接入路径更清晰。
   </Accordion>
 </AccordionGroup>
 
 ## 适用场景
 
 - 为内部工具、AI 应用或代理服务提供统一模型出口
-- 为团队成员分发独立令牌，并限制可用模型与额度
-- 对不同上游做灰度、重试、分组和路由配置
-- 搭建一个可直接运营的 AI API 平台
+- 用 API Key 快速验证不同模型的可用性
+- 在现有 OpenAI/Claude/Gemini 客户端中快速迁移到统一网关
+- 作为应用的统一模型接入层
 
-## Next steps
+## 下一步
 
-If you are ready to integrate, continue with [Quickstart](/en/quickstart).
+如果你已经准备开始接入，请继续阅读 [快速上手](/cn/quickstart)。
 
-If you want request formats, auth details, and examples, go to [API reference](/en/api-reference/introduction).
+如果你想直接查看请求格式、鉴权方式和示例，请前往 [API reference](/cn/api-reference/introduction)。

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
+  <rect x="85" y="85" width="1030" height="500" rx="30" fill="#ffffff" stroke="#dbe4ff"/>
+  <text x="125" y="170" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Create a Station</text>
+  <text x="125" y="225" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">Add RSS feeds or import OPML to build your program list.</text>
+  <rect x="125" y="285" width="650" height="72" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="150" y="330" font-family="Arial, sans-serif" font-size="26" fill="#6b7280">RSS URL or OPML import</text>
+  <rect x="125" y="380" width="220" height="62" rx="18" fill="#7c3aed"/>
+  <text x="192" y="419" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Add</text>
+  <circle cx="940" cy="285" r="84" fill="#ede9fe"/>
+  <text x="898" y="301" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#6d28d9">05</text>
+</svg>

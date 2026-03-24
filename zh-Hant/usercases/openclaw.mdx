@@ -24,13 +24,13 @@ openclaw onboard \
   --auth-choice custom-api-key \
   --custom-provider-id alltoken \
   --custom-compatibility openai \
-  --custom-base-url "https://alltoken.aatest.online/v1" \
+  --custom-base-url "https://alltoken.co/v1" \
   --custom-model-id "glm-4" \
   --custom-api-key "$ALLTOKEN_API_KEY"
 ```
 
 ## 說明
 
-- 基礎地址請使用 `https://alltoken.aatest.online/v1`
+- 基礎地址請使用 `https://alltoken.co/v1`
 - 將 `glm-4` 替換成你在 AllTokens 中已開通的模型名稱
 - 如果你偏好手動設定，也可以在 `models.providers` 中新增自訂 provider，並把預設模型設為 `alltoken/glm-4`
