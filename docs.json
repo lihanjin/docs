@@ -51,6 +51,7 @@
                 "group": "开发工具&平台",
                 "pages": [
                   "cn/usercases/claude-code",
+                  "cn/usercases/gemini-cli",
                   "cn/usercases/opencode",
                   "cn/usercases/openclaw"
                 ]
@@ -140,6 +141,7 @@
                 "group": "Developer tools & platforms",
                 "pages": [
                   "en/usercases/claude-code",
+                  "en/usercases/gemini-cli",
                   "en/usercases/opencode",
                   "en/usercases/openclaw"
                 ]
@@ -229,6 +231,7 @@
                 "group": "開發者工具與平台",
                 "pages": [
                   "zh-Hant/usercases/claude-code",
+                  "zh-Hant/usercases/gemini-cli",
                   "zh-Hant/usercases/opencode",
                   "zh-Hant/usercases/openclaw"
                 ]

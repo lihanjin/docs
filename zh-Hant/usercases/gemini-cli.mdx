@@ -1,0 +1,68 @@
+---
+title: "Gemini CLI"
+description: "Gemini CLI 是一個終端 AI 助手，但目前不支援自訂 Base URL，因此不能直接接入 AllTokens。"
+---
+
+## 概述
+
+Gemini CLI 是一個執行在終端中的 AI 助手。
+
+它適合做程式碼分析、檔案處理、研究與命令列協作。
+
+## 與 AllTokens 的關係
+
+Gemini CLI 目前使用 Google 登入、Gemini API Key 或 Vertex AI 進行驗證。
+
+它沒有提供可直接填入 `https://alltoken.co/v1` 這類自訂服務地址的入口，所以目前不能直接接入 AllTokens。
+
+如果你想在終端裡使用 AllTokens，建議優先查看 [Claude Code](/zh-Hant/usercases/claude-code)、[OpenCode](/zh-Hant/usercases/opencode) 或 [OpenClaw](/zh-Hant/usercases/openclaw)。
+
+## 安裝
+
+你可以使用 `npm` 全域安裝：
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+也可以直接使用 `npx` 執行：
+
+```bash
+npx @google/gemini-cli
+```
+
+## 驗證
+
+首次執行後，Gemini CLI 會提示你選擇驗證方式。
+
+常見方式包括：
+
+- 使用 Google 帳號登入
+- 使用 Gemini API Key
+- 使用 Vertex AI
+
+如果你選擇 Google 登入，瀏覽器會完成本機驗證流程。
+
+## 基本用法
+
+安裝並完成驗證後，直接執行：
+
+```bash
+gemini
+```
+
+你可以讓它解釋檔案、分析程式碼、生成內容，或處理多步驟的終端任務。
+
+## 使用建議
+
+- 如果你需要 AllTokens 網關，優先選擇支援自訂提供方的終端工具
+- 如果你只想使用 Gemini 生態的終端助手，Gemini CLI 就是最直接的選擇
+- 建議先用小任務驗證驗證方式，再處理更複雜的工作流
+
+## 總結
+
+Gemini CLI 是一個很強的終端 AI 助手。
+
+但它目前不是 AllTokens 的直接接入對象，所以這頁主要用來幫你判斷工具選型。
+
+如果你要繼續了解官方用法，可以看 [Gemini CLI 文件](https://google-gemini.github.io/gemini-cli/)。

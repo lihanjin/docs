@@ -1,0 +1,68 @@
+---
+title: "Gemini CLI"
+description: "Gemini CLI is a terminal AI assistant, but it does not currently support a custom Base URL, so it cannot connect to AllTokens directly."
+---
+
+## Overview
+
+Gemini CLI is an AI assistant that runs in your terminal.
+
+It is useful for code analysis, file operations, research, and command-line workflows.
+
+## Relation to AllTokens
+
+Gemini CLI currently uses Google sign-in, a Gemini API key, or Vertex AI for authentication.
+
+It does not expose a custom provider or custom Base URL setting such as `https://alltoken.co/v1`, so it cannot connect to AllTokens directly.
+
+If you want a terminal workflow with AllTokens, consider [Claude Code](/en/usercases/claude-code), [OpenCode](/en/usercases/opencode), or [OpenClaw](/en/usercases/openclaw).
+
+## Install
+
+Install globally with `npm`:
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+Or run it directly with `npx`:
+
+```bash
+npx @google/gemini-cli
+```
+
+## Authenticate
+
+On first launch, Gemini CLI asks you to choose an authentication method.
+
+Common options include:
+
+- Login with Google
+- Use a Gemini API key
+- Use Vertex AI
+
+If you choose Google login, the browser handles the local auth flow.
+
+## Basic usage
+
+After installing and authenticating, run:
+
+```bash
+gemini
+```
+
+You can ask it to explain files, analyze code, generate content, or manage multi-step terminal tasks.
+
+## Tips
+
+- Use a tool with custom-provider support if you need the AllTokens gateway
+- If you only want a Gemini-native terminal assistant, Gemini CLI is the direct path
+- Start with a small task before moving to more complex workflows
+
+## Summary
+
+Gemini CLI is a strong terminal AI assistant.
+
+It is not a direct AllTokens integration target today, so this page is here mainly to help with tool selection.
+
+For the official docs, see [Gemini CLI](https://google-gemini.github.io/gemini-cli/).

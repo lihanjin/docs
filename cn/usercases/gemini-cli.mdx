@@ -1,0 +1,68 @@
+---
+title: "Gemini CLI"
+description: "Gemini CLI 是一个终端 AI 助手，但它当前不支持自定义 Base URL，因此不能直接接入 AllTokens。"
+---
+
+## 概述
+
+Gemini CLI 是一个运行在终端里的 AI 助手。
+
+它适合代码分析、文件处理、调研和命令行协作。
+
+## 与 AllTokens 的关系
+
+Gemini CLI 目前使用 Google 登录、Gemini API Key 或 Vertex AI 进行认证。
+
+它没有提供可直接填写 `https://alltoken.co/v1` 这类自定义服务地址的入口，所以当前不能直接接入 AllTokens。
+
+如果你想在终端里使用 AllTokens，建议优先查看 [Claude Code](/cn/usercases/claude-code)、[OpenCode](/cn/usercases/opencode) 或 [OpenClaw](/cn/usercases/openclaw)。
+
+## 安装
+
+你可以使用 `npm` 全局安装：
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+也可以直接通过 `npx` 运行：
+
+```bash
+npx @google/gemini-cli
+```
+
+## 认证
+
+首次运行后，Gemini CLI 会提示你选择认证方式。
+
+常见方式包括：
+
+- 使用 Google 账号登录
+- 使用 Gemini API Key
+- 使用 Vertex AI
+
+如果你使用 Google 账号登录，浏览器会完成本地认证流程。
+
+## 基本用法
+
+安装并认证后，直接运行：
+
+```bash
+gemini
+```
+
+你可以让它解释文件、分析代码、生成内容，或者在终端里处理多步骤任务。
+
+## 使用建议
+
+- 如果你需要 AllTokens 网关，优先使用支持自定义提供方的终端工具
+- 如果你只是想用 Gemini 生态的终端助手，Gemini CLI 本身已经足够直接
+- 先在一个小任务里验证认证方式，再处理更复杂的工作流
+
+## 总结
+
+Gemini CLI 是一个很强的终端 AI 助手。
+
+但它目前不是 AllTokens 的直接接入对象，所以这篇页面主要用于帮助你判断工具选型。
+
+如果你要继续了解官方用法，可以看 [Gemini CLI 文档](https://google-gemini.github.io/gemini-cli/)。
