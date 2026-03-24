@@ -161,6 +161,18 @@
                 "pages": [
                   "en/usercases/nextaidrawio"
                 ]
+              },
+              {
+                "group": "Agent solutions",
+                "pages": [
+                  "en/usercases/openmanus"
+                ]
+              },
+              {
+                "group": "Audio content creation",
+                "pages": [
+                  "en/usercases/cube-sugar-studio"
+                ]
               }
             ]
           },
@@ -237,6 +249,18 @@
                 "group": "高效輸入與筆記工具",
                 "pages": [
                   "zh-Hant/usercases/nextaidrawio"
+                ]
+              },
+              {
+                "group": "智能體解決方案",
+                "pages": [
+                  "zh-Hant/usercases/openmanus"
+                ]
+              },
+              {
+                "group": "音訊內容創作",
+                "pages": [
+                  "zh-Hant/usercases/cube-sugar-studio"
                 ]
               }
             ]

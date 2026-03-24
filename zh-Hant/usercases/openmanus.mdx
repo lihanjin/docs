@@ -1,0 +1,92 @@
+---
+title: "OpenManus"
+description: "將 AllTokens 接入 OpenManus，配置支援 function calling 的模型並執行智能體任務。"
+---
+
+## 安裝 OpenManus
+
+先完成 OpenManus 的程式碼下載與依賴安裝。
+
+如果你已經可以在本機啟動 OpenManus，再繼續下一步設定即可。
+
+## 前置條件
+
+- OpenManus 已安裝並能在本機啟動
+- 你已擁有可用的 AllTokens API Key
+- 目標模型支援 function calling
+- 如果你會用到視覺任務，也要確認視覺模型已開通
+
+## 設定 OpenManus
+
+打開 `config/config.toml`，把模型設定指向 AllTokens。
+
+建議先使用支援 function calling 的通用模型，例如 `Qwen/QwQ-32B`，需要視覺能力時再切換到視覺模型。
+
+```toml
+[llm]
+model = "Qwen/QwQ-32B"
+base_url = "https://alltoken.co/v1"
+api_key = "YOUR_API_KEY"
+max_tokens = 16384
+temperature = 0.6
+
+[llm.vision]
+model = "Qwen/Qwen2-VL-72B-Instruct"
+base_url = "https://alltoken.co/v1"
+api_key = "YOUR_API_KEY"
+```
+
+## 執行 OpenManus
+
+設定完成後，啟動主程式：
+
+```bash
+python main.py
+```
+
+OpenManus 會把任務拆解、搜尋資訊、擷取內容，並在需要時呼叫工具。
+
+## 典型流程
+
+OpenManus 很適合做多步驟任務，例如研究、分析與報告生成。
+
+常見流程通常包含：
+
+1. 理解需求
+2. 搜尋資料來源
+3. 打開頁面或文件
+4. 用程式整理資料
+5. 產出最終結果
+
+如果你需要網頁存取，請確認模型支援工具調用，而且搜尋工具也已可用。
+
+## 疑難排解
+
+### 智能體沒有呼叫工具
+
+請先確認目前使用的模型支援 function calling，並檢查 `base_url` 是否為 `https://alltoken.co/v1`。
+
+### 找不到模型
+
+請確認 `config.toml` 裡的模型名稱，和 AllTokens 內已開通的模型名稱一致。
+
+### 視覺任務失敗
+
+請確認 `[llm.vision]` 裡的模型已開通，且支援圖片輸入。
+
+### 啟動後立刻報錯
+
+請先檢查依賴是否安裝完整，再確認 API Key 是否有效。
+
+## 使用建議
+
+- 先用簡單任務驗證鏈路，再跑複雜報告
+- 把文字與視覺測試分開，方便排查問題
+- 正式環境建議為 OpenManus 單獨建立 API Key
+- 如果你常切換模型，優先選擇更穩定的通用模型
+
+## 總結
+
+OpenManus 適合處理多步驟、可拆解、需要工具協作的智能體任務。
+
+接入 AllTokens 後，你可以把模型入口統一到一個網關，再按任務選擇合適的模型。

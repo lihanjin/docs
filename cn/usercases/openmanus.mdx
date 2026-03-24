@@ -11,6 +11,13 @@ description: "将 AllTokens 接入 OpenManus，配置支持 function calling 的
 
 ![安装 OpenManus](/images/usercases/openmanus/step-1-install.svg)
 
+## 前置条件
+
+- 已经可以在本地运行 OpenManus
+- 已准备好 AllTokens API Key
+- 已确认目标模型支持 function calling
+- 如果你要使用视觉能力，确认视觉模型也已开通
+
 ## 配置 OpenManus
 
 在 `config` 目录里找到 `config.toml`，把模型服务改成 AllTokens。
@@ -58,6 +65,24 @@ OpenManus 更适合做多步骤任务，比如调研、分析和报告生成。
 5. 生成最终报告
 
 如果你需要联网信息，建议优先选择支持工具调用的模型，并确保网络与搜索工具都正常。
+
+## 常见问题
+
+### 调用失败或没有工具输出
+
+请先确认你使用的模型支持 function calling，并检查 `base_url` 是否填写为 `https://alltoken.co/v1`。
+
+### 模型找不到
+
+请检查 `config.toml` 里的模型名是否和 AllTokens 控制台中的名称一致。
+
+### 视觉任务失败
+
+请确认 `[llm.vision]` 里的模型已经开通，并且该模型支持图像输入。
+
+### 启动后立刻报错
+
+请先检查依赖是否安装完整，再确认 `api_key` 是否有效。
 
 ## 执行日志
 
