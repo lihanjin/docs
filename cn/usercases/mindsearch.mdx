@@ -1,13 +1,13 @@
 ---
 title: "在 MindSearch 中使用"
-description: "将 AllTokens 配置为 MindSearch 的模型接口来源。"
+description: "将 AllToken 配置为 MindSearch 的模型接口来源。"
 ---
 
 ## 概述
 
 MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接口。
 
-将 AllTokens 作为统一模型入口后，你可以在 MindSearch 中复用同一套模型与鉴权配置。
+将 AllToken 作为统一模型入口后，你可以在 MindSearch 中复用同一套模型与鉴权配置。
 
 ## 适用场景
 
@@ -18,7 +18,7 @@ MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接
 ## 前置条件
 
 - 已部署或可访问 MindSearch
-- 已拥有 AllTokens API Key
+- 已拥有 AllToken API Key
 - 已确认你的 MindSearch 版本支持 OpenAI 兼容接入，或支持自定义模型服务
 
 ## 推荐配置
@@ -45,7 +45,7 @@ export OPENAI_MODEL="glm-4"
 
 1. 打开 MindSearch 的模型配置或环境变量配置位置。
 2. 将基础地址设置为 `https://alltoken.co/v1`。
-3. 填入 AllTokens API Key。
+3. 填入 AllToken API Key。
 4. 指定一个已开通的模型名称。
 5. 执行一次搜索或总结任务验证返回结果。
 

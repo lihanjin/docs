@@ -1,6 +1,6 @@
 ---
 title: "Gemini CLI"
-description: "Gemini CLI 是一个终端 AI 助手，但它当前不支持自定义 Base URL，因此不能直接接入 AllTokens。"
+description: "Gemini CLI 是一个终端 AI 助手，但它当前不支持自定义 Base URL，因此不能直接接入 AllToken。"
 ---
 
 ## 概述
@@ -9,13 +9,13 @@ Gemini CLI 是一个运行在终端里的 AI 助手。
 
 它适合代码分析、文件处理、调研和命令行协作。
 
-## 与 AllTokens 的关系
+## 与 AllToken 的关系
 
-Gemini CLI 目前使用 Google 登录、Gemini API Key 或 Vertex AI 进行认证。
+原因很直接：Gemini CLI 目前只支持 Google 登录、Gemini API Key 或 Vertex AI 进行认证。
 
-它没有提供可直接填写 `https://alltoken.co/v1` 这类自定义服务地址的入口，所以当前不能直接接入 AllTokens。
+它没有提供可直接填写 `https://alltoken.co/v1` 这类自定义服务地址的入口，所以当前不能直接接入 AllToken。
 
-如果你想在终端里使用 AllTokens，建议优先查看 [Claude Code](/cn/usercases/claude-code)、[OpenCode](/cn/usercases/opencode) 或 [OpenClaw](/cn/usercases/openclaw)。
+如果你想在终端里使用 AllToken，建议优先查看 [Claude Code](/cn/usercases/claude-code)、[OpenCode](/cn/usercases/opencode) 或 [OpenClaw](/cn/usercases/openclaw)。
 
 ## 安装
 
@@ -55,7 +55,7 @@ gemini
 
 ## 使用建议
 
-- 如果你需要 AllTokens 网关，优先使用支持自定义提供方的终端工具
+- 如果你需要 AllToken 网关，优先使用支持自定义提供方的终端工具
 - 如果你只是想用 Gemini 生态的终端助手，Gemini CLI 本身已经足够直接
 - 先在一个小任务里验证认证方式，再处理更复杂的工作流
 
@@ -63,6 +63,6 @@ gemini
 
 Gemini CLI 是一个很强的终端 AI 助手。
 
-但它目前不是 AllTokens 的直接接入对象，所以这篇页面主要用于帮助你判断工具选型。
+但它目前不是 AllToken 的直接接入对象，所以这篇页面主要用于帮助你判断工具选型。
 
 如果你要继续了解官方用法，可以看 [Gemini CLI 文档](https://google-gemini.github.io/gemini-cli/)。

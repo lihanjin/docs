@@ -1,6 +1,6 @@
 ---
 title: "OpenManus"
-description: "Connect AllTokens to OpenManus and run agentic tasks with an OpenAI-compatible model."
+description: "Connect AllToken to OpenManus and run agentic tasks with an OpenAI-compatible model."
 ---
 
 ## Install OpenManus
@@ -12,13 +12,13 @@ If you can already run OpenManus locally, continue to the configuration step.
 ## Prerequisites
 
 - OpenManus is installed and can start locally
-- You have an active AllTokens API Key
+- You have an active AllToken API Key
 - The target model supports function calling
 - If you plan to use vision tasks, make sure a vision model is enabled too
 
 ## Configure OpenManus
 
-Open the `config/config.toml` file and point the model settings to AllTokens.
+Open the `config/config.toml` file and point the model settings to AllToken.
 
 Start with a function-calling-capable general model such as `Qwen/QwQ-32B`, then switch to a vision model only if you need it.
 
@@ -68,7 +68,7 @@ Check whether the selected model supports function calling and confirm `base_url
 
 ### The model cannot be found
 
-Make sure the model name in `config.toml` matches the name enabled in your AllTokens account.
+Make sure the model name in `config.toml` matches the name enabled in your AllToken account.
 
 ### Vision tasks fail
 
@@ -89,4 +89,4 @@ Recheck your dependencies and make sure the API key is valid.
 
 OpenManus is a good fit for multi-step, tool-driven agent tasks.
 
-With AllTokens, you can keep model access behind one gateway and choose the right model for each job.
+With AllToken, you can keep model access behind one gateway and choose the right model for each job.

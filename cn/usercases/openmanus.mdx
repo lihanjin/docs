@@ -1,6 +1,6 @@
 ---
 title: "OpenManus"
-description: "将 AllTokens 接入 OpenManus，配置支持 function calling 的模型并运行智能体任务。"
+description: "将 AllToken 接入 OpenManus，配置支持 function calling 的模型并运行智能体任务。"
 ---
 
 ## 安装 OpenManus
@@ -14,13 +14,13 @@ description: "将 AllTokens 接入 OpenManus，配置支持 function calling 的
 ## 前置条件
 
 - 已经可以在本地运行 OpenManus
-- 已准备好 AllTokens API Key
+- 已准备好 AllToken API Key
 - 已确认目标模型支持 function calling
 - 如果你要使用视觉能力，确认视觉模型也已开通
 
 ## 配置 OpenManus
 
-在 `config` 目录里找到 `config.toml`，把模型服务改成 AllTokens。
+在 `config` 目录里找到 `config.toml`，把模型服务改成 AllToken。
 
 推荐先使用一个支持 function calling 的通用模型，例如 `Qwen/QwQ-32B`，然后按需再切到视觉模型。
 
@@ -74,7 +74,7 @@ OpenManus 更适合做多步骤任务，比如调研、分析和报告生成。
 
 ### 模型找不到
 
-请检查 `config.toml` 里的模型名是否和 AllTokens 控制台中的名称一致。
+请检查 `config.toml` 里的模型名是否和 AllToken 控制台中的名称一致。
 
 ### 视觉任务失败
 
@@ -107,4 +107,4 @@ OpenManus 更适合做多步骤任务，比如调研、分析和报告生成。
 
 OpenManus 适合做多步骤、可拆解、需要工具协作的智能体任务。
 
-接入 AllTokens 后，你可以把模型入口统一到一个网关，再按任务选择合适的通用模型或视觉模型。
+接入 AllToken 后，你可以把模型入口统一到一个网关，再按任务选择合适的通用模型或视觉模型。

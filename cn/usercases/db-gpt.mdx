@@ -1,13 +1,13 @@
 ---
 title: "在 DB-GPT 中使用"
-description: "将 AllTokens 接入 DB-GPT，统一管理模型调用和访问权限。"
+description: "将 AllToken 接入 DB-GPT，统一管理模型调用和访问权限。"
 ---
 
 ## 概述
 
 DB-GPT 支持配置外部模型服务。
 
-通过 AllTokens 作为统一网关，你可以在 DB-GPT 中集中控制模型访问、额度和路由。
+通过 AllToken 作为统一网关，你可以在 DB-GPT 中集中控制模型访问、额度和路由。
 
 ## 适用场景
 
@@ -18,7 +18,7 @@ DB-GPT 支持配置外部模型服务。
 ## 前置条件
 
 - 已部署或可访问 DB-GPT
-- 已拥有 AllTokens API Key
+- 已拥有 AllToken API Key
 - 已确定要接入的模型名称
 
 ## 配置步骤
@@ -44,7 +44,7 @@ DB-GPT 支持配置外部模型服务。
 ## 使用建议
 
 - 建议为 DB-GPT 使用独立 API Key
-- 如需绑定特定模型能力，可在 AllTokens 侧限制模型范围
+- 如需绑定特定模型能力，可在 AllToken 侧限制模型范围
 - 如果 DB-GPT 中同时使用聊天和 Embedding 能力，建议分别配置对应模型
 
 ## 常见问题
