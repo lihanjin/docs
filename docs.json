@@ -7,7 +7,7 @@
     "light": "#A78BFA",
     "dark": "#5B21B6"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/apple-touch-icon.png",
   "api": {
     "mdx": {
       "server": "https://hubto.ai",
