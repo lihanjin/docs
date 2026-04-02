@@ -14,7 +14,7 @@ Hubto 面向调用方提供统一的大模型接口网关。
 线上站点推荐使用以下地址：
 
 ```txt
-https://hubto.ai
+https://api.hubto.ai
 ```
 
 所有接口都需要通过请求头传递令牌：
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR_API_KEY
 ## 快速示例
 
 ```bash
-curl https://hubto.ai/v1/chat/completions \
+curl https://api.hubto.ai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{

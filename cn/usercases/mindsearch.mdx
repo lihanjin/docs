@@ -26,7 +26,7 @@ MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接
 如果你的 MindSearch 支持 OpenAI 兼容方式接入，通常只需要以下三项：
 
 - API Key：`YOUR_API_KEY`
-- Base URL：`https://hubto.ai/v1`
+- Base URL：`https://api.hubto.ai/v1`
 - Model：例如 `glm-4`
 
 如果你使用的是自部署版本，常见做法是在配置文件或环境变量中填写这些值。
@@ -35,7 +35,7 @@ MindSearch 在执行搜索、推理和总结时，需要一个可用的模型接
 
 ```bash
 export OPENAI_API_KEY="YOUR_API_KEY"
-export OPENAI_API_BASE="https://hubto.ai/v1"
+export OPENAI_API_BASE="https://api.hubto.ai/v1"
 export OPENAI_MODEL="glm-4"
 ```
 
@@ -44,7 +44,7 @@ export OPENAI_MODEL="glm-4"
 ## 配置步骤
 
 1. 打开 MindSearch 的模型配置或环境变量配置位置。
-2. 将基础地址设置为 `https://hubto.ai/v1`。
+2. 将基础地址设置为 `https://api.hubto.ai/v1`。
 3. 填入 Hubto API Key。
 4. 指定一个已开通的模型名称。
 5. 执行一次搜索或总结任务验证返回结果。

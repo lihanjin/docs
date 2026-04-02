@@ -25,14 +25,14 @@ Start with a function-calling-capable general model such as `Qwen/QwQ-32B`, then
 ```toml
 [llm]
 model = "Qwen/QwQ-32B"
-base_url = "https://hubto.ai/v1"
+base_url = "https://api.hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 max_tokens = 16384
 temperature = 0.6
 
 [llm.vision]
 model = "Qwen/Qwen2-VL-72B-Instruct"
-base_url = "https://hubto.ai/v1"
+base_url = "https://api.hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 ```
 
@@ -64,7 +64,7 @@ If you need web access, make sure your model supports tool calling and your sear
 
 ### The agent does not call tools
 
-Check whether the selected model supports function calling and confirm `base_url` is set to `https://hubto.ai/v1`.
+Check whether the selected model supports function calling and confirm `base_url` is set to `https://api.hubto.ai/v1`.
 
 ### The model cannot be found
 

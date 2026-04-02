@@ -8,7 +8,7 @@ description: "通过 API Key 和第一条请求接入 Hubto 网关。"
 在开始之前，请先确认你已经具备以下条件：
 
 - 已获得可用的 API Key
-- 可以访问 `https://hubto.ai`
+- 可以访问 `https://api.hubto.ai`
 
 ## 在线接入
 
@@ -17,13 +17,13 @@ description: "通过 API Key 和第一条请求接入 Hubto 网关。"
 如果你使用线上站点，推荐把以下地址作为基础地址：
 
 ```bash
-https://hubto.ai/v1
+https://api.hubto.ai/v1
 ```
 
 如果你需要 Gemini 兼容路径，可直接使用：
 
 ```bash
-https://hubto.ai/v1beta/models
+https://api.hubto.ai/v1beta/models
 ```
 
 常见接口包括：
@@ -39,7 +39,7 @@ https://hubto.ai/v1beta/models
 先请求模型列表，确认你的 API Key 可用：
 
 ```bash
-curl https://hubto.ai/v1/models \
+curl https://api.hubto.ai/v1/models \
   -H "Authorization: Bearer YOUR_API_KEY" \
 ```
 
@@ -48,7 +48,7 @@ curl https://hubto.ai/v1/models \
 下面的示例使用 OpenAI 兼容方式发起聊天请求：
 
 ```bash
-curl https://hubto.ai/v1/chat/completions \
+curl https://api.hubto.ai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{

@@ -24,13 +24,13 @@ openclaw onboard \
   --auth-choice custom-api-key \
   --custom-provider-id hubto \
   --custom-compatibility openai \
-  --custom-base-url "https://hubto.ai/v1" \
+  --custom-base-url "https://api.hubto.ai/v1" \
   --custom-model-id "glm-4" \
   --custom-api-key "$HUBTO_API_KEY"
 ```
 
 ## Notes
 
-- Use `https://hubto.ai/v1` as the base URL.
+- Use `https://api.hubto.ai/v1` as the base URL.
 - Replace `glm-4` with any model that is enabled in your Hubto account.
 - If you prefer manual config, you can add a custom provider under `models.providers` and set the default model to `hubto/glm-4`.
