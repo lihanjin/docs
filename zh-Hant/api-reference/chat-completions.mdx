@@ -10,7 +10,7 @@ description: "OpenAI 兼容聊天补全接口。"
 ## 请求
 
 - Method: `POST`
-- URL: `https://alltoken.co/v1/chat/completions`
+- URL: `https://hubto.ai/v1/chat/completions`
 - Auth: `Authorization: Bearer YOUR_API_KEY`
 - Content-Type: `application/json`
 
@@ -22,7 +22,7 @@ description: "OpenAI 兼容聊天补全接口。"
   "messages": [
     {
       "role": "user",
-      "content": "你好，请用一句话介绍 AllToken。"
+      "content": "你好，请用一句话介绍 Hubto。"
     }
   ]
 }
@@ -31,7 +31,7 @@ description: "OpenAI 兼容聊天补全接口。"
 ## 请求示例
 
 ```bash
-curl https://alltoken.co/v1/chat/completions \
+curl https://hubto.ai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
@@ -39,7 +39,7 @@ curl https://alltoken.co/v1/chat/completions \
     "messages": [
       {
         "role": "user",
-        "content": "你好，请用一句话介绍 AllToken。"
+        "content": "你好，请用一句话介绍 Hubto。"
       }
     ]
   }'

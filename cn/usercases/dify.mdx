@@ -1,24 +1,24 @@
 ---
 title: "在 Dify 中使用"
-description: "将 AllToken 接入 Dify，作为模型供应方统一管理模型调用。"
+description: "将 Hubto 接入 Dify，作为模型供应方统一管理模型调用。"
 ---
 
 ## 概述
 
 Dify 支持通过兼容接口接入外部模型供应方。
 
-使用 AllToken 作为统一网关后，你可以在 Dify 中集中管理模型访问、额度和路由策略。
+使用 Hubto 作为统一网关后，你可以在 Dify 中集中管理模型访问、额度和路由策略。
 
 ## 适用场景
 
 - 你希望在 Dify 中接入团队统一的大模型网关
-- 你希望在同一个工作区里复用多个 AllToken 模型
+- 你希望在同一个工作区里复用多个 Hubto 模型
 - 你希望把应用的模型调用和令牌管理分开处理
 
 ## 前置条件
 
 - 已部署或可访问 Dify
-- 已拥有 AllToken API Key
+- 已拥有 Hubto API Key
 - 已确认需要接入的模型名称
 
 ## 配置步骤
@@ -33,9 +33,9 @@ Dify 支持通过兼容接口接入外部模型供应方。
 
 ### 步骤 3：填写连接信息
 
-- Provider name：可填写 `AllToken`
+- Provider name：可填写 `Hubto`
 - API Key：`YOUR_API_KEY`
-- Base URL：`https://alltoken.co/v1`
+- Base URL：`https://hubto.ai/v1`
 - Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet`
 
 ### 步骤 4：添加需要的模型
@@ -54,9 +54,9 @@ Dify 支持通过兼容接口接入外部模型供应方。
 
 ## 使用建议
 
-- 建议先在 AllToken 中为 Dify 创建独立令牌
+- 建议先在 Hubto 中为 Dify 创建独立令牌
 - 如需不同应用使用不同模型，可分别配置多个模型项
-- 如果需要稳定切换上游，可在 AllToken 中完成路由层配置
+- 如果需要稳定切换上游，可在 Hubto 中完成路由层配置
 - 如果你同时接入聊天和向量能力，建议使用不同模型名，避免混用
 
 ## 常见问题
@@ -66,7 +66,7 @@ Dify 支持通过兼容接口接入外部模型供应方。
 请先确认 Base URL 使用的是：
 
 ```txt
-https://alltoken.co/v1
+https://hubto.ai/v1
 ```
 
 ### 返回模型不存在

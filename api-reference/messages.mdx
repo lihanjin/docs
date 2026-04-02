@@ -10,7 +10,7 @@ description: "Claude Messages 兼容接口。"
 ## 请求
 
 - Method: `POST`
-- URL: `https://alltoken.co/v1/messages`
+- URL: `https://hubto.ai/v1/messages`
 - Auth: `Authorization: Bearer YOUR_API_KEY`
 - Content-Type: `application/json`
 
@@ -23,7 +23,7 @@ description: "Claude Messages 兼容接口。"
   "messages": [
     {
       "role": "user",
-      "content": "请介绍 AllToken。"
+      "content": "请介绍 Hubto。"
     }
   ]
 }
@@ -32,7 +32,7 @@ description: "Claude Messages 兼容接口。"
 ## 请求示例
 
 ```bash
-curl https://alltoken.co/v1/messages \
+curl https://hubto.ai/v1/messages \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
@@ -41,7 +41,7 @@ curl https://alltoken.co/v1/messages \
     "messages": [
       {
         "role": "user",
-        "content": "请介绍 AllToken。"
+        "content": "请介绍 Hubto。"
       }
     ]
   }'

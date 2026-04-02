@@ -1,19 +1,19 @@
 ---
 title: "在 OpenCode 中使用"
-description: "将 AllToken 接入 OpenCode，通过自定义 OpenAI 兼容提供方使用统一模型网关。"
+description: "将 Hubto 接入 OpenCode，通过自定义 OpenAI 兼容提供方使用统一模型网关。"
 ---
 
 ## 概述
 
 OpenCode 是一个面向开发者的 AI 编码工具，支持通过配置文件接入自定义模型提供方。
 
-将 OpenCode 接入 AllToken 后，你可以用统一的 API Key、基础地址和模型名完成编码问答、重构和命令行协作。
+将 OpenCode 接入 Hubto 后，你可以用统一的 API Key、基础地址和模型名完成编码问答、重构和命令行协作。
 
 ## 前置条件
 
 - 已安装并可以正常使用 OpenCode
-- 已拥有可用的 AllToken API Key
-- 网络环境可以访问 `https://alltoken.co`
+- 已拥有可用的 Hubto API Key
+- 网络环境可以访问 `https://hubto.ai`
 
 ## 配置方式
 
@@ -22,7 +22,7 @@ OpenCode 支持全局配置和项目级配置：
 - 全局配置：`~/.config/opencode/opencode.json`
 - 项目级配置：项目根目录下的 `opencode.json`
 
-如果你希望所有项目都走 AllToken，建议先使用全局配置。
+如果你希望所有项目都走 Hubto，建议先使用全局配置。
 
 ## 配置步骤
 
@@ -31,7 +31,7 @@ OpenCode 支持全局配置和项目级配置：
 先在终端中写入环境变量：
 
 ```bash
-export ALLTOKEN_API_KEY="YOUR_API_KEY"
+export HUBTO_API_KEY="YOUR_API_KEY"
 ```
 
 ### 步骤 2：写入 OpenCode 配置
@@ -42,12 +42,12 @@ export ALLTOKEN_API_KEY="YOUR_API_KEY"
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "alltoken": {
+    "hubto": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "AllToken",
+      "name": "Hubto",
       "options": {
-        "baseURL": "https://alltoken.co/v1",
-        "apiKey": "{env:ALLTOKEN_API_KEY}"
+        "baseURL": "https://hubto.ai/v1",
+        "apiKey": "{env:HUBTO_API_KEY}"
       },
       "models": {
         "glm-4": {
@@ -56,7 +56,7 @@ export ALLTOKEN_API_KEY="YOUR_API_KEY"
       }
     }
   },
-  "model": "alltoken/glm-4"
+  "model": "hubto/glm-4"
 }
 ```
 
@@ -68,17 +68,17 @@ opencode
 
 ### 步骤 4：切换模型
 
-如果你已经在 AllToken 中开通了其他模型，可以把默认模型改成对应值，例如：
+如果你已经在 Hubto 中开通了其他模型，可以把默认模型改成对应值，例如：
 
 ```json
 {
-  "model": "alltoken/deepseek-v3"
+  "model": "hubto/deepseek-v3"
 }
 ```
 
 ## 推荐验证方式
 
-启动后先发一个简单请求，例如“解释一下当前项目结构”。如果能正常返回内容，说明 AllToken 接入已经生效。
+启动后先发一个简单请求，例如“解释一下当前项目结构”。如果能正常返回内容，说明 Hubto 接入已经生效。
 
 ## 使用建议
 
@@ -94,14 +94,14 @@ opencode
 
 ### 返回认证失败
 
-请确认 `ALLTOKEN_API_KEY` 已生效，并且值来自 AllToken 控制台。
+请确认 `HUBTO_API_KEY` 已生效，并且值来自 Hubto 控制台。
 
 ### 返回 404 或请求地址错误
 
 请确认 `baseURL` 使用的是：
 
 ```txt
-https://alltoken.co/v1
+https://hubto.ai/v1
 ```
 
 ## 下一步

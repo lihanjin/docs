@@ -1,25 +1,25 @@
 ---
 title: "Use in Claude Code"
-description: "Connect AllToken to Claude Code through a unified gateway."
+description: "Connect Hubto to Claude Code through a unified gateway."
 ---
 
 ## Overview
 
 Claude Code is a command-line AI assistant for developers.
 
-By connecting it to AllToken, you can route Claude requests through a single gateway and manage keys, models, quotas, and routing in one place.
+By connecting it to Hubto, you can route Claude requests through a single gateway and manage keys, models, quotas, and routing in one place.
 
 ## Quick setup
 
 ```bash
 export ANTHROPIC_API_KEY="YOUR_API_KEY"
-export ANTHROPIC_BASE_URL="https://alltoken.co"
+export ANTHROPIC_BASE_URL="https://hubto.ai"
 export ANTHROPIC_MODEL="claude-3-5-sonnet"
 claude
 ```
 
 ## Notes
 
-- Make sure your AllToken key has access to Claude models.
+- Make sure your Hubto key has access to Claude models.
 - To switch models, update `ANTHROPIC_MODEL`.
 - To make the config persistent, add these variables to your shell profile.

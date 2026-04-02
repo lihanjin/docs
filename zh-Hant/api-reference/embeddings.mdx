@@ -10,7 +10,7 @@ description: "文本向量生成接口。"
 ## 请求
 
 - Method: `POST`
-- URL: `https://alltoken.co/v1/embeddings`
+- URL: `https://hubto.ai/v1/embeddings`
 - Auth: `Authorization: Bearer YOUR_API_KEY`
 - Content-Type: `application/json`
 
@@ -19,19 +19,19 @@ description: "文本向量生成接口。"
 ```json
 {
   "model": "text-embedding-3-small",
-  "input": "AllToken 是统一的大模型接口网关。"
+  "input": "Hubto 是统一的大模型接口网关。"
 }
 ```
 
 ## 请求示例
 
 ```bash
-curl https://alltoken.co/v1/embeddings \
+curl https://hubto.ai/v1/embeddings \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
     "model": "text-embedding-3-small",
-    "input": "AllToken 是统一的大模型接口网关。"
+    "input": "Hubto 是统一的大模型接口网关。"
   }'
 ```
 

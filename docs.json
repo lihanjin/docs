@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AllToken",
+  "name": "Hubto",
   "colors": {
     "primary": "#7C3AED",
     "light": "#A78BFA",
@@ -10,7 +10,7 @@
   "favicon": "/favicon.svg",
   "api": {
     "mdx": {
-      "server": "https://alltoken.co",
+      "server": "https://hubto.ai",
       "auth": {
         "method": "bearer"
       }
@@ -304,7 +304,7 @@
       "anchors": [
         {
           "anchor": "官网",
-          "href": "https://alltoken.co/",
+          "href": "https://hubto.ai/",
           "icon": "globe"
         }
       ]
@@ -319,13 +319,13 @@
     "links": [
       {
         "label": "产品站点",
-        "href": "https://alltoken.co/"
+        "href": "https://hubto.ai/"
       }
     ],
     "primary": {
       "type": "button",
       "label": "立即体验",
-      "href": "https://alltoken.co/"
+      "href": "https://hubto.ai/"
     }
   },
   "contextual": {

@@ -1,15 +1,15 @@
 ---
 title: "产品简介"
-description: "了解 AllToken 是什么、解决什么问题，以及适合哪些场景。"
+description: "了解 Hubto 是什么、解决什么问题，以及适合哪些场景。"
 ---
 
 ## 产品介绍
 
-AllToken 是一个面向开发者的 API Key 模型网关服务。
+Hubto 是一个面向开发者的 API Key 模型网关服务。
 
 你可以把它理解为一层统一的模型访问入口。你使用一个基础地址和 API Key，就能通过统一网关访问多种模型接口。
 
-对于开发者，AllToken 的目标很明确：提供稳定、兼容的 API 网关接入。
+对于开发者，Hubto 的目标很明确：提供稳定、兼容的 API 网关接入。
 
 <CardGroup cols={2}>
   <Card title="统一接入入口" icon="plug">
@@ -30,7 +30,7 @@ AllToken 是一个面向开发者的 API Key 模型网关服务。
 
 ### 统一模型网关
 
-AllToken 提供统一的 `/v1` 入口，并支持多类常见模型接口：
+Hubto 提供统一的 `/v1` 入口，并支持多类常见模型接口：
 
 - OpenAI 兼容接口，如 `/v1/chat/completions`、`/v1/models`、`/v1/embeddings`
 - OpenAI Responses 接口，如 `/v1/responses`
@@ -42,7 +42,7 @@ AllToken 提供统一的 `/v1` 入口，并支持多类常见模型接口：
 
 ### API Key 网关控制
 
-AllToken 提供基于 API Key 的网关访问控制：
+Hubto 提供基于 API Key 的网关访问控制：
 
 - 所有请求统一使用 API Key 鉴权
 - 保持常见 SDK 与请求格式的兼容性
@@ -50,11 +50,11 @@ AllToken 提供基于 API Key 的网关访问控制：
 
 ## 产品特性
 
-### 为什么使用 AllToken
+### 为什么使用 Hubto
 
 <AccordionGroup>
   <Accordion title="降低多模型接入复杂度" icon="shuffle">
-    当你同时使用 OpenAI、Claude、Gemini 或其他上游时，接口格式、鉴权方式和可用模型往往并不一致。AllToken 将这些差异收敛到统一入口，减少多套 SDK 与多套配置带来的维护成本。
+    当你同时使用 OpenAI、Claude、Gemini 或其他上游时，接口格式、鉴权方式和可用模型往往并不一致。Hubto 将这些差异收敛到统一入口，减少多套 SDK 与多套配置带来的维护成本。
   </Accordion>
   <Accordion title="保持客户端改动最小" icon="wand">
     在已有请求结构基础上，你通常只需要替换基础地址和 API Key，就可以接入网关。

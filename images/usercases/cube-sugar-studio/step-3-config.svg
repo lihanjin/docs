@@ -2,9 +2,9 @@
   <rect width="1200" height="675" rx="32" fill="#f8fafc"/>
   <rect x="85" y="85" width="1030" height="500" rx="30" fill="#ffffff" stroke="#dbe4ff"/>
   <text x="125" y="170" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">AI Settings</text>
-  <text x="125" y="225" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">Use the OpenAI-compatible endpoint from AllToken.</text>
+  <text x="125" y="225" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">Use the OpenAI-compatible endpoint from Hubto.</text>
   <rect x="125" y="275" width="560" height="70" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
-  <text x="150" y="319" font-family="Arial, sans-serif" font-size="26" fill="#6b7280">Base URL  https://alltoken.co/v1</text>
+  <text x="150" y="319" font-family="Arial, sans-serif" font-size="26" fill="#6b7280">Base URL  https://hubto.ai/v1</text>
   <rect x="125" y="370" width="560" height="70" rx="14" fill="#f8fafc" stroke="#cbd5e1"/>
   <text x="150" y="414" font-family="Arial, sans-serif" font-size="26" fill="#6b7280">Model  glm-4 / deepseek-v3</text>
   <rect x="125" y="465" width="220" height="60" rx="18" fill="#7c3aed"/>

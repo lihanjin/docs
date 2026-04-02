@@ -10,7 +10,7 @@ description: "OpenAI Responses 接口。"
 ## 请求
 
 - Method: `POST`
-- URL: `https://alltoken.co/v1/responses`
+- URL: `https://hubto.ai/v1/responses`
 - Auth: `Authorization: Bearer YOUR_API_KEY`
 - Content-Type: `application/json`
 
@@ -19,19 +19,19 @@ description: "OpenAI Responses 接口。"
 ```json
 {
   "model": "gpt-4.1-mini",
-  "input": "请概括 AllToken 的核心价值。"
+  "input": "请概括 Hubto 的核心价值。"
 }
 ```
 
 ## 请求示例
 
 ```bash
-curl https://alltoken.co/v1/responses \
+curl https://hubto.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
     "model": "gpt-4.1-mini",
-    "input": "请概括 AllToken 的核心价值。"
+    "input": "请概括 Hubto 的核心价值。"
   }'
 ```
 

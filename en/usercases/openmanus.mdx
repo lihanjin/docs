@@ -1,6 +1,6 @@
 ---
-title: "OpenManus"
-description: "Connect AllToken to OpenManus and run agentic tasks with an OpenAI-compatible model."
+title: "Use in OpenManus"
+description: "Connect Hubto to OpenManus and run agentic tasks with an OpenAI-compatible model."
 ---
 
 ## Install OpenManus
@@ -12,27 +12,27 @@ If you can already run OpenManus locally, continue to the configuration step.
 ## Prerequisites
 
 - OpenManus is installed and can start locally
-- You have an active AllToken API Key
+- You have an active Hubto API Key
 - The target model supports function calling
 - If you plan to use vision tasks, make sure a vision model is enabled too
 
 ## Configure OpenManus
 
-Open the `config/config.toml` file and point the model settings to AllToken.
+Open the `config/config.toml` file and point the model settings to Hubto.
 
 Start with a function-calling-capable general model such as `Qwen/QwQ-32B`, then switch to a vision model only if you need it.
 
 ```toml
 [llm]
 model = "Qwen/QwQ-32B"
-base_url = "https://alltoken.co/v1"
+base_url = "https://hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 max_tokens = 16384
 temperature = 0.6
 
 [llm.vision]
 model = "Qwen/Qwen2-VL-72B-Instruct"
-base_url = "https://alltoken.co/v1"
+base_url = "https://hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 ```
 
@@ -64,11 +64,11 @@ If you need web access, make sure your model supports tool calling and your sear
 
 ### The agent does not call tools
 
-Check whether the selected model supports function calling and confirm `base_url` is set to `https://alltoken.co/v1`.
+Check whether the selected model supports function calling and confirm `base_url` is set to `https://hubto.ai/v1`.
 
 ### The model cannot be found
 
-Make sure the model name in `config.toml` matches the name enabled in your AllToken account.
+Make sure the model name in `config.toml` matches the name enabled in your Hubto account.
 
 ### Vision tasks fail
 
@@ -89,4 +89,4 @@ Recheck your dependencies and make sure the API key is valid.
 
 OpenManus is a good fit for multi-step, tool-driven agent tasks.
 
-With AllToken, you can keep model access behind one gateway and choose the right model for each job.
+With Hubto, you can keep model access behind one gateway and choose the right model for each job.

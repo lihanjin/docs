@@ -1,24 +1,24 @@
 ---
 title: "在 Sider 中使用"
-description: "将 AllToken 接入 Sider，通过兼容接口使用统一模型网关。"
+description: "将 Hubto 接入 Sider，通过兼容接口使用统一模型网关。"
 ---
 
 ## 概述
 
 Sider 支持接入外部模型服务。
 
-配置 AllToken 后，你可以在 Sider 中通过统一网关访问已开通的模型。
+配置 Hubto 后，你可以在 Sider 中通过统一网关访问已开通的模型。
 
 ## 适用场景
 
-- 你希望在浏览器插件或桌面侧统一使用 AllToken
+- 你希望在浏览器插件或桌面侧统一使用 Hubto
 - 你希望在 Sider 中接入自定义模型服务
 - 你希望把个人设备的模型调用和其他业务分开管理
 
 ## 前置条件
 
 - 已安装并可正常使用 Sider
-- 已拥有 AllToken API Key
+- 已拥有 Hubto API Key
 - 已确认要使用的模型名称
 
 ## 配置步骤
@@ -34,7 +34,7 @@ Sider 支持接入外部模型服务。
 ### 步骤 3：填写参数
 
 - API Key：`YOUR_API_KEY`
-- Base URL：`https://alltoken.co/v1`
+- Base URL：`https://hubto.ai/v1`
 - Model：例如 `glm-4`、`deepseek-v3`、`claude-3-5-sonnet`
 
 ### 步骤 4：验证连接
@@ -43,7 +43,7 @@ Sider 支持接入外部模型服务。
 
 ## 使用建议
 
-- 如果 Sider 支持多个提供方，建议单独保存一套 `AllToken` 配置
+- 如果 Sider 支持多个提供方，建议单独保存一套 `Hubto` 配置
 - 先验证一个基础聊天模型，再切换到更长上下文或更高成本的模型
 - 如果需要多人协作，建议为不同成员分配不同的 API Key
 
@@ -51,7 +51,7 @@ Sider 支持接入外部模型服务。
 
 ### 配置保存后无法请求
 
-请确认网络可访问 AllToken 域名，并检查 Base URL 末尾是否为 `/v1`。
+请确认网络可访问 Hubto 域名，并检查 Base URL 末尾是否为 `/v1`。
 
 ### 调用成功但回复质量不符合预期
 
