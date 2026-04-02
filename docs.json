@@ -311,8 +311,8 @@
     }
   },
   "logo": {
-    "light": "/apple-touch-icon.png",
-    "dark": "/apple-touch-icon.png",
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
     "href": "/cn"
   },
   "navbar": {
