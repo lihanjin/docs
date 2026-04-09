@@ -1,13 +1,13 @@
 ---
 title: "Use in OpenCode"
-description: "Connect Hubto to OpenCode through a custom OpenAI-compatible provider."
+description: "Connect HubTo to OpenCode through a custom OpenAI-compatible provider."
 ---
 
 ## Overview
 
 OpenCode lets you configure custom model providers through its config file.
 
-With Hubto, you can route OpenCode requests through a single gateway and manage API keys, models, and quotas in one place.
+With HubTo, you can route OpenCode requests through a single gateway and manage API keys, models, and quotas in one place.
 
 ## Quick setup
 
@@ -25,7 +25,7 @@ Create or update `~/.config/opencode/opencode.json`:
   "provider": {
     "hubto": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Hubto",
+      "name": "HubTo",
       "options": {
         "baseURL": "https://api.hubto.ai/v1",
         "apiKey": "{env:HUBTO_API_KEY}"

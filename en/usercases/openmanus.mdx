@@ -1,6 +1,6 @@
 ---
 title: "Use in OpenManus"
-description: "Connect Hubto to OpenManus and run agentic tasks with an OpenAI-compatible model."
+description: "Connect HubTo to OpenManus and run agentic tasks with an OpenAI-compatible model."
 ---
 
 ## Install OpenManus
@@ -12,13 +12,13 @@ If you can already run OpenManus locally, continue to the configuration step.
 ## Prerequisites
 
 - OpenManus is installed and can start locally
-- You have an active Hubto API Key
+- You have an active HubTo API Key
 - The target model supports function calling
 - If you plan to use vision tasks, make sure a vision model is enabled too
 
 ## Configure OpenManus
 
-Open the `config/config.toml` file and point the model settings to Hubto.
+Open the `config/config.toml` file and point the model settings to HubTo.
 
 Start with a function-calling-capable general model such as `Qwen/QwQ-32B`, then switch to a vision model only if you need it.
 
@@ -68,7 +68,7 @@ Check whether the selected model supports function calling and confirm `base_url
 
 ### The model cannot be found
 
-Make sure the model name in `config.toml` matches the name enabled in your Hubto account.
+Make sure the model name in `config.toml` matches the name enabled in your HubTo account.
 
 ### Vision tasks fail
 
@@ -89,4 +89,4 @@ Recheck your dependencies and make sure the API key is valid.
 
 OpenManus is a good fit for multi-step, tool-driven agent tasks.
 
-With Hubto, you can keep model access behind one gateway and choose the right model for each job.
+With HubTo, you can keep model access behind one gateway and choose the right model for each job.

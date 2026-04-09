@@ -1,18 +1,18 @@
 ---
 title: "在 OpenClaw 中使用"
-description: "将 Hubto 作为 OpenClaw 的自定义 OpenAI 兼容提供方接入。"
+description: "将 HubTo 作为 OpenClaw 的自定义 OpenAI 兼容提供方接入。"
 ---
 
 ## 概述
 
 OpenClaw 支持通过向导或配置文件接入自定义模型提供方。
 
-将 Hubto 配置为 OpenClaw 的 OpenAI 兼容提供方后，你可以通过统一网关管理模型访问、API Key 和路由策略。
+将 HubTo 配置为 OpenClaw 的 OpenAI 兼容提供方后，你可以通过统一网关管理模型访问、API Key 和路由策略。
 
 ## 前置条件
 
 - 已安装并可以正常使用 OpenClaw
-- 已拥有可用的 Hubto API Key
+- 已拥有可用的 HubTo API Key
 - 已确认需要使用的模型名称
 
 ## 方法一：使用向导配置
@@ -93,7 +93,7 @@ export HUBTO_API_KEY="YOUR_API_KEY"
 
 ### 向导执行后模型不可用
 
-请确认 `--custom-base-url` 使用的是 `https://api.hubto.ai/v1`，并确认模型名已在 Hubto 中开通。
+请确认 `--custom-base-url` 使用的是 `https://api.hubto.ai/v1`，并确认模型名已在 HubTo 中开通。
 
 ### 返回认证失败
 

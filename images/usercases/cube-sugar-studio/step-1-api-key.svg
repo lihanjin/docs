@@ -7,7 +7,7 @@
   </defs>
   <rect width="1200" height="675" rx="32" fill="url(#bg)"/>
   <rect x="80" y="90" width="1040" height="495" rx="28" fill="#ffffff" stroke="#dbe4ff"/>
-  <text x="120" y="175" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">Hubto API Key</text>
+  <text x="120" y="175" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#111827">HubTo API Key</text>
   <text x="120" y="235" font-family="Arial, sans-serif" font-size="28" fill="#4b5563">Create a key for Maidu Radio and paste it into the app.</text>
   <rect x="120" y="300" width="520" height="68" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
   <text x="150" y="345" font-family="Arial, sans-serif" font-size="26" fill="#6b7280">sk-xxxxxxxxxxxxxxxx</text>

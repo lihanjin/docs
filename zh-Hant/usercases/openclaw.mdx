@@ -1,13 +1,13 @@
 ---
 title: "在 OpenClaw 中使用"
-description: "將 Hubto 作為 OpenClaw 的自訂 OpenAI 相容提供方接入。"
+description: "將 HubTo 作為 OpenClaw 的自訂 OpenAI 相容提供方接入。"
 ---
 
 ## 概述
 
 OpenClaw 支援透過引導精靈或設定檔接入自訂模型提供方。
 
-將 Hubto 接入後，你可以把 OpenClaw 的模型請求統一走同一個網關，並集中管理模型與 API Key。
+將 HubTo 接入後，你可以把 OpenClaw 的模型請求統一走同一個網關，並集中管理模型與 API Key。
 
 ## 快速設定
 
@@ -32,5 +32,5 @@ openclaw onboard \
 ## 說明
 
 - 基礎地址請使用 `https://api.hubto.ai/v1`
-- 將 `glm-4` 替換成你在 Hubto 中已開通的模型名稱
+- 將 `glm-4` 替換成你在 HubTo 中已開通的模型名稱
 - 如果你偏好手動設定，也可以在 `models.providers` 中新增自訂 provider，並把預設模型設為 `hubto/glm-4`
