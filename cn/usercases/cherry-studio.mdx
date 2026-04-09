@@ -1,0 +1,100 @@
+---
+title: "在 Cherry Studio 中使用"
+description: "将 HubTo 接入 Cherry Studio，作为自定义服务商统一管理模型。"
+---
+
+## 概述
+
+[Cherry Studio](https://www.cherry-ai.com/download) 是一个多模型桌面 AI 客户端。
+
+根据官方文档，Cherry Studio 支持添加自定义服务商，并可选择 `OpenAI`、`Gemini`、`Anthropic`、`Azure OpenAI` 等服务类型。
+
+将 HubTo 接入 Cherry Studio 后，你可以继续使用 Cherry Studio 的多模型对话体验，同时把 API Key、模型和访问地址统一收敛到 HubTo。
+
+## 适用场景
+
+- 你希望在桌面端统一管理多个模型
+- 你希望把第三方模型服务统一切到 HubTo
+- 你希望按个人或团队维度隔离 API Key 和访问权限
+
+## 前置条件
+
+- 已安装 Cherry Studio
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：打开模型服务设置
+
+启动 Cherry Studio，打开 **设置**，进入 **模型服务** 页面。
+
+如果你第一次使用，可以先参考官方文档：
+
+- 官方下载页：[https://www.cherry-ai.com/download](https://www.cherry-ai.com/download)
+- 自定义服务商文档：[https://docs.cherry-ai.com/docs/en-us/pre-basic/providers/zi-ding-yi-fu-wu-shang](https://docs.cherry-ai.com/docs/en-us/pre-basic/providers/zi-ding-yi-fu-wu-shang)
+
+### 步骤 2：新增自定义服务商
+
+在服务商列表底部点击 **+ Add** 或 **添加**，创建一个新的自定义服务商。
+
+推荐填写：
+
+- Provider Name：`HubTo`
+- Provider Type：`OpenAI`
+
+保存后，你会在服务商列表里看到刚创建的 HubTo 入口。
+
+### 步骤 3：填写 API 信息
+
+打开这个自定义服务商的详细配置，填写：
+
+- API Key：`YOUR_API_KEY`
+- API Address / Base URL：`https://api.hubto.ai/v1`
+
+如果当前版本提供 **Check** 或校验按钮，建议先点一次确认配置可用。
+
+### 步骤 4：添加模型
+
+在模型管理区域点击 **Manage** 或 **Add**，加入你准备使用的模型 ID。
+
+示例：
+
+- `gpt-5.4`
+- `zai-org/GLM-4.5`
+- `deepseek-ai/DeepSeek-V3`
+
+### 步骤 5：启用服务商并开始使用
+
+打开该服务商右侧的启用开关，然后在聊天界面选择 `HubTo` 和对应模型开始使用。
+
+## 使用建议
+
+- 只添加你实际会用到的模型，避免列表过长
+- 如果你要多人共用，建议给 Cherry Studio 单独创建 API Key
+- 如果你需要稳定切换模型，优先在 HubTo 中统一做权限和路由管理
+
+## 常见问题
+
+### API 校验失败
+
+请确认填写的是：
+
+```txt
+https://api.hubto.ai/v1
+```
+
+并检查 API Key 是否有效。
+
+### 服务商能添加，但看不到模型
+
+请确认你已经手动添加模型 ID，并打开了服务商开关。
+
+### 请求发出后返回 404
+
+请确认 Provider Type 选择的是 `OpenAI`，并检查模型名称是否与 HubTo 中开通的模型一致。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

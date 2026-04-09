@@ -79,18 +79,21 @@
               {
                 "group": "对话助手",
                 "pages": [
+                  "cn/usercases/cherry-studio",
                   "cn/usercases/chathub"
                 ]
               },
               {
                 "group": "翻译工具",
                 "pages": [
+                  "cn/usercases/immersive-translate",
                   "cn/usercases/trancy"
                 ]
               },
               {
                 "group": "高效输入与笔记工具",
                 "pages": [
+                  "cn/usercases/obsidian-copilot",
                   "cn/usercases/nextaidrawio"
                 ]
               },

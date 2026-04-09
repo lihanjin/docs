@@ -79,7 +79,7 @@
   <rect x="463" y="271" width="199" height="29" rx="11" fill="#FFFFFF" stroke="#D7DCE4"/>
   <circle cx="480" cy="285" r="10" fill="#EFF2F6"/>
   <path d="M480 277C483 277 485.5 279.5 485.5 282.5C485.5 285.5 483 288 480 288C477 288 474.5 285.5 474.5 282.5C474.5 279.5 477 277 480 277Z" fill="#6B7280"/>
-  <text x="508" y="291" fill="#20242B" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">Hubto</text>
+  <text x="508" y="291" fill="#20242B" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">HubTo</text>
   <path d="M653 281L658 286L653 291" stroke="#9DA3AE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 
   <rect x="451" y="752" width="231" height="36" rx="14" fill="#FFFFFF" stroke="#E2E5EA"/>
@@ -111,7 +111,7 @@
     <circle cx="734" cy="377" r="6.5" stroke="#69707C" stroke-width="1.4"/>
     <text x="752" y="381" fill="#2D323A" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">显示名称</text>
     <rect x="728" y="391" width="552" height="35" rx="15" fill="#FFFFFF" stroke="#DCE2EB"/>
-    <text x="742" y="414" fill="#2E333B" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">Hubto</text>
+    <text x="742" y="414" fill="#2E333B" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">HubTo</text>
   </g>
   <g>
     <path d="M732 446C734 450 739 451 742 448C744 445 742 440 738 440C734 440 732 443 732 446Z" stroke="#69707C" stroke-width="1.4"/>

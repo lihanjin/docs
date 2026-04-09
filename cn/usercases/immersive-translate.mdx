@@ -1,0 +1,95 @@
+---
+title: "在沉浸式翻译中使用"
+description: "将 HubTo 接入沉浸式翻译，通过自定义 OpenAI API 地址使用翻译能力。"
+---
+
+## 概述
+
+[沉浸式翻译](https://immersivetranslate.com/docs/) 是一个面向网页、PDF、视频字幕和文档场景的翻译工具。
+
+根据官方文档，它的 OpenAI 翻译服务支持在 **More Settings** 中自定义 OpenAI API 地址。
+
+将 HubTo 接入后，你可以在沉浸式翻译中继续使用 OpenAI 类翻译入口，同时把 API Key 和模型调用切换到 HubTo。
+
+## 适用场景
+
+- 你希望在网页双语阅读场景中接入 HubTo
+- 你希望为 PDF、字幕或长文翻译统一管理模型服务
+- 你希望把 OpenAI 类翻译请求切到自定义地址
+
+## 前置条件
+
+- 已安装沉浸式翻译扩展
+- 已拥有可用的 HubTo API Key
+- 当前版本支持 OpenAI 翻译服务入口
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：安装并打开设置
+
+先从官方页面安装沉浸式翻译，然后进入扩展设置。
+
+- 官方文档入口：[https://immersivetranslate.com/docs/](https://immersivetranslate.com/docs/)
+- OpenAI 服务说明：[https://immersivetranslate.com/docs/services/openai](https://immersivetranslate.com/docs/services/openai)
+
+### 步骤 2：选择 OpenAI 翻译服务
+
+在翻译服务列表中选择 **OpenAI**。
+
+官方文档说明，这个入口支持填写 API Key，并可在 **More Settings** 中自定义地址。
+
+### 步骤 3：填写 HubTo 配置
+
+在 OpenAI 设置中填写：
+
+- API Key：`YOUR_API_KEY`
+
+然后展开 **More Settings**，把自定义 OpenAI API 地址设置为：
+
+```txt
+https://api.hubto.ai/v1/chat/completions
+```
+
+如果界面提供模型选择项，请选择你已经开通的模型，例如：
+
+- `gpt-5.4`
+- `zai-org/GLM-4.5`
+- `deepseek-ai/DeepSeek-V3`
+
+### 步骤 4：执行一次翻译测试
+
+打开任意外文网页，触发一次段落翻译或整页翻译，确认可以正常返回结果。
+
+## 地址填写说明
+
+沉浸式翻译官方文档在自定义 OpenAI 地址时使用的是完整的接口入口，因此这里建议填写完整地址：
+
+```txt
+https://api.hubto.ai/v1/chat/completions
+```
+
+## 使用建议
+
+- 如果你遇到频率限制，优先降低并发或请求频率
+- 如果你需要多人共用，建议给沉浸式翻译单独创建 API Key
+- 如果模型切换较频繁，建议先在 HubTo 控制台确认对应模型已开通
+
+## 常见问题
+
+### 配置后仍然走默认 OpenAI 地址
+
+请确认你已经在 **More Settings** 中保存了自定义地址，而不是只填写了 API Key。
+
+### 返回认证失败
+
+请确认 API Key 来自 HubTo 控制台，并检查是否包含多余空格。
+
+### 翻译请求失败或响应很慢
+
+请先确认当前模型可用，再适当降低请求频率。沉浸式翻译官方文档也建议在频率受限时下调请求速度。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

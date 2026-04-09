@@ -1,0 +1,113 @@
+---
+title: "在 Obsidian Copilot 中使用"
+description: "将 HubTo 接入 Obsidian Copilot，作为 OpenAI-compatible 第三方模型服务。"
+---
+
+## 概述
+
+[Obsidian Copilot](https://www.obsidiancopilot.com/en/docs/getting-started) 是 Obsidian 的 AI 插件，支持聊天、总结、翻译、知识库问答和项目分析等能力。
+
+根据官方文档，Copilot 支持添加自定义模型，并且明确支持 `3rd party (openai format)`。
+
+将 HubTo 接入后，你可以在 Obsidian 中直接调用 HubTo 提供的模型来处理笔记问答、摘要生成和内容创作。
+
+## 适用场景
+
+- 你希望在 Obsidian 中统一管理 AI 笔记工作流
+- 你希望把聊天模型或嵌入模型切到 HubTo
+- 你希望在不改日常写作习惯的前提下切换模型来源
+
+## 前置条件
+
+- 已安装 Obsidian
+- 已安装并启用 Copilot 插件
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：安装 Copilot 插件
+
+打开 Obsidian，进入 **Community Plugins**，搜索 `Copilot`，安装并启用。
+
+官方安装与设置文档：
+
+- Getting Started：[https://www.obsidiancopilot.com/en/docs/getting-started](https://www.obsidiancopilot.com/en/docs/getting-started)
+- Copilot Settings：[https://www.obsidiancopilot.com/en/docs/settings](https://www.obsidiancopilot.com/en/docs/settings)
+
+### 步骤 2：进入 Copilot 设置
+
+在 Obsidian 中打开：
+
+```txt
+Settings → Copilot Settings
+```
+
+### 步骤 3：添加自定义模型
+
+按照官方文档，在 Copilot 设置中添加一个自定义模型：
+
+1. 进入 **Basic Settings**
+2. 打开 **API Keys**
+3. 点击 **Add Model**
+4. 选择 **Custom Model**
+
+### 步骤 4：选择第三方 OpenAI 格式并填写参数
+
+在自定义模型表单中填写：
+
+- Provider：`3rd party (openai format)`
+- Model Name：填写你要使用的模型，例如 `gpt-5.4`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+
+如果你要使用其他模型，也可以填写：
+
+- `zai-org/GLM-4.5`
+- `deepseek-ai/DeepSeek-V3`
+
+保存后，把这个模型设置为默认聊天模型即可开始使用。
+
+### 步骤 5：如有需要，处理 CORS
+
+官方文档说明，如果调用第三方服务时遇到 CORS 报错，可以在 Copilot 设置中打开 CORS 相关选项后再重试。
+
+## 扩展说明
+
+Copilot 官方文档还说明：
+
+- 第三方 API Key 可以直接在自定义模型表单中填写
+- 嵌入模型也可以使用 OpenAI-compatible 的第三方服务
+
+如果你准备在 Vault QA 或语义检索中使用嵌入模型，也可以按同样思路切到 HubTo 支持的嵌入模型。
+
+## 使用建议
+
+- 先只接入一个聊天模型验证链路，再扩展到嵌入模型
+- 如果你主要用笔记问答，建议优先选择上下文能力更强的模型
+- 如果你是团队共享知识库，建议为 Obsidian Copilot 单独创建 API Key
+
+## 常见问题
+
+### 保存后模型不可用
+
+请确认 Base URL 使用的是：
+
+```txt
+https://api.hubto.ai/v1
+```
+
+并检查模型名称是否填写正确。
+
+### 聊天时报 CORS 错误
+
+请按 Copilot 官方文档的说明，打开 CORS 相关选项后再测试一次。
+
+### Vault QA 或索引功能异常
+
+请确认聊天模型和嵌入模型都使用了有效的服务配置，并检查当前模型是否支持对应能力。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)
