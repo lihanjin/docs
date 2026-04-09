@@ -1,0 +1,52 @@
+<svg width="715" height="625" viewBox="0 0 715 625" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="715" height="625" fill="#DAD8D8"/>
+  <g opacity="0.5">
+    <rect x="0" y="19" width="715" height="49" fill="#D3D1D1"/>
+    <rect x="0" y="102" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="165" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="228" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="291" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="354" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="417" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="480" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="543" width="715" height="58" fill="#D5D3D3"/>
+    <rect x="0" y="114" width="67" height="26" rx="13" fill="#4D7FE9"/>
+    <circle cx="49" cy="127" r="11" fill="#DCE5FF"/>
+    <rect x="647" y="199" width="56" height="27" rx="13.5" fill="#4D7FE9"/>
+    <circle cx="690" cy="212.5" r="11" fill="#DCE5FF"/>
+    <rect x="647" y="258" width="56" height="27" rx="13.5" fill="#4D7FE9"/>
+    <circle cx="690" cy="271.5" r="11" fill="#DCE5FF"/>
+  </g>
+  <rect x="72" y="59" width="601" height="555" rx="15" fill="white"/>
+  <rect x="72.5" y="59.5" width="600" height="554" rx="14.5" stroke="#E5E7EB"/>
+  <text x="104" y="113" fill="#444444" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">名称</text>
+  <rect x="104" y="124" width="537" height="35" rx="7" fill="#FAFBFC" stroke="#C8D0DC" stroke-width="1.4"/>
+  <text x="118" y="147" fill="#4B5563" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">hubto</text>
+  <text x="104" y="192" fill="#444444" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">API Host</text>
+  <rect x="104" y="201" width="537" height="31" rx="7" fill="#FAFBFC" stroke="#C8D0DC" stroke-width="1.4"/>
+  <text x="118" y="222" fill="#4B5563" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">OpenAI</text>
+  <path d="M620 214L624 218L628 214" stroke="#9CA3AF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="104" y="238" width="537" height="35" rx="7" fill="#FAFBFC" stroke="#C8D0DC" stroke-width="1.4"/>
+  <text x="118" y="261" fill="#4B5563" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">https://api.hubto.ai/v1</text>
+  <text x="104" y="308" fill="#444444" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">API Key</text>
+  <rect x="104" y="313" width="537" height="35" rx="7" fill="#FAFBFC" stroke="#C8D0DC" stroke-width="1.4"/>
+  <text x="118" y="336" fill="#444444" font-size="18" letter-spacing="1.2" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">••••••••••••••••••••••</text>
+  <path d="M621 329C618.6 331.5 615.4 333 612 333C608.6 333 605.4 331.5 603 329C605.4 326.5 608.6 325 612 325C615.4 325 618.6 326.5 621 329Z" stroke="#6B7280" stroke-width="1.2"/>
+  <circle cx="612" cy="329" r="1.8" fill="#6B7280"/>
+  <text x="104" y="383" fill="#444444" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">模型</text>
+  <rect x="104" y="390" width="537" height="34" rx="7" fill="#FAFBFC" stroke="#C8D0DC" stroke-width="1.4"/>
+  <text x="118" y="413" fill="#4B5563" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">claude-opus-4-6</text>
+  <rect x="104.5" y="442.5" width="14" height="14" rx="2.5" fill="white" stroke="#8E939B"/>
+  <text x="128" y="455" fill="#444444" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">支持图片输入</text>
+  <rect x="104.5" y="467.5" width="14" height="14" rx="2.5" fill="white" stroke="#8E939B"/>
+  <text x="128" y="480" fill="#444444" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">支持 function calling</text>
+  <path d="M104 505L111 510.5L104 516V505Z" fill="#444444"/>
+  <text x="121" y="516" fill="#444444" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">高级设置</text>
+  <circle cx="111" cy="559" r="8" stroke="#B0B4BE" stroke-width="1.2"/>
+  <text x="108.3" y="564" fill="#B0B4BE" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">?</text>
+  <text x="126" y="564" fill="#7A7F87" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">帮助</text>
+  <rect x="504" y="545" width="58" height="31" rx="11" fill="#F3F4F6"/>
+  <text x="523" y="566" fill="#666666" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">取消</text>
+  <rect x="578" y="545" width="61" height="31" rx="11" fill="#5A88F7"/>
+  <text x="598" y="566" fill="white" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">确认</text>
+</svg>
