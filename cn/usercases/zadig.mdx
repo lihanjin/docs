@@ -1,0 +1,80 @@
+---
+title: "在 Zadig 中使用"
+description: "将 HubTo 接入 Zadig，在交付流程或插件节点中统一调用模型能力。"
+---
+
+## 概述
+
+Zadig 是一个面向研发协作与交付流程的平台，适合把 AI 能力接入到构建、发布、分析和自动化任务中。
+
+将 HubTo 接入 Zadig 后，你可以在流程节点、脚本步骤或扩展能力中统一调用模型，并集中管理 API Key、权限和配额。
+
+## 适用场景
+
+- 你希望在 CI/CD 或交付流程里接入大模型能力
+- 你希望把模型调用统一走团队网关，便于审计和治理
+- 你希望在不同流水线中复用同一套模型配置
+
+## 前置条件
+
+- 已部署或可访问 Zadig
+- 已拥有可用的 HubTo API Key
+- 流程环境可以访问 `https://api.hubto.ai`
+
+## 接入方式
+
+### 方式一：通过平台内置模型或插件配置
+
+如果 Zadig 当前版本支持 AI 插件、自定义模型供应方或扩展服务，优先直接填写：
+
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`
+
+### 方式二：通过任务步骤直接调用 API
+
+如果你当前使用的是脚本、Webhook 或 HTTP 请求节点，可以直接调用 HubTo 接口：
+
+```bash
+curl https://api.hubto.ai/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "deepseek-v3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "请总结本次构建日志中的异常信息"
+      }
+    ]
+  }'
+```
+
+## 推荐验证方式
+
+建议先在一个测试流程中调用一次简单提示词，确认流程环境可以成功请求 HubTo，并返回结果。
+
+## 使用建议
+
+- 建议为 Zadig 单独创建一个 API Key，方便隔离交付流程用量
+- 如果你在多个流程中复用模型调用，建议把 Base URL 和 Key 配成公共变量
+- 如果后续需要切换模型，优先在 HubTo 中统一调整权限和路由
+
+## 常见问题
+
+### 流程里请求超时
+
+请检查 Zadig 所在环境是否能访问 `https://api.hubto.ai/v1`，并确认出口网络策略没有拦截。
+
+### 返回 401 或 403
+
+请确认你注入到流程里的 API Key 来自 HubTo，并且权限与目标模型匹配。
+
+### 响应格式不符合预期
+
+如果你是通过脚本节点调用接口，请先确认后续步骤读取的是 `choices` 或响应体中的正确字段。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

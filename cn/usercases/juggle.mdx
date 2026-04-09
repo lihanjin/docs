@@ -1,0 +1,79 @@
+---
+title: "在微服务编排框架 Juggle 中使用"
+description: "将 HubTo 接入 Juggle，在服务编排或工作流节点中统一调用模型能力。"
+---
+
+## 概述
+
+微服务编排框架 Juggle 适合把多个服务、任务和流程节点组合成可执行工作流。
+
+将 HubTo 接入后，你可以在编排链路中统一调用模型，实现分类、总结、意图识别、内容生成等能力。
+
+## 适用场景
+
+- 你希望在服务编排流程中增加 AI 处理步骤
+- 你希望把模型能力以标准 HTTP 接口的方式接入现有流程
+- 你希望统一管理 API Key、权限和调用策略
+
+## 前置条件
+
+- 已部署或可访问 Juggle
+- 已拥有可用的 HubTo API Key
+- Juggle 支持 HTTP 请求、插件或外部服务调用
+
+## 接入方式
+
+### 方式一：直接配置兼容模型供应方
+
+如果 Juggle 当前版本支持模型服务配置、自定义供应方或兼容 OpenAI 接口，可以直接填写：
+
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`
+
+### 方式二：在编排节点中调用 HubTo API
+
+如果你当前是通过 HTTP 节点编排服务，可以直接向 HubTo 发起请求：
+
+```json
+{
+  "model": "deepseek-v3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "请把这段日志归纳成 3 条排障结论"
+    }
+  ]
+}
+```
+
+请求地址使用 `https://api.hubto.ai/v1/chat/completions`，并在 Header 中加入 `Authorization: Bearer YOUR_API_KEY`。
+
+## 推荐验证方式
+
+建议先在一个测试流程里调用一次简单提示词，确认 Juggle 可以拿到稳定返回，再逐步接入正式场景。
+
+## 使用建议
+
+- 通过环境变量或密钥管理注入 API Key，不要把密钥写在编排定义里
+- 如果你有多个业务流程，建议封装一个公共的 HubTo 请求节点
+- 如果输出会影响后续自动化流程，建议加上失败重试和空结果兜底
+
+## 常见问题
+
+### 流程节点报网络错误
+
+请确认 Juggle 所在环境可以访问 `https://api.hubto.ai/v1`。
+
+### 返回格式解析失败
+
+请检查编排节点读取的是文本结果字段，而不是整个响应对象。
+
+### 调用成本不可控
+
+建议为 Juggle 单独创建 API Key，并在 HubTo 中设置配额或权限范围。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

@@ -1,0 +1,64 @@
+---
+title: "在 ClawX 中使用"
+description: "将 HubTo 接入 ClawX，通过统一网关配置模型与访问权限。"
+---
+
+## 概述
+
+ClawX 是一个面向开发和自动化协作的 AI 工具，常见于代码问答、执行任务和辅助生成场景。
+
+将 ClawX 接入 HubTo 后，你可以统一管理模型网关、令牌与访问策略，并在需要时灵活切换模型。
+
+## 适用场景
+
+- 你希望把 ClawX 的模型调用接到统一网关
+- 你希望在多个环境中复用同一套接入方式
+- 你希望让 API Key 管理和模型路由集中到 HubTo
+
+## 前置条件
+
+- 已安装并可以正常使用 ClawX
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：进入模型设置或 Provider 设置
+
+在 ClawX 中找到模型供应方、API 配置或自定义接口入口。
+
+### 步骤 2：填写 HubTo 参数
+
+- Provider name：`HubTo`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`
+
+### 步骤 3：保存并验证
+
+保存后执行一个测试请求，例如“分析当前目录下的项目结构”，确认请求已经通过 HubTo 返回结果。
+
+## 使用建议
+
+- 建议先验证基础问答，再尝试复杂工作流
+- 如果你需要多人协作，建议给不同成员分配不同 API Key
+- 若工具支持保存多个 Provider，可以按环境分别配置开发与生产用量
+
+## 常见问题
+
+### 无法连接接口
+
+请先确认网络可以访问 `https://api.hubto.ai/v1`。
+
+### 调用返回 401
+
+请确认 API Key 填写正确，且当前令牌仍然有效。
+
+### 模型调用仍然走旧配置
+
+请检查工具是否同时启用了其他默认 Provider，并优先切换到 HubTo。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

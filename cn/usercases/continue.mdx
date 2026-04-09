@@ -1,0 +1,72 @@
+---
+title: "在 Continue 中使用"
+description: "将 HubTo 接入 Continue，通过统一网关管理编辑器中的模型调用。"
+---
+
+## 概述
+
+Continue 是一个常见的 AI 编码助手，适合在编辑器里完成问答、补全、重构和代码库理解。
+
+将 Continue 接入 HubTo 后，你可以继续沿用现有工作流，同时把模型访问、令牌权限和额度控制统一收敛到 HubTo。
+
+## 适用场景
+
+- 你希望在编辑器内完成日常编码协作
+- 你希望在多个模型之间切换，但只维护一套网关地址
+- 你希望把团队成员的调用权限统一管理
+
+## 前置条件
+
+- 已安装并可以正常使用 Continue
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：打开模型配置
+
+在 Continue 的设置界面或配置文件中找到模型列表与 Provider 配置区域。
+
+### 步骤 2：添加兼容模型供应方
+
+如果当前版本支持 OpenAI 兼容模型、Custom Provider 或自定义 Base URL，优先使用这一类入口。
+
+### 步骤 3：填写 HubTo 信息
+
+- Provider：`HubTo`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`、`claude-3-5-sonnet`
+
+### 步骤 4：完成验证
+
+保存后，在 Continue 中发起一个简单任务，例如“总结当前文件的职责”，确认可以正常返回内容。
+
+## 使用建议
+
+- 先配置一个你最常用的模型，验证链路后再补充其他模型
+- 若你同时有个人与团队环境，建议分别使用不同 API Key
+- 若模型名不能自动拉取，可以直接手动填写 HubTo 中的模型名称
+
+## 常见问题
+
+### 模型列表为空
+
+部分版本不会自动发现远端模型，这时可以直接手动填写模型名。
+
+### 认证失败或返回 401
+
+请确认 API Key 有效，并检查 Continue 保存配置后是否需要重新加载窗口。
+
+### 请求地址错误
+
+请确认 Base URL 使用的是：
+
+```txt
+https://api.hubto.ai/v1
+```
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

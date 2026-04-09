@@ -51,9 +51,29 @@
                 "group": "开发工具&平台",
                 "pages": [
                   "cn/usercases/claude-code",
-                  "cn/usercases/gemini-cli",
+                  "cn/usercases/cline",
+                  "cn/usercases/continue",
+                  "cn/usercases/qoder",
+                  "cn/usercases/kilo-code",
                   "cn/usercases/opencode",
-                  "cn/usercases/openclaw"
+                  "cn/usercases/openclaw",
+                  "cn/usercases/dify",
+                  "cn/usercases/trae",
+                  "cn/usercases/tyrion",
+                  "cn/usercases/zadig",
+                  "cn/usercases/qingliu-no-code-platform",
+                  "cn/usercases/translate-js",
+                  "cn/usercases/juggle",
+                  "cn/usercases/langbot",
+                  "cn/usercases/codewave",
+                  "cn/usercases/refly",
+                  "cn/usercases/comfyui-prompt-helper",
+                  "cn/usercases/nobase",
+                  "cn/usercases/astrbot",
+                  "cn/usercases/lazyllm",
+                  "cn/usercases/lazycraft",
+                  "cn/usercases/clawx",
+                  "cn/usercases/gemini-cli"
                 ]
               },
               {

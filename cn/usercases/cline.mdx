@@ -1,0 +1,72 @@
+---
+title: "在 Cline 中使用"
+description: "将 HubTo 接入 Cline，通过 OpenAI 兼容配置统一管理编码模型。"
+---
+
+## 概述
+
+Cline 是一个面向编码与终端协作场景的 AI 开发工具，常用于补全、重构、代码解释和执行任务。
+
+将 Cline 接入 HubTo 后，你可以把模型调用统一走同一套网关地址，并集中管理 API Key、模型权限和额度策略。
+
+## 适用场景
+
+- 你希望在编辑器中继续使用熟悉的工具界面
+- 你希望把团队常用模型统一接入到同一套网关
+- 你希望按个人或项目隔离 API Key 与调用额度
+
+## 前置条件
+
+- 已安装并可以正常使用 Cline
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：进入模型或提供方设置
+
+在 Cline 的设置页面中找到模型供应方、Provider 或 API 配置入口。
+
+### 步骤 2：选择兼容接入方式
+
+优先选择 OpenAI 兼容或自定义提供方接入方式。如果工具支持直接填写 Base URL 和 API Key，一般就可以接入 HubTo。
+
+### 步骤 3：填写 HubTo 配置
+
+- Provider name：`HubTo`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`、`claude-3-5-sonnet`
+
+### 步骤 4：保存并测试
+
+保存配置后，让 Cline 执行一个简单任务，例如“解释当前文件的主要结构”，确认请求可以正常返回。
+
+## 使用建议
+
+- 先用一个基础模型完成链路验证，再切换到日常主模型
+- 如果你有多个项目，建议为每个项目分别配置 API Key
+- 如需更稳定的团队体验，建议先在 HubTo 中完成模型路由与权限规划
+
+## 常见问题
+
+### 找不到自定义提供方入口
+
+部分版本会把入口放在实验功能、模型供应方或高级设置里，可以先搜索 `provider`、`base url` 或 `openai compatible`。
+
+### 返回认证失败
+
+请确认填写的是 HubTo 控制台生成的有效 API Key，并检查值里没有额外空格。
+
+### 请求没有走 HubTo
+
+请确认 Base URL 使用的是：
+
+```txt
+https://api.hubto.ai/v1
+```
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

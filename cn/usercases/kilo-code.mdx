@@ -1,0 +1,68 @@
+---
+title: "在 Kilo Code 中使用"
+description: "将 HubTo 接入 Kilo Code，用统一网关管理代码生成与重构模型。"
+---
+
+## 概述
+
+Kilo Code 是一个聚焦开发场景的 AI 工具，常见于代码生成、重构、解释和调试辅助。
+
+接入 HubTo 后，你可以继续使用 Kilo Code 的交互方式，同时把模型访问地址、令牌和权限策略统一交给 HubTo 管理。
+
+## 适用场景
+
+- 你希望统一管理 Kilo Code 的模型来源
+- 你希望多人协作时使用不同 API Key 但共享同一网关
+- 你希望随时切换模型而不改动太多本地配置
+
+## 前置条件
+
+- 已安装并可以正常使用 Kilo Code
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：打开配置面板
+
+在 Kilo Code 中找到模型配置、API 配置或自定义 Provider 入口。
+
+### 步骤 2：填写基础连接信息
+
+- Provider name：`HubTo`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`
+
+### 步骤 3：保存并执行测试任务
+
+例如让 Kilo Code “解释当前项目中的入口文件”，确认能正常返回结果。
+
+## 使用建议
+
+- 先验证问答或解释类任务，再逐步开启复杂的自动化能力
+- 若工具支持工作区级配置，建议为重要项目单独配置模型
+- 如果你准备切换多个模型，建议先在 HubTo 中规划好命名与权限
+
+## 常见问题
+
+### 配置保存后不生效
+
+请尝试重启工具或重新打开当前工作区。
+
+### 返回认证错误
+
+请确认 API Key 来源于 HubTo 控制台，并检查是否复制了多余字符。
+
+### 无法连接接口
+
+请确认本机网络能够访问：
+
+```txt
+https://api.hubto.ai/v1
+```
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)

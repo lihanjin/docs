@@ -1,0 +1,68 @@
+---
+title: "在 Qoder 中使用"
+description: "将 HubTo 接入 Qoder，通过统一网关配置代码问答与生成模型。"
+---
+
+## 概述
+
+Qoder 是一个面向开发场景的 AI 编码工具，适合代码生成、解释、重构和交互式问答。
+
+将 Qoder 接入 HubTo 后，你可以集中管理模型访问入口，并根据团队需要统一分配 API Key 与模型权限。
+
+## 适用场景
+
+- 你希望把 Qoder 的模型调用统一接到团队网关
+- 你希望按角色或项目管理不同模型的使用权限
+- 你希望在不改变日常使用习惯的情况下切换上游模型
+
+## 前置条件
+
+- 已安装并可以正常使用 Qoder
+- 已拥有可用的 HubTo API Key
+- 网络环境可以访问 `https://api.hubto.ai`
+
+## 配置步骤
+
+### 步骤 1：进入模型设置
+
+在 Qoder 中找到模型供应方、Provider、Model 或 API 设置入口。
+
+### 步骤 2：选择自定义或兼容接口
+
+如果 Qoder 支持 OpenAI 兼容、自定义 API 或 Base URL 配置，就可以直接接入 HubTo。
+
+### 步骤 3：填写连接参数
+
+- 名称：`HubTo`
+- Base URL：`https://api.hubto.ai/v1`
+- API Key：`YOUR_API_KEY`
+- Model：例如 `deepseek-v3`、`glm-4`
+
+### 步骤 4：保存并发起测试
+
+配置完成后，执行一个简单问题，例如“为这个函数补充单元测试”，确认返回正常。
+
+## 使用建议
+
+- 先用一个成本较低的模型完成接入验证
+- 如果 Qoder 支持保存多个配置项，建议按项目或环境区分
+- 如需稳定切换模型，建议优先在 HubTo 完成路由策略配置
+
+## 常见问题
+
+### 没有找到 Base URL 入口
+
+有些工具会把它放在高级设置、实验功能或自定义 Provider 里，建议先搜索 `base url`、`provider` 或 `custom api`。
+
+### 调用返回 404
+
+请确认 Base URL 填写为 `https://api.hubto.ai/v1`，而不是根域名。
+
+### 模型不可用
+
+请确认当前 API Key 已开通对应模型权限，并检查模型名称是否填写正确。
+
+## 下一步
+
+- 获取 API Key：参见 [快速上手](/cn/quickstart)
+- 查看接口文档：参见 [接口参考](/cn/api-reference/introduction)
