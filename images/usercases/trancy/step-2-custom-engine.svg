@@ -1,0 +1,135 @@
+<svg width="1767" height="915" viewBox="0 0 1767 915" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1767" height="915" fill="#111111"/>
+  <rect x="0" y="0" width="1767" height="53" fill="#171717"/>
+  <line x1="0" y1="53.5" x2="1767" y2="53.5" stroke="#2B2B2B"/>
+  <line x1="1357.5" y1="0" x2="1357.5" y2="915" stroke="#2D2D2D"/>
+  <rect x="12" y="13" width="18" height="18" rx="4" fill="#F3F4F6"/>
+  <path d="M29 15L36 18V31L20 38V24L29 21V15Z" fill="#D6D8DD"/>
+  <text x="52" y="35" fill="#F3F4F6" font-size="18" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">翻译引擎设置</text>
+  <text x="1398" y="35" fill="#F3F4F6" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">添加自定义引擎</text>
+  <rect x="1367" y="11" width="30" height="30" rx="8" stroke="#4A4A4A"/>
+  <path d="M1377 21L1387 31M1387 21L1377 31" stroke="#B8B8B8" stroke-width="1.4" stroke-linecap="round"/>
+
+  <text x="425" y="138" fill="#F4F4F5" font-size="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">自定义引擎</text>
+  <text x="425" y="179" fill="#8E8E93" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">如果你可以自己申请到翻译引擎的 API，我们更推荐你使用自定义引擎，这样你可以更灵活的控制翻译引擎使用，费用也更低。</text>
+
+  <rect x="422" y="214" width="413" height="97" rx="16" fill="#1C1C1E" stroke="#343438"/>
+  <rect x="451" y="240" width="45" height="45" rx="12" fill="#2A2A2C"/>
+  <path d="M466 248H481C486 248 490 252 490 257V272C490 277 486 281 481 281H466C461 281 457 277 457 272V257C457 252 461 248 466 248Z" fill="#F3F4F6" fill-opacity="0.1"/>
+  <path d="M467 257C467 253.7 469.7 251 473 251H474.3C475.1 251 475.8 251.4 476.2 252L477.8 254.5C478.1 255 478.6 255.3 479.2 255.3H480C483.3 255.3 486 258 486 261.3V264.2C486 267.5 483.3 270.2 480 270.2H479.2C478.6 270.2 478.1 270.5 477.8 271L476.2 273.5C475.8 274.1 475.1 274.5 474.3 274.5H473C469.7 274.5 467 271.8 467 268.5V257Z" stroke="#F3F4F6" stroke-width="1.6"/>
+  <text x="512" y="258" fill="#F4F4F5" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">gpt-5 OpenAI</text>
+  <text x="512" y="282" fill="#A0A0A5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">gpt-5</text>
+  <rect x="808" y="252" width="34" height="22" rx="11" fill="#FFC85A"/>
+  <circle cx="831" cy="263" r="8" fill="#1A1A1A"/>
+
+  <rect x="888" y="214" width="438" height="97" rx="16" fill="#1C1C1E" stroke="#343438"/>
+  <rect x="913" y="240" width="45" height="45" rx="12" fill="#2A2A2C"/>
+  <circle cx="935.5" cy="262.5" r="9" fill="#F4F4F5"/>
+  <path d="M935.5 248V277M921 262.5H950" stroke="#2A2A2C" stroke-width="2"/>
+  <circle cx="946" cy="252" r="3" fill="#F4F4F5"/>
+  <circle cx="925" cy="273" r="3" fill="#F4F4F5"/>
+  <text x="976" y="258" fill="#F4F4F5" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">alltoken</text>
+  <text x="976" y="282" fill="#A0A0A5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">gpt-5</text>
+  <rect x="1268" y="252" width="34" height="22" rx="11" fill="#FFC85A"/>
+  <circle cx="1291" cy="263" r="8" fill="#1A1A1A"/>
+
+  <text x="425" y="395" fill="#F4F4F5" font-size="24" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">Trancy 引擎</text>
+  <text x="425" y="434" fill="#8E8E93" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">Trancy 引擎的设置只作用于插件的沉浸式翻译、字幕翻译和 PDF 翻译，Google 和 Microsoft 是内置引擎，其他AI翻译引擎需要单独额外购买翻译包。</text>
+
+  <g>
+    <rect x="425" y="495" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="450" y="519" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <path d="M466 531H482V547H466V531Z" fill="#F5F5F5"/>
+    <path d="M474 531V547" stroke="#2B2B2C" stroke-width="1.4"/>
+    <path d="M466 539H482" stroke="#2B2B2C" stroke-width="1.4"/>
+    <text x="514" y="537" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">Microsoft</text>
+    <text x="514" y="560" fill="#A8D672" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">内置</text>
+    <rect x="811" y="533" width="30" height="18" rx="9" fill="#666"/>
+    <circle cx="820" cy="542" r="7" fill="#F3F4F6"/>
+  </g>
+  <g>
+    <rect x="887" y="495" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="912" y="519" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <text x="928" y="550" text-anchor="middle" fill="#F4F4F5" font-size="20" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">G</text>
+    <text x="976" y="537" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">Google</text>
+    <text x="976" y="560" fill="#A8D672" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">内置</text>
+    <rect x="1273" y="533" width="30" height="18" rx="9" fill="#FFC85A"/>
+    <circle cx="1294" cy="542" r="7" fill="#1A1A1A"/>
+  </g>
+  <g>
+    <rect x="425" y="615" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="450" y="639" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <path d="M468 663C472 655 481 653 487 657C483 665 474 667 468 663Z" fill="#E8E8E8"/>
+    <path d="M463 652C467 659 473 663 481 664" stroke="#E8E8E8" stroke-width="2" stroke-linecap="round"/>
+    <text x="514" y="657" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">SiliconFlow</text>
+    <text x="514" y="680" fill="#A0A0A5" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">SiliconFlow</text>
+    <text x="592" y="680" fill="#FF91B0" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">FREE</text>
+    <rect x="811" y="653" width="30" height="18" rx="9" fill="#666"/>
+    <circle cx="820" cy="662" r="7" fill="#F3F4F6"/>
+  </g>
+  <g>
+    <rect x="887" y="615" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="912" y="639" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <path d="M926 662C930 652 941 649 949 655C947 664 937 668 926 662Z" fill="#F0F0F0"/>
+    <text x="976" y="657" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">DeepSeek V3</text>
+    <text x="976" y="680" fill="#A0A0A5" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">DeepSeek</text>
+    <rect x="1273" y="653" width="30" height="18" rx="9" fill="#666"/>
+    <circle cx="1282" cy="662" r="7" fill="#F3F4F6"/>
+  </g>
+  <g>
+    <rect x="425" y="735" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="450" y="759" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <path d="M467 772H481C486 772 490 776 490 781V785C490 790 486 794 481 794H467C462 794 458 790 458 785V781C458 776 462 772 467 772Z" fill="#F4F4F5"/>
+    <path d="M474 772V794M458 783H490" stroke="#2B2B2C" stroke-width="1.5"/>
+    <text x="514" y="777" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">GPT-4.1-mini</text>
+    <text x="514" y="800" fill="#A0A0A5" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">OpenAI</text>
+    <rect x="811" y="773" width="30" height="18" rx="9" fill="#FFC85A"/>
+    <circle cx="832" cy="782" r="7" fill="#1A1A1A"/>
+  </g>
+  <g>
+    <rect x="887" y="735" width="438" height="95" rx="16" fill="#1C1C1E" stroke="#343438"/>
+    <rect x="912" y="759" width="48" height="48" rx="12" fill="#2B2B2C"/>
+    <path d="M928 772H944C949 772 953 776 953 781V785C953 790 949 794 944 794H928C923 794 919 790 919 785V781C919 776 923 772 928 772Z" fill="#F4F4F5"/>
+    <path d="M936 772V794M919 783H953" stroke="#2B2B2C" stroke-width="1.5"/>
+    <text x="976" y="777" fill="#F4F4F5" font-size="16" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">GPT-4.1-nano</text>
+    <text x="976" y="800" fill="#A0A0A5" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">OpenAI</text>
+    <rect x="1273" y="773" width="30" height="18" rx="9" fill="#FFC85A"/>
+    <circle cx="1294" cy="782" r="7" fill="#1A1A1A"/>
+  </g>
+
+  <text x="1378" y="87" fill="#D4D4D8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">选择服务商</text>
+  <rect x="1378" y="111" width="355" height="43" rx="8" fill="#1F1F20" stroke="#545456"/>
+  <rect x="1394" y="124" width="22" height="18" rx="4" fill="#2B2B2C"/>
+  <path d="M1400 133H1410M1405 128V138" stroke="#F2F2F3" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="1427" y="136" fill="#F5F5F5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">自定义引擎</text>
+  <path d="M1709 128L1715 134L1721 128" stroke="#A7A7AD" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="1378" y="193" fill="#D4D4D8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">模型名称</text>
+  <rect x="1378" y="214" width="355" height="43" rx="8" fill="#1F1F20" stroke="#545456"/>
+  <text x="1395" y="241" fill="#F5F5F5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">claude-opus-4-6</text>
+
+  <text x="1378" y="309" fill="#D4D4D8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">引擎名称</text>
+  <circle cx="1457" cy="307" r="7" stroke="#8A8A90" stroke-width="1.2"/>
+  <text x="1454.5" y="311" fill="#8A8A90" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">i</text>
+  <rect x="1378" y="317" width="355" height="43" rx="8" fill="#1F1F20" stroke="#545456"/>
+  <text x="1395" y="345" fill="#F5F5F5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">HubTo</text>
+
+  <text x="1378" y="397" fill="#D4D4D8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">API Key</text>
+  <rect x="1378" y="419" width="355" height="80" rx="8" fill="#1F1F20" stroke="#545456"/>
+  <text x="1395" y="446" fill="#F5F5F5" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">sk-test</text>
+
+  <text x="1378" y="541" fill="#D4D4D8" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="600">API 接口地址</text>
+  <text x="1696" y="541" fill="#FFC85A" font-size="12" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">必填</text>
+  <rect x="1378" y="561" width="355" height="100" rx="8" fill="#1F1F20" stroke="#545456"/>
+  <text x="1395" y="604" fill="#8D8D92" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">请输入 API 接口地址 eg:</text>
+  <text x="1395" y="626" fill="#8D8D92" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">https://api.openai.com/v1/chat/completions</text>
+
+  <rect x="1378" y="688" width="379" height="45" rx="8" fill="#FFC85A"/>
+  <text x="1568" y="717" text-anchor="middle" fill="#1A1A1A" font-size="15" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">添加</text>
+
+  <rect x="1743" y="489" width="24" height="24" rx="6" fill="#6C3DF4"/>
+  <path d="M1749 501H1761M1755 495V507" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+  <rect x="1742" y="522" width="25" height="34" rx="7" fill="#EDE9FE"/>
+  <text x="1754.5" y="535" text-anchor="middle" fill="#6C3DF4" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">中</text>
+  <text x="1754.5" y="549" text-anchor="middle" fill="#3B82F6" font-size="11" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="700">A</text>
+</svg>
