@@ -41,10 +41,10 @@ export ANTHROPIC_BASE_URL="https://api.hubto.ai"
 
 ### 步骤 3：选择模型
 
-如果你希望默认使用某个 Claude 模型，可以继续设置。常见示例：
+如果你希望默认使用某个 Claude 模型，可以继续设置。当前可用模型建议在模型广场查看，以下为常见示例：
 
 ```bash
-export ANTHROPIC_MODEL="claude-3-5-sonnet"
+export ANTHROPIC_MODEL="claude-opus-4-7"
 ```
 
 ### 步骤 4：启动 Claude Code
@@ -62,7 +62,7 @@ claude
 ```bash
 export ANTHROPIC_API_KEY="YOUR_API_KEY"
 export ANTHROPIC_BASE_URL="https://api.hubto.ai"
-export ANTHROPIC_MODEL="claude-3-5-sonnet"
+export ANTHROPIC_MODEL="claude-opus-4-7"
 ```
 
 保存后重新加载 shell：
@@ -81,6 +81,7 @@ source ~/.zshrc
 
 - 先在 HubTo 控制台中确认令牌已启用 Claude 相关模型
 - 如需切换模型，只需要修改 `ANTHROPIC_MODEL`
+- 当前可用模型建议以模型广场显示为准
 - 如果你同时管理多个环境，建议为 Claude Code 单独创建一个 API Key
 - 如果你和团队共用网关，建议区分开发、测试和生产环境的令牌
 

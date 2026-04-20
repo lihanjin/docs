@@ -16,8 +16,8 @@ api: "POST /v1/messages"
 
 ## 请求体
 
-<ParamField body="model" type="string" default="claude-3-5-sonnet" required>
-  Claude 模型名称。
+<ParamField body="model" type="string" default="claude-opus-4-7" required>
+  Claude 模型名称，可在模型广场查看当前可用模型。
 </ParamField>
 
 <ParamField body="max_tokens" type="integer" default="512" required>
@@ -36,7 +36,7 @@ api: "POST /v1/messages"
 
 ```json
 {
-  "model": "claude-3-5-sonnet",
+  "model": "claude-opus-4-7",
   "max_tokens": 512,
   "messages": [
     {
@@ -49,6 +49,6 @@ api: "POST /v1/messages"
 
 ## 响应
 
-<ResponseField name="content" type="object[]">
-  Claude 返回内容数组。
-</ResponseField>
+成功时返回 Claude Messages 兼容结构。
+
+当前可用模型请以模型广场显示为准。
