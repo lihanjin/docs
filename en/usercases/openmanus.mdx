@@ -20,18 +20,18 @@ If you can already run OpenManus locally, continue to the configuration step.
 
 Open the `config/config.toml` file and point the model settings to HubTo.
 
-Start with a function-calling-capable general model such as `Qwen/QwQ-32B`, then switch to a vision model only if you need it.
+Start with a function-calling-capable general model such as `glm-5.1`, then switch to a vision model only if you need it.
 
 ```toml
 [llm]
-model = "Qwen/QwQ-32B"
+model = "glm-5.1"
 base_url = "https://api.hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 max_tokens = 16384
 temperature = 0.6
 
 [llm.vision]
-model = "Qwen/Qwen2-VL-72B-Instruct"
+model = "qwen2.5-vl-72b-instruct"
 base_url = "https://api.hubto.ai/v1"
 api_key = "YOUR_API_KEY"
 ```

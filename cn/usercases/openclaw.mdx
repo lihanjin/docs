@@ -25,7 +25,7 @@ openclaw onboard \
   --custom-provider-id hubto \
   --custom-compatibility openai \
   --custom-base-url "https://api.hubto.ai/v1" \
-  --custom-model-id "glm-4" \
+  --custom-model-id "glm-5.1" \
   --custom-api-key "$HUBTO_API_KEY"
 ```
 
@@ -50,8 +50,8 @@ export HUBTO_API_KEY="YOUR_API_KEY"
         "api": "openai-completions",
         "models": [
           {
-            "id": "glm-4",
-            "name": "GLM-4",
+            "id": "glm-5.1",
+            "name": "GLM-5.1",
             "reasoning": false,
             "input": ["text"],
             "cost": {
@@ -70,14 +70,14 @@ export HUBTO_API_KEY="YOUR_API_KEY"
   "agents": {
     "defaults": {
       "model": {
-        "primary": "hubto/glm-4"
+        "primary": "hubto/glm-5.1"
       }
     }
   }
 }
 ```
 
-如果你要使用其他模型，把 `glm-4` 替换成当前已开通的模型名即可。
+如果你要使用其他模型，把 `glm-5.1` 替换成当前已开通的模型名即可。
 
 ## 推荐验证方式
 

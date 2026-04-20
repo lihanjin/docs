@@ -18,7 +18,7 @@ description: "文本转语音接口。"
 
 ```json
 {
-  "model": "gpt-4o-mini-tts",
+  "model": "gpt-5.4-tts",
   "voice": "alloy",
   "input": "欢迎使用 HubTo。"
 }
@@ -31,7 +31,7 @@ curl https://api.hubto.ai/v1/audio/speech \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -d '{
-    "model": "gpt-4o-mini-tts",
+    "model": "gpt-5.4-tts",
     "voice": "alloy",
     "input": "欢迎使用 HubTo。"
   }'
